@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look Up</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header class="header-container">
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main>
+        <div class="user-signin">
+
+            <div class="user-signin-titleContainer">
+                <h1 class="user-signin-title">Já sou cadastrado</h1>
+            </div>
+
+            <form class="signin-form" action="/usuario/login" method="POST">
+
+                <div class="MuiFormControll-root">
+                    <input type="email" class="signinEmail" name="email" placeholder="E-mail" autocomplete="off">
+                </div>
+                
+                <div class="MuiFormControll-root">
+                    <input type="password" class="signinPassword" name="password" placeholder="Senha" autocomplete="off">
+                </div>
+
+                <div class="MuiGrid-item">
+                    <a href="" class="MuiTypography-body MuiTypography-colorPrimary">Esqueci meu login ?</a>
+                </div>
+
+                <div class="loginErrors-container">
+                    <% if(typeof errors !== 'undefined') { %>
+                        <ul>
+                            <% for(let error in errors) { %>
+                                <li><%= errors[error].msg %></li>
+                          <% } %>
+                        </ul>
+                   <% } %>
+                </div>
+                
+                <button type="submit" class="signin-btn">Acessar</button>
+
+            </form>
+            
+        </div>
+
+        <div class="user-signup">
+            <h1 class="user-signup-title">Não sou cadastrado</h1>
+
+            <div class="order-signup-list">
+
+                <ul class="list-inline">
+                    <li>100% seguro</li>
+                    <li>100% confiável</li>
+                </ul>
+
+            </div>
+
+            <a href="/usuario/cadastro" class="btnSignup-btn"><button type="submit" class="signup-btn">Cadastre-se</button></a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+</html>

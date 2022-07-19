@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look Up</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header class="header-container">
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main id="cart-info">
+
+        <div id="cart-title">
+            <img src="/images/icons/shopping-car.svg" alt="">
+            <h2>Carrinho</h2>
+        </div>
+
+        <!--
+            Início da entrada do script
+        Para cada produto adicionado no carrinho, mostrar o código abaixo.
+        -->
+
+        <div class="remove-container">
+            <img id="product-photo">
+            
+            <div class="product-name">
+                <h2>Nome do produto</h2>
+
+                <!--Função remover do carrinho-->
+            
+                <div class="remove-flex">
+                    <img src="/images/icons/remove_shopping_cart_white_24dp 1.svg" alt="">
+                    <h2>Remover do carrinho</h2>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="buy-value">
+            <h2 id="value-title">Valor do produto: </h2>
+            <h2 id="value-number">R$2.700</h2>
+        </div>
+
+            <!-- Adicionar função para receber valores dos produtos adicionados no carrinho e somá-los mostrando o valor total da compra-->
+            <div id="final-buy-value">
+                <img src="/images/icons/bag.svg">
+                <div id="write-buy-value">
+                    <h1>Valor total da compra:</h1>
+                    <h2>R$5.600,00</h2>
+                </div>
+
+                <!-- Adicionar rota para finalização de compra-->
+                <div id="button-final">
+                    <button type="submit">Finalizar compra</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+        
+</body>
+</html>
