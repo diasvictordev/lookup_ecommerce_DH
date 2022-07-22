@@ -1,70 +1,99 @@
-    <nav class="nav-container">
-        <div class="search">
-            <input type="text" class="searchTerm" placeholder="Busque aqui o seu produto...">
-            <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
-           </button>
-         </div>
+<nav class="nav-container">
+    <div class="lookUp">
+        <img src="/images/icons/logo.svg" alt="" />
+    </div>
 
-        <div class="nav-links">
+    <div class="search">
+        <input type="text" class="searchTerm" placeholder="Busque aqui o seu produto   " />
+        <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
 
+    <div class="nav-links">
+        <div class="sidebar">
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="openNav()">×</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <button class="openbtn" onclick="openNav()">
+                ☰
+            </button>
+        </div>
+
+        <div class="logo">
+            <img src="/images/icons/logo.svg" alt="" />
+        </div>
+
+        <div class="logo-test">
             <div class="user-nav">
-                <a href="/usuario/login" class="nav-icon-links"><img src="/images/icons/account.svg" alt=""></a>
-                <a href="/usuario/login" class="nav-text-links">Minha Conta</a>
+                <a href="" class="nav-icon-links"><img src="/images/icons/account.svg" alt="" /></a>
+                <a href="" class="nav-text-links">Minha Conta</a>
             </div>
 
             <div class="user-nav">
-                <a href="" class="nav-icon-links"><img src="/images/icons/headset.svg" class="imagem" alt=""></a>
+                <a href="" class="nav-icon-links"><img src="/images/icons/headset.svg" class="imagem"
+                        alt="" /></a>
                 <a href="" class="nav-text-links">Atendimento</a>
             </div>
 
-            <div class="user-nav">
-                <a href="/carrinho" class="nav-icon-links"><img src="/images/icons/shopping-car.svg" alt=""></a>
-                <a href="/carrinho" class="nav-text-links">Carrinho</a>
+            <div class="user-nav car">
+                <a href="" class="nav-icon-links"><img src="/images/icons/shopping-car.svg" alt="" /></a>
+                <a href="" class="nav-text-links car-text">Carrinho</a>
             </div>
 
-        </div>
-    </nav>
-
-    <div class="header-options">
-
-        <div class="hamburger-container">
-
-            <div class="hamburger-menu category" class="menu-svg">
-                <img src="/images/icons/menu.svg" alt="">
-                <a href='/'><button class="menubtn header-titles">Menu</button></a>
+            <div class="nav-responsive-icons">
+                <a href="" class="nav-icon-links nav-responsive">
+                    <img src="/images/icons/account.svg" alt="" />
+                </a>
+                <a href="" class="nav-icon-links nav-responsive"><img src="/images/icons/shopping-car.svg"
+                        alt="" /></a>
             </div>
-            
-            <div class="hamburger-links">
-                <a href="#">Smartphones</a>
-                <a href="#">Periféricos</a>
-                <a href="#">Áudio</a>
-                <a href="#">Cadeiras</a>
-                <a href="#">Hardware</a>
-                <a href="#">Tablet</a>
-                <a href="#">TV's</a>
-             </div>
+        </div>
+    </div>
+</nav>
 
+<div class="header-options">
+    <div class="hamburger-container">
+        <div class="hamburger-menu category" class="menu-svg">
+            <img src="/images/icons/menu.svg" alt="" />
+            <button class="menubtn header-titles">Menu</button>
         </div>
 
-        <div class="category">
-            <a href="" class="category-link"><img src="/images/icons/trophy.svg" alt=""></a>
-            <a href="" class="header-titles">Mais Vendidos</a>
+        <div class="hamburger-links">
+            <a href="#">Smartphones</a>
+            <a href="#">Periféricos</a>
+            <a href="#">Áudio</a>
+            <a href="#">Cadeiras</a>
+            <a href="#">Hardware</a>
+            <a href="#">Tablet</a>
+            <a href="#">TV's</a>
         </div>
+    </div>
 
-        <div class="category">
-            <a href="" class="category-link"><img src="/images/icons/desktop.svg" alt=""></a>
-            <a href="" class="header-titles">Computadores</a>
-        </div>
+    <div class="category">
+        <a href="" class="category-link"><img src="/images/icons/trophy.svg" alt="" /></a>
+        <a href="" class="header-titles">Mais Vendidos</a>
+    </div>
 
-        <div class="category">
-            <a href="" class="category-link"><img src="/images/icons/laptop.svg" alt=""></a>
-            <a href="" class="header-titles">Notebooks</a>
-        </div>
+    <div class="category">
+        <a href="" class="category-link"><img src="/images/icons/desktop.svg" alt="" /></a>
+        <a href="" class="header-titles">Computadores</a>
+    </div>
 
-        <div class="category">
-            <a href="" class="category-link"><img src="/images/icons/gamer.svg" alt=""></a>
-            <a href="" class="header-titles">Gamer</a>
-        </div>
+    <div class="category">
+        <a href="" class="category-link"><img src="/images/icons/laptop.svg" alt="" /></a>
+        <a href="" class="header-titles">Notebooks</a>
+    </div>
+
+    <div class="category">
+        <a href="" class="category-link"><img src="/images/icons/gamer.svg" alt="" /></a>
+        <a href="" class="header-titles">Gamer</a>
+    </div>
+</div>
 
     </div>
