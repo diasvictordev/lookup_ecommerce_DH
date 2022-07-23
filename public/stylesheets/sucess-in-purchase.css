@@ -1,0 +1,23 @@
+@import "style.css";
+
+.sucess{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sucess img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 38px;
+}
+
+.sucess h1{
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+}

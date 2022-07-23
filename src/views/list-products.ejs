@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Look Up</title>
+    <link rel="stylesheet" href="detail-product.css" />
+</head>
+
+<header class="header-container">
+    <%- include('./partials/header'); %>
+</header>
+
+<main>
+    <div class="info-price">
+        <div class="info-image-container">
+            <div class="details-icons">
+                <div class="di-card">
+                    <img src="/images/icons/home.svg" alt="" />
+                    <h2>Home</h2>
+                </div>
+
+                <div class="di-card info-tech">
+                    <img src="/images/icons/info.svg" alt="" />
+                    <h2>Informações</h2>
+                </div>
+
+                <div class="di-card">
+                    <img src="/images/icons/favorite.svg" alt="" />
+                    <h2>Favoritar</h2>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <div class="image-frame">
+                    <img src="/images/high/2.jpg" onclick="imageFunction(this)" alt="" />
+                    <img src="/images/high/1.jpg" onclick="imageFunction(this)" alt="" />
+                    <img src="/images/high/2.jpg" onclick="imageFunction(this)" alt="" />
+                    <img src="/images/high/1.jpg" onclick="imageFunction(this)" alt="" />
+                </div>
+
+                <div class="frame-box">
+                    <img id="imageBox" src="/images/high/1.jpg" alt="" />
+
+                    <div class="offer-icon">
+                        <img src="/images/icons/discount.svg" alt="">
+                        <span>Oferta</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <script>
+                function imageFunction(imageFrame) {
+                    let fullImage = document.getElementById("imageBox");
+                    fullImage.src = imageFrame.src;
+                }
+            </script>
+
+        <div class="price-container">
+            <h1>Computador Acer RGB</h1>
+
+            <div class="price-detail-card card1">
+                <div class="price-total">
+                    <img src="/images/icons/payments.svg" alt="" />
+                    <div class="price-value">
+                        <span class="price-text">á vista</span>
+                        <span class="value">R$ 454.000,00</span>
+                    </div>
+                </div>
+
+                    <div class="discount-parcel">
+                        <span class="price-text">Desconto</span>
+                        <span class="discount">10%</span>
+                    </div>
+                
+            </div>
+
+            <div class="price-detail-card card2">
+                <div class="price-total">
+                    <img src="/images/icons/credit.svg" alt="" />
+                    <div class="price-value">
+                        <span class="price-text">12x de 400,00</span>
+                        <span class="price-text">sem juros no cartão</span>
+                        <span class="value">R$ 13.000,00</span>
+                    </div>
+                </div>
+
+                    <div class="discount-parcel">
+                        <span class="price-text">Parcelas</span>
+                       <a href="#parcel-list"><img src="/images/icons/arrow.svg" alt="" /></a>
+                    </div>
+                
+            </div>
+
+            <button class="price-btn">Comprar</button>
+            
+            <div class="cep-info">
+                <label for="cep">Frete e Prazo:</label>
+                <input type="text" id="cep" name="cep" placeholder="Insira seu cep">
+                <button class="cep-btn" type="submit">Calcular</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div id="parcel-list" class="parcel-container">
+
+        <div class="parcel-icon">
+            <img src="/images/icons/credit-electric.svg" alt="">
+            <h2>Parcelamento</h2>
+        </div>
+
+        <div class="parcel-list">
+        <ul>
+            <li>1x de R$798,78 (com 10% de desconto)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+        </ul>
+
+        <ul>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+            <li>1x de R$798,78 (sem juros)</li>
+        </ul>
+        </div>
+
+        <div class="single-product-description">
+            <div class="description-icon">
+                <img src="/images/icons/description.svg" alt="">
+                <h2>Descrição do Produto</h2>
+            </div>
+
+            <p>Escolhemos um Gabinete Gamer com design bonito e arrojado com frontal com iluminação
+                RGB que certamente trará mais evidência para o seu setup. O PC Gamer Concórdia vem equi
+                pado com um poderoso processador Intel Core i5 de 10° Geração que oferece atualizações
+                de desempenho incríveis para melhorar a produtividade, proporcionando entretenimento sur
+                preendente.</p>
+             <p>Escolhemos um Gabinete Gamer com design bonito e arrojado com frontal com iluminação
+                RGB que certamente trará mais evidência para o seu setup. O PC Gamer Concórdia vem equi
+                pado com um poderoso processador Intel Core i5 de 10° Geração que oferece atualizações
+                de desempenho incríveis para melhorar a produtividade, proporcionando entretenimento sur
+                preendente.</p>
+
+        </div>
+
+        <div>
+
+            <div class="tech-icon">
+                <img src="/images/icons/info.svg" alt="">
+                <h2>Informações Técnicas</h2>
+            </div>
+
+            <div class="tech-container">
+                <ul class="technical-info">
+                <li>Marca: Intel</li>
+                <li>Peso: 2Kg</li>
+                <li>Efeitos de LED: RGB</li>
+                <li>Marca: Intel</li>
+                <li>Peso: 2Kg</li>
+                <li>Efeitos de LED: RGB</li>
+                </ul>
+
+                <ul class="tech-info">
+                    <li>Marca: Intel</li>
+                    <li>Peso: 2Kg</li>
+                    <li>Efeitos de LED: RGB</li>
+                    <li>Marca: Intel</li>
+                    <li>Peso: 2Kg</li>
+                    <li>Efeitos de LED: RGB</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="box-container">
+
+        <div class="title-container">
+            <img src="/images/icons/like.svg" alt="">
+            <span>Talvez você Goste</span>
+        </div>
+
+        <div class="products-container">
+
+            <div class="add-product-container">
+                <div class="products-card">
+                    <img src="/images/high/2.jpg" alt="">
+                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
+                    <span class="price-cash">A vista R$ 1.200,00</span>
+                    <span class="text1-card">ou</span>
+                    <span class="price-card">R$ 1.400,00</span>
+                    <span class="text2-card">em até</span>
+                    <span class="parcel-price">12x de R$ 142,00</span>
+                </div>
+                <button class="add-product">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="add-product-container">
+                <div class="products-card">
+                    <img src="/images/high/2.jpg" alt="">
+                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
+                    <span class="price-cash">A vista R$ 1.200,00</span>
+                    <span class="text1-card">ou</span>
+                    <span class="price-card">R$ 1.400,00</span>
+                    <span class="text2-card">em até</span>
+                    <span class="parcel-price">12x de R$ 142,00</span>
+                </div>
+                <button class="add-product">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="add-product-container">
+                <div class="products-card">
+                    <img src="/images/high/2.jpg" alt="">
+                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
+                    <span class="price-cash">A vista R$ 1.200,00</span>
+                    <span class="text1-card">ou</span>
+                    <span class="price-card">R$ 1.400,00</span>
+                    <span class="text2-card">em até</span>
+                    <span class="parcel-price">12x de R$ 142,00</span>
+                </div>
+                <button class="add-product">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="add-product-container">
+                <div class="products-card">
+                    <img src="/images/high/2.jpg" alt="">
+                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
+                    <span class="price-cash">A vista R$ 1.200,00</span>
+                    <span class="text1-card">ou</span>
+                    <span class="price-card">R$ 1.400,00</span>
+                    <span class="text2-card">em até</span>
+                    <span class="parcel-price">12x de R$ 142,00</span>
+                </div>
+                <button class="add-product">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="add-product-container">
+                <div class="products-card">
+                    <img src="/images/high/2.jpg" alt="">
+                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
+                    <span class="price-cash">A vista R$ 1.200,00</span>
+                    <span class="text1-card">ou</span>
+                    <span class="price-card">R$ 1.400,00</span>
+                    <span class="text2-card">em até</span>
+                    <span class="parcel-price">12x de R$ 142,00</span>
+                </div>
+                <button class="add-product">Adicionar ao Carrinho</button>
+            </div>
+
+
+            <div class="add-product-container">
+                <div class="products-card">
+                    <img src="/images/high/2.jpg" alt="">
+                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
+                    <span class="price-cash">A vista R$ 1.200,00</span>
+                    <span class="text1-card">ou</span>
+                    <span class="price-card">R$ 1.400,00</span>
+                    <span class="text2-card">em até</span>
+                    <span class="parcel-price">12x de R$ 142,00</span>
+                </div>
+                <button class="add-product">Adicionar ao Carrinho</button>
+            </div>
+
+
+            <div class="add-product-container">
+                <div class="products-card">
+                    <img src="/images/high/2.jpg" alt="">
+                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
+                    <span class="price-cash">A vista R$ 1.200,00</span>
+                    <span class="text1-card">ou</span>
+                    <span class="price-card">R$ 1.400,00</span>
+                    <span class="text2-card">em até</span>
+                    <span class="parcel-price">12x de R$ 142,00</span>
+                </div>
+                <button class="add-product">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="add-product-container">
+                <div class="products-card">
+                    <img src="/images/high/2.jpg" alt="">
+                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
+                    <span class="price-cash">A vista R$ 1.200,00</span>
+                    <span class="text1-card">ou</span>
+                    <span class="price-card">R$ 1.400,00</span>
+                    <span class="text2-card">em até</span>
+                    <span class="parcel-price">12x de R$ 142,00</span>
+                </div>
+                <button class="add-product">Adicionar ao Carrinho</button>
+            </div>
+
+
+        </div>
+
+       </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <%- include('./partials/footer'); %>
+</footer>
