@@ -1,0 +1,495 @@
+@import "/style.css";
+
+.info-price{
+    max-width: var(--max-width-pattern);
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.info-image-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details-icons{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 0 10px;
+    background-color: var(--electric-indigo);
+    border-radius: 4px;
+}
+
+.di-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 0;
+}
+
+.di-card h2{
+    font-size: 2.4rem;
+}
+
+.di-card img{
+    max-width: 30px;
+    width: 100%;
+}
+
+.image-container{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-container img{
+    display: block;
+}
+
+.image-frame{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.frame-box{
+    position: relative;
+}
+
+#imageBox{
+    max-width: 460px;
+    width: 100%;
+    object-fit: cover;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 4px;
+}
+
+.offer-icon{
+    position: absolute;
+    right: 12px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    animation: blink 1.5s infinite;
+    gap: 10px;
+}
+
+.offer-icon img{
+    background-color: transparent;
+    max-width: 30px;
+    width: 100%;
+}
+
+.offer-icon span{
+    font-size: 2.2rem;
+    color: var(--electric-indigo);
+}
+
+.image-frame img{
+    max-width: 90px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 2px;
+    opacity: .6;
+    transition: all 500ms;
+}
+
+.image-frame img:hover{
+    opacity: 1;
+    transition: all 500ms;
+}
+
+.price-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 41px;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--electric-indigo);
+    border-radius: 4px;
+}
+
+.price-detail-card{
+    display: flex;
+    width: 80%;
+    padding: 8px 15px;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 4px;
+}
+
+.price-container h1{
+    margin-top: 20px;
+}
+
+.price-detail-card img{
+    max-width: 35px;
+    width: 100%;
+}
+
+.price-total{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price-total span{
+    display: block;
+}
+
+.value{
+    margin-top: 20px;
+}
+
+.discount-parcel{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.price-text{
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 35px;
+    color: var(--black);
+}
+
+.value, .discount{
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 35px;
+    color: var(--black);
+    }
+
+.price-container h1{
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 35px;
+    }
+
+.price-btn{
+    background-color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.price-btn:hover, .cep-btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+    transition: all 500ms;
+}
+
+.cep-info{
+    width: 80%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 20px 0;
+    gap: 5px;
+    background-color: var(--electric-indigo);
+}
+
+.cep-info label{
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.cep-info input{
+    font-family: 'roboto';
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--white);
+}
+
+.cep-info input:focus{
+    outline: none;
+}
+
+.cep-info input::placeholder{
+padding: 10px;
+}
+
+.cep-btn{
+    font-weight: 600;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: all 500ms;
+}
+
+.parcel-container{
+    padding: 24px;
+    margin: 100px auto 60px auto;
+    max-width: var(--max-width-pattern);
+    width: 90%;
+    background-color: var(--electric-indigo);
+    border-radius: 4px;
+}
+
+.parcel-icon, .description-icon, .tech-icon{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.parcel-icon img, .tech-icon img, .description-icon img{
+    max-width: 35px;
+    width: 100%;
+}
+
+.parcel-icon h2, .single-product-description h2, .tech-icon h2{
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 35px;
+}
+
+.single-product-description p{
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 35px;
+}
+
+.parcel-container ul li{
+    color: var(--white);
+}
+
+.parcel-list, .tech-container{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 35px;
+}
+
+@media only screen and (max-width: 1257px){
+    .cep-info label{
+        font-size: 1.5rem;
+    }
+
+    .cep-info input, .cep-btn{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1122px){
+
+    .price-text{
+        font-size: 2rem;
+    }
+
+    .value, .discount, .price-btn{
+        font-size: 2.5rem;
+    }
+
+    .di-card h2{
+        font-size: 2rem;
+    }
+
+    #imageBox{
+    padding: 60px 20px;
+    }
+}
+
+@media only screen and (max-width: 996px){
+    .info-price{
+        flex-direction: column;
+    }
+
+    #imageBox{
+        padding: 20px;
+        }
+
+    .price-container, .info-image-container{
+        width: 100%;
+    }
+
+    .image-container{
+        padding: 25px 0 5px 0;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 886px){
+    .parcel-icon h2, .single-product-description h2, .tech-icon h2{
+        font-size: 2.5rem;
+    }
+    .parcel-list, .tech-container, .single-product-description p{
+        font-size: 2rem;
+    }
+
+    .parcel-icon, .description-icon, .tech-icon{
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 719px){
+    .parcel-icon h2, .single-product-description h2, .tech-icon h2{
+        font-size: 2.3rem;
+    }
+    .parcel-list, .tech-container, .single-product-description p{
+        font-size: 1.8rem;
+    }
+
+    .parcel-icon, .description-icon, .tech-icon{
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 652px){
+    .parcel-icon h2, .single-product-description h2, .tech-icon h2{
+        font-size: 2rem;
+    }
+
+    .parcel-list, .tech-container, .single-product-description p{
+        font-size: 1.6rem;
+    }
+
+    .parcel-icon, .description-icon, .tech-icon{
+        margin-bottom: 20px;
+    }
+
+    .cep-info{
+        flex-direction: column;
+    }
+
+    .cep-info label{
+        text-align: center;
+    }
+
+    .price-container h1{
+        text-align: center;
+    }
+
+    .parcel-list{
+        flex-direction: column;
+        /* text-align: center; */
+    }
+
+    .cep-info input{
+        text-align: center;
+    }
+
+    .parcel-container{
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 487px){
+    .di-card h2{
+        font-size: 1.5rem;
+    }
+
+    .di-card img{
+        max-width: 25px;
+    }
+
+    .image-container{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .image-frame{
+        flex-direction: row;
+    }
+
+    .image-frame img{
+        max-width: 50px;
+    }
+
+    .price-total img{
+        display: none;
+    }
+
+    .price-detail-card{
+        flex-direction: column;
+
+    }
+    .price-value{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value{
+        margin-top: 10px;
+    }
+
+    .discount-parcel{
+        gap: 10px;
+    }
+
+    .price-btn{
+        width: 80%;
+    }
+
+    .price-container{
+        gap: 20px;
+    }
+
+}
+
+
+@media only screen and (max-width: 470px){
+    .tech-container{
+        flex-direction: column;
+    }
+    }
+
+@media only screen and (max-width: 366px){
+
+    .details-icons{
+        gap: 10px;
+    }
+
+    .di-card{
+        gap: 5px;
+    }
+
+    .di-card h2{
+        font-size: 1.4rem;
+    }
+    .di-card img{
+        max-width: 20px;
+    }
+}
+
+@media only screen and (max-width: 336px){
+    .parcel-icon h2, .single-product-description h2, .tech-icon h2{
+        font-size: 1.8rem;
+    }
+}
