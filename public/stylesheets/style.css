@@ -16,6 +16,7 @@ html {
 body {
   background-color: var(--black);
   font-family: 'Roboto', ' sans-serif';
+  overflow: overlay;
 }
 
 a,
@@ -1386,4 +1387,18 @@ footer p {
 .table-row li {
   color: gray;
   font-family: 'Share', cursive;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
