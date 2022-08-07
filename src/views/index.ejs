@@ -1,267 +1,264 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Look Up</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="/js/index.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look Up</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/js/index.js"></script>
 </head>
+
 <body>
-    
-    <header class="header-container">
-        <%- include('./partials/header'); %>
-    </header>
 
-    <main>
+  <header class="header-container">
+    <%- include('./partials/header'); %>
+  </header>
 
-        <div class="content">
-            <div class="slides">
-              <input
-                checked
-                class="slide-input"
-                type="radio"
-                name="slide"
-                id="slide1"
-              />
-              <input class="slide-input" type="radio" name="slide" id="slide2" />
-              <input class="slide-input" type="radio" name="slide" id="slide3" />
-      
-              <div class="slide s1">
-                <img src="/images/banner/1.jpg" alt="" />
-              </div>
-      
-              <div class="slide">
-                <img src="/images/banner/2.jpg" alt="" />
-              </div>
-      
-              <div class="slide">
-                <img src="/images/banner/3.jpg" alt="" />
-              </div>
-      
-              <div class="colorContainer">
-                <div class="colors color1"></div>
-                <div class="colors color2"></div>
-                <div class="colors color3"></div>
-              </div>
-            </div>
-      
-            <div class="navigation">
-              <label class="bar" for="slide1"></label>
-              <label class="bar" for="slide2"></label>
-              <label class="bar" for="slide3"></label>
-            </div>
-          </div>
-      
-          <script>
-            let value = 1;
-            setInterval(function () {
-              document.getElementById("slide" + value).checked = true;
-              value++;
-              if (value > 3) {
-                return (value = 1);
-              }
-            }, 5000);
-          </script>
+  <main>
 
-                 <div class="highlights">
+    <div class="content">
+      <div class="slides">
+        <input checked class="slide-input" type="radio" name="slide" id="slide1" />
+        <input class="slide-input" type="radio" name="slide" id="slide2" />
+        <input class="slide-input" type="radio" name="slide" id="slide3" />
 
-                        <div class="highlights-card">
-                            <img src="/images/high/2.jpg" alt="">
-                        </div>
+        <div class="slide s1">
+          <img src="/images/banner/1.jpg" alt="" />
+        </div>
 
-                        <div class="highlights-card">
-                            <img src="/images/high/2.jpg" alt="">
-                        </div>
+        <div class="slide">
+          <img src="/images/banner/2.jpg" alt="" />
+        </div>
 
-                        <div class="highlights-card">
-                            <img src="/images/high/2.jpg" alt="">
-                        </div>
+        <div class="slide">
+          <img src="/images/banner/3.jpg" alt="" />
+        </div>
 
-                </div>
-            
+        <div class="colorContainer">
+          <div class="colors color1"></div>
+          <div class="colors color2"></div>
+          <div class="colors color3"></div>
+        </div>
+      </div>
 
-                 <div class="box-container">
-
-                 <div class="title-container">
-                     <img src="/images/icons/warning.svg" alt="">
-                     <span>Produtos em Oferta</span>
-                 </div>
-
-                 <div class="products-container">
-
-                    <div class="add-product-container">
-                        <div class="products-card">
-                        <img src="/images/high/2.jpg" alt="">
-                        <h2 class="description-card">Nome do produto - mini descrição...</h2>
-                        <span class="price-cash">A vista R$ 1.200,00</span>
-                        <span class="text1-card">ou</span>
-                        <span class="price-card">R$ 1.400,00</span>
-                        <span class="text2-card">em até</span>
-                        <span class="parcel-price">12x de R$ 142,00</span>
-                        </div>
-                        <button class="add-product">Adicionar ao Carrinho</button>
-                   </div>
-
-                   <div class="add-product-container">
-                    <div class="products-card">
-                    <img src="/images/high/2.jpg" alt="">
-                    <h2 class="description-card">Nome do produto - mini descrição...</h2>
-                    <span class="price-cash">A vista R$ 1.200,00</span>
-                    <span class="text1-card">ou</span>
-                    <span class="price-card">R$ 1.400,00</span>
-                    <span class="text2-card">em até</span>
-                    <span class="parcel-price">12x de R$ 142,00</span>
-                    </div>
-                    <button class="add-product">Adicionar ao Carrinho</button>
-               </div>
-
-                      <div class="add-product-container">
-                        <div class="products-card">
-                        <img src="/images/high/2.jpg" alt="">
-                        <h2 class="description-card">Nome do produto - mini descrição...</h2>
-                        <span class="price-cash">A vista R$ 1.200,00</span>
-                        <span class="text1-card">ou</span>
-                        <span class="price-card">R$ 1.400,00</span>
-                        <span class="text2-card">em até</span>
-                        <span class="parcel-price">12x de R$ 142,00</span>
-                        </div>
-                        <button class="add-product">Adicionar ao Carrinho</button>
-                   </div>
-
-                      <div class="add-product-container">
-                        <div class="products-card">
-                        <img src="/images/high/2.jpg" alt="">
-                        <h2 class="description-card">Nome do produto - mini descrição...</h2>
-                        <span class="price-cash">A vista R$ 1.200,00</span>
-                        <span class="text1-card">ou</span>
-                        <span class="price-card">R$ 1.400,00</span>
-                        <span class="text2-card">em até</span>
-                        <span class="parcel-price">12x de R$ 142,00</span>
-                        </div>
-                        <button class="add-product">Adicionar ao Carrinho</button>
-                   </div>
-
-                 </div>
-
-                 </div>
-
-                 <div class="brands">
-
-                    <div class="brand-card">
-                        <img src="/images//banner/intel.jpeg" alt="">
-                    </div>
-
-                    <div class="brand-card">
-                        <img src="/images/banner/ryzen.jpg" alt="">
-                    </div>
-
-                 </div>
-
-                 <div class="box-container">
-
-                    <div class="title-container">
-                        <img src="/images/icons/upgrade.svg" alt="">
-                        <span>Upgrade</span>
-                    </div>
-   
-                    <div class="products-container">
-   
-                       <div class="add-product-container">
-                        <div class="products-card">
-                        <img src="/images/high/2.jpg" alt="">
-                        <h2 class="description-card">Nome do produto - mini descrição...</h2>
-                        <span class="price-cash">A vista R$ 1.200,00</span>
-                        <span class="text1-card">ou</span>
-                        <span class="price-card">R$ 1.400,00</span>
-                        <span class="text2-card">em até</span>
-                        <span class="parcel-price">12x de R$ 142,00</span>
-                        </div>
-                        <button class="add-product">Adicionar ao Carrinho</button>
-                   </div>
-   
-                       <div class="add-product-container">
-                        <div class="products-card">
-                        <img src="/images/high/2.jpg" alt="">
-                        <h2 class="description-card">Nome do produto - mini descrição...</h2>
-                        <span class="price-cash">A vista R$ 1.200,00</span>
-                        <span class="text1-card">ou</span>
-                        <span class="price-card">R$ 1.400,00</span>
-                        <span class="text2-card">em até</span>
-                        <span class="parcel-price">12x de R$ 142,00</span>
-                        </div>
-                        <button class="add-product">Adicionar ao Carrinho</button>
-                   </div>
-   
-                       <div class="add-product-container">
-                        <div class="products-card">
-                        <img src="/images/high/2.jpg" alt="">
-                        <h2 class="description-card">Nome do produto - mini descrição...</h2>
-                        <span class="price-cash">A vista R$ 1.200,00</span>
-                        <span class="text1-card">ou</span>
-                        <span class="price-card">R$ 1.400,00</span>
-                        <span class="text2-card">em até</span>
-                        <span class="parcel-price">12x de R$ 142,00</span>
-                        </div>
-                        <button class="add-product">Adicionar ao Carrinho</button>
-                   </div>
-   
-                       <div class="add-product-container">
-                        <div class="products-card">
-                        <img src="/images/high/2.jpg" alt="">
-                        <h2 class="description-card">Nome do produto - mini descrição...</h2>
-                        <span class="price-cash">A vista R$ 1.200,00</span>
-                        <span class="text1-card">ou</span>
-                        <span class="price-card">R$ 1.400,00</span>
-                        <span class="text2-card">em até</span>
-                        <span class="parcel-price">12x de R$ 142,00</span>
-                        </div>
-                        <button class="add-product">Adicionar ao Carrinho</button>
-                   </div>
-   
-                    </div>
-
-                 </div>
-
-                <div class="ipu-container">
-
-                    <div class="ipu-card">
-                        <h2>Iniciante</h2>
-                        <img src="/images/high/2.jpg" alt="">
-                    </div>
-
-                    <div class="ipu-card">
-                        <h2>Ultra</h2>
-                        <img src="/images/high/2.jpg" alt="">
-                    </div>
-
-                    <div class="ipu-card">
-                        <h2>Ultimate</h2>
-                        <img src="/images/high/2.jpg" alt="">
-                    </div>
-
-                </div>
-
-                <div class="support-container">
-
-                    <%- include('./partials/support');%>
-
-                </div>
-                
-    </main>
-    
-    <div class="top" onclick="topFunction()">
-        <img src="/images/icons/arrowUp.svg" alt="">
+      <div class="navigation">
+        <label class="bar" for="slide1"></label>
+        <label class="bar" for="slide2"></label>
+        <label class="bar" for="slide3"></label>
+      </div>
     </div>
 
-    <script src="/js/scrollTop.js">
-
+    <script>
+      let value = 1;
+      setInterval(function () {
+        document.getElementById("slide" + value).checked = true;
+        value++;
+        if (value > 3) {
+          return (value = 1);
+        }
+      }, 5000);
     </script>
 
-    <footer>
-        <%- include('./partials/footer'); %>
-    </footer>
+    <div class="highlights">
+
+      <div class="highlights-card">
+        <img src="/images/high/2.jpg" alt="">
+      </div>
+
+      <div class="highlights-card">
+        <img src="/images/high/2.jpg" alt="">
+      </div>
+
+      <div class="highlights-card">
+        <img src="/images/high/2.jpg" alt="">
+      </div>
+
+    </div>
+
+
+    <div class="box-container">
+
+      <div class="title-container">
+        <img src="/images/icons/warning.svg" alt="">
+        <span>Produtos em Oferta</span>
+      </div>
+
+      <div class="products-container">
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="brands">
+
+      <div class="brand-card">
+        <img src="/images//banner/intel.jpeg" alt="">
+      </div>
+
+      <div class="brand-card">
+        <img src="/images/banner/ryzen.jpg" alt="">
+      </div>
+
+    </div>
+
+    <div class="box-container">
+
+      <div class="title-container">
+        <img src="/images/icons/upgrade.svg" alt="">
+        <span>Upgrade</span>
+      </div>
+
+      <div class="products-container">
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="ipu-container">
+
+      <div class="ipu-card">
+        <h2>Iniciante</h2>
+        <img src="/images/high/2.jpg" alt="">
+      </div>
+
+      <div class="ipu-card">
+        <h2>Ultra</h2>
+        <img src="/images/high/2.jpg" alt="">
+      </div>
+
+      <div class="ipu-card">
+        <h2>Ultimate</h2>
+        <img src="/images/high/2.jpg" alt="">
+      </div>
+
+    </div>
+
+    <div class="support-container">
+
+      <%- include('./partials/support');%>
+
+    </div>
+
+  </main>
+
+  <div class="top" onclick="topFunction()">
+    <img src="/images/icons/arrowUp.svg" alt="">
+  </div>
+
+  <script src="/js/scrollTop.js">
+
+  </script>
+
+  <footer>
+    <%- include('./partials/footer'); %>
+  </footer>
 
 </body>
+
 </html>
