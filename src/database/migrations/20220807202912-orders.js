@@ -4,23 +4,27 @@ const sequelize = require("sequelize");
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('cart', {
+    await queryInterface.createTable('orders', {
+      order_id: {
+        type: sequelize.STRING,
+        allowNull: false
+      },
+      order_status: {
+        type: sequelize.STRING,
+        allowNull: false
+      },
       cart_id: {
         type: sequelize.STRING,
         allowNull: false
       },
-      product_id: {
-        type: sequelize.STRING,
-        allowNull: false
-      },
-      user_id: {
-        type: sequelize.STRING,
+      payment_method: {
+        type:sequelize.STRING,
         allowNull: false
       }
     });
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.dropTable('cart');
+     await queryInterface.dropTable('orders');
   }
 };
