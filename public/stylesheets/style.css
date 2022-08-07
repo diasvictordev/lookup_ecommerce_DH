@@ -908,6 +908,12 @@ footer p {
     height: 350px;
   }
 
+  .add-product {
+    background-color: var(--white);
+    color: var(--black);
+    transition: all 800ms;
+  }
+
 }
 
 @media only screen and (max-width: 736px) {
@@ -925,13 +931,17 @@ footer p {
   .brands {
     margin-bottom: 40px;
   }
-}
 
-@media only screen and (max-width: 736px) {
   .products-container {
     grid-template-columns: 1fr;
     justify-items: center;
   }
+
+  .highlights{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 }
 
 @media only screen and (max-width: 680px) {
@@ -978,10 +988,6 @@ footer p {
 
 @media only screen and (max-width: 425px) {
   .brands {
-    display: none;
-  }
-
-  .highlights {
     display: none;
   }
 
