@@ -16,52 +16,56 @@
 
     <main>
 
-            <div class="slider">
-
-                <div class="slides">
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-
-                    <div class="slide first">
-                        <img src="/images/banner/1.jpg" alt="">
-                    </div>
-
-                    <div class="slide">
-                        <img src="/images/banner/2.jpg" alt="">
-                    </div>
-
-                    <div class="slide">
-                        <img src="/images/banner/3.jpg" alt="">
-                    </div>
-
-                    <div class="slide">
-                        <img src="/images/banner/4.jpg" alt="">
-                    </div>
-
-                    <div class="navigation-auto">
-
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-
-                    </div>
-                </div>
-
-                <div class="manual-navigation">
-                    
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
-
-                </div>
-
+        <div class="content">
+            <div class="slides">
+              <input
+                checked
+                class="slide-input"
+                type="radio"
+                name="slide"
+                id="slide1"
+              />
+              <input class="slide-input" type="radio" name="slide" id="slide2" />
+              <input class="slide-input" type="radio" name="slide" id="slide3" />
+      
+              <div class="slide s1">
+                <img src="/images/banner/1.jpg" alt="" />
+              </div>
+      
+              <div class="slide">
+                <img src="/images/banner/2.jpg" alt="" />
+              </div>
+      
+              <div class="slide">
+                <img src="/images/banner/3.jpg" alt="" />
+              </div>
+      
+              <div class="colorContainer">
+                <div class="colors color1"></div>
+                <div class="colors color2"></div>
+                <div class="colors color3"></div>
+              </div>
             </div>
+      
+            <div class="navigation">
+              <label class="bar" for="slide1"></label>
+              <label class="bar" for="slide2"></label>
+              <label class="bar" for="slide3"></label>
+            </div>
+          </div>
+      
+          <script>
+            let value = 1;
+            setInterval(function () {
+              document.getElementById("slide" + value).checked = true;
+              value++;
+              if (value > 3) {
+                return (value = 1);
+              }
+            }, 5000);
+          </script>
 
-                <!-- <div class="highlights">
+                 <div class="highlights">
 
                         <div class="highlights-card">
                             <img src="/images/high/2.jpg" alt="">
@@ -76,46 +80,6 @@
                         </div>
 
                 </div>
-
-
-                <div class="highlights-slider">
-
-                    <div class="highlights-slides">
-                        <input type="radio" name="highlights-btn" id="highlights1">
-                        <input type="radio" name="highlights-btn" id="highlights2">
-                        <input type="radio" name="highlights-btn" id="highlights3">
-            
-                        <div class="slides-h first">
-                            <img src="/images/banner/1.jpg" alt="">
-                        </div>
-            
-                        <div class="slides-h">
-                            <img src="/images/banner/2.jpg" alt="">
-                        </div>
-            
-                        <div class="slides-h">
-                            <img src="/images/banner/3.jpg" alt="">
-                        </div>
-            
-            
-                        <div class="highlights-auto">
-            
-                            <div class="highlights-btn1"></div>
-                            <div class="highlights-btn2"></div>
-                            <div class="highlights-btn3"></div>
-            
-                        </div>
-                    </div>
-            
-                    <div class="manual-highlights">
-                        
-                        <label for="highlights1" class="manual-btn"></label>
-                        <label for="highlights2" class="manual-btn"></label>
-                        <label for="highlights3" class="manual-btn"></label>
-            
-                    </div>
-            
-                </div> -->
             
 
                  <div class="box-container">
