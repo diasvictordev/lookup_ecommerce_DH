@@ -319,112 +319,6 @@ span {
   background-color: #444;
 }
 
-.slider {
-  margin: var(--centralize-container);
-  max-width: var(--max-width-pattern);
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-}
-
-.slides {
-  width: 400%;
-  height: 400px;
-  display: flex;
-}
-
-.slides input {
-  display: none;
-}
-
-.slide {
-  max-width: var(--max-width-pattern);
-  width: 100%;
-  position: relative;
-  transition: 2s;
-}
-
-.slide img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-.manual-navigation {
-  position: absolute;
-  max-width: var(--max-width-pattern);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.manual-btn {
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
-}
-
-.manual-btn:hover {
-  background-color: white;
-}
-
-#radio1:checked~.first {
-  margin-left: 0;
-}
-
-#radio2:checked~.first {
-  margin-left: -25%;
-}
-
-#radio3:checked~.first {
-  margin-left: -50%;
-}
-
-#radio4:checked~.first {
-  margin-left: -75%;
-}
-
-.navigation-auto div {
-  border: 2px solid blue;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.navigation-auto {
-  position: absolute;
-  max-width: var(--max-width-pattern);
-  width: 100%;
-  margin-top: 400px;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation-auto div:not(:last-child) {
-  margin-right: 40px;
-}
-
-#radio1:checked~.navigation-auto .auto-btn1 {
-  background-color: white;
-}
-
-#radio2:checked~.navigation-auto .auto-btn2 {
-  background-color: white;
-}
-
-#radio3:checked~.navigation-auto .auto-btn3 {
-  background-color: white;
-}
-
-#radio4:checked~.navigation-auto .auto-btn4 {
-  background-color: white;
-}
 
 .highlights {
   margin: 30px auto;
@@ -448,102 +342,101 @@ span {
 
 }
 
-.highlights-slider {
-  margin: var(--centralize-container);
+
+.content{
+  height: 450px;
   max-width: var(--max-width-pattern);
   width: 90%;
-  height: 200px;
   overflow: hidden;
-}
-
-.highlights-slides {
-  width: 410%;
-  height: 170px;
-  display: flex;
-}
-
-.highlights-slides input {
-  display: none;
-}
-
-.slides-h {
-  width: var(--max-width-pattern);
+  margin: 0 auto;
   position: relative;
-  transition: 2s;
 }
 
-.slides-h img {
+.slide img{
   width: 100%;
-  border-radius: 4px;
 }
 
-.manual-highlights {
-  position: absolute;
-  max-width: var(--max-width-pattern);
-  width: 90%;
+.navigation{
+  left: 50%;
+  bottom: 3%;
   display: flex;
-  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
 }
 
-.manual-btn {
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 10px;
+.bar{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: 1s;
+  border: 1px solid white;
 }
 
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
-}
-
-.manual-btn:hover {
+.bar:hover{
   background-color: white;
 }
 
-#highlights1:checked~.first {
+
+.slides{
+  display: flex;
+  width: 300%;
+  height: 450px;
+}
+
+.slide{
+  width: 34%;
+  transition: .6s;
+}
+
+#slide1:checked ~ .s1{
   margin-left: 0;
 }
 
-#highlights2:checked~.first {
-  margin-left: -25%;
+#slide2:checked ~ .s1{
+  margin-left: -34%;
 }
 
-#highlights3:checked~.first {
-  margin-left: -50%;
+#slide3:checked ~ .s1{
+  margin-left: -68%;
 }
 
-.highlights-auto div {
-  border: 2px solid blue;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.highlights-auto {
+.navigation{
   position: absolute;
-  width: var(--max-width-pattern);
-  width: 90%;
-  margin-top: 170px;
+}
+.slide-input{
+  display: none;
+}
+
+.colorContainer{
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
   display: flex;
-  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
 }
 
-.highlights-auto div:not(:last-child) {
-  margin-right: 40px;
+.colors{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid white;
 }
 
-#highlights1:checked~.highlights-auto .highlights-btn1 {
-  background-color: white;
+#slide1:checked ~ .colorContainer .color1{
+  z-index: 2;
+  background-color: blueviolet;
 }
 
-#highlights2:checked~.highlights-auto .highlights-btn2 {
-  background-color: white;
+#slide2:checked ~ .colorContainer .color2{
+  z-index: 2;
+  background-color: blueviolet;
 }
 
-#highlights3:checked~.highlights-auto .highlights-btn3 {
-  background-color: white;
+#slide3:checked ~ .colorContainer .color3{
+  z-index: 2;
+  background-color: blueviolet;
 }
 
 .box-container {
