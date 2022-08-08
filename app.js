@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 
-const mainRouter = require('./src/routes/mainRouter');
+const indexRouter = require('./src/routes/index');
 const userRouter = require('./src/routes/userRouter');
 
 const path = require('path');
+const { index } = require('./src/controllers/mainController');
 
 app.use(express.json());
 
@@ -15,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', mainRouter);
+app.use('/', indexRouter);
 app.use('/usuario', userRouter);
 
 
