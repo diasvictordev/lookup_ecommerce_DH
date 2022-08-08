@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartphones</title>
+  <link rel="stylesheet" href="/stylesheets/list-products.css">
+  <script src="/js/filter.js"></script>
+</head>
+
+<body>
+
+  <header class="header-container">
+    <%- include('./partials/header'); %>
+  </header>
+
+  <main>
+
+    <%- include('./partials/filter'); %>    
+
+    <div class="box-container">
+
+      <div class="title-container">
+        <img src="/images/icons/warning.svg" alt="">
+        <span>Produtos em Oferta</span>
+      </div>
+
+      <div class="products-container">
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="add-product-container">
+          <div class="products-card">
+            <img src="/images/high/2.jpg" alt="">
+            <h2 class="description-card">Nome do produto - mini descrição...</h2>
+            <span class="price-cash">A vista R$ 1.200,00</span>
+            <span class="text1-card">ou</span>
+            <span class="price-card">R$ 1.400,00</span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de R$ 142,00</span>
+          </div>
+          <button class="add-product">Adicionar ao Carrinho</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <%- include('./partials/page');%>
+
+
+    <div class="support-container">
+
+      <%- include('./partials/support');%>
+
+    </div>
+
+  </main>
+
+  <div class="top" onclick="topFunction()">
+    <img src="/images/icons/arrowUp.svg" alt="">
+  </div>
+
+
+
+  <footer>
+    <%- include('./partials/footer'); %>
+  </footer>
+
+</body>
+
+</html>
