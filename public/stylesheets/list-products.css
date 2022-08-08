@@ -1,201 +1,174 @@
 @import "style.css";
 
-.list-products{
-    max-width: var(--max-width-pattern);
-    margin: var(--centralize-container);
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 0;
+.filter{
+  max-width: var(--max-width-pattern);
+  margin: var(--centralize-container);
+  width: 90%;
+  display: none;
 }
 
-.list-typography{
-    font-size: 2.4rem;
-    color: var(--white);
-    margin-bottom: 30px;
-    display: block;
+
+.list-products{
+  max-width: var(--max-width-pattern);
+  margin: var(--centralize-container);
+  display: flex;
+  justify-content: space-between;
+  /* padding: 30px 0; */
+  width: 90%;
+}
+
+.list-typography, .filter-btn{
+  font-size: 2.4rem;
+  color: var(--white);
+  margin-bottom: 30px;
+  display: block;
 }
 
 .check-container{
-  color: #fff;
-  display: flex;
-  align-items: center;
+color: #fff;
+display: flex;
+align-items: center;
 }
 
 .check-container label{
-  font-size: 1.6rem;
-  cursor: pointer;
-  display: flex;
-  padding: 6px;
+font-size: 1.6rem;
+cursor: pointer;
+display: flex;
+padding: 6px;
 }
 
 .check-container input[type='checkbox']{
-  cursor: pointer;
-  opacity: 0;
-  position: absolute;
-  display: inline-block;
+cursor: pointer;
+opacity: 0;
+position: absolute;
+display: inline-block;
 }
 
 .check-container label::before{
-  content: '';
-  width: 1em;
-  height: 1em;
-  border: 0.05em solid var(--white);
-  border-radius: 4px;
-  margin-right: 5px;
+content: '';
+width: 1em;
+height: 1em;
+border: 0.05em solid var(--white);
+border-radius: 4px;
+margin-right: 5px;
 }
 
 .check-container label:hover::before, .check-container input[type='checkbox']:hover + label::before{
-  background-color: var(--electric-indigo);
+background-color: var(--electric-indigo);
 }
 
 .filter-category{
-  max-width: var(--max-width-pattern);
-  width: 90%;
-  margin: var(--centralize-container);
-  background-color: var(--electric-indigo);
-  display: flex;
-  display: none;
-  border-radius: 4px;
-}
-
-/* Style the tab */
-.tab {
+max-width: var(--max-width-pattern);
+width: 90%;
+margin: var(--centralize-container);
+background-color: var(--electric-indigo);
 display: flex;
-flex-direction: column;
-justify-content: center;
-border: 1px solid #ccc;
-width: 40%;
-border-radius: 4px 0 0 4px;
-border: 1px solid #fff;
+display: none;
+border-radius: 4px;
 }
-
-/* Style the buttons inside the tab */
-.tab button {
-display: block;
-background-color: inherit;
-color: #fff;
-padding: 20px 10px;
-width: 100%;
-border: none;
-outline: none;
-text-align: left;
-cursor: pointer;
-transition: 0.3s;
-font-size: 1.6rem;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-background-color: #fff;
-color: #000;
-}
-
-/* Style the tab content */
-.tabcontent {
-padding: 0px 12px;
-border: 1px solid #fff;
-width: 60%;
-border-left: none;
-height: 250px;
-border-radius: 0 4px 4px 0;
-}
-
 
 /* .check-container input[type='checkbox']:focus + label::before{
-  background-color: var(--electric-indigo);
+background-color: var(--electric-indigo);
 } */
 
 .check-container input[type='checkbox']:checked + label::before{
-  background-color: var(--electric-indigo);
-  content: '\002714';
-  display: flex;
-  justify-content: center;
-  align-items: center;
+background-color: var(--electric-indigo);
+content: '\002714';
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .page{
-  color: #fff;
-  text-align: center;
-  margin-bottom: 30px;
+color: #fff;
+text-align: center;
+margin-bottom: 30px;
 }
 
 .page span{
-  font-weight: 400;
-  font-size: 2.6rem;
-  padding: 0 5px 0 0;
+font-weight: 400;
+font-size: 2.6rem;
+padding: 0 5px 0 0;
 }
 
 .page ul{
-  display: inline-block;
+display: inline-block;
 }
 
 .page ul li{
-  display: inline-block;
+display: inline-block;
 }
 
 .page ul li a{
-  font-size: 2.4rem;
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 50%;
+font-size: 2.4rem;
+display: inline-block;
+padding: 6px 12px;
+border-radius: 50%;
 }
 
 .page ul li a:hover{
-  background-color: var(--electric-indigo);
+background-color: var(--electric-indigo);
 }
 
 
 .top{
-  right: 5%; 
-  position: fixed;
-  top: 70%;
-  display: none;
+right: 5%; 
+position: fixed;
+top: 70%;
+display: none;
 }
 
 .top img:hover{
-  background-color: var(--electric-indigo);
-  border-radius: 50%;
-  transition: all 1s;
+background-color: var(--electric-indigo);
+border-radius: 50%;
+transition: all 1s;
 }
 
+.filter-btn, .filter-sub{
+background-color: var(--electric-indigo);
+padding: 5px 10px;
+border-radius: 4px;
+}
 
-@media only screen and (max-width: 736px){ 
+.list-products{
+position: relative;
+margin-bottom: 100px;
+}
+
+.filter-sub{
+position: absolute;
+left: 50%;
+color: #fff;
+border: none;
+font-size: 25px;
+padding: 10px 20px;
+top: 100%;
+}
+
+@media only screen and (max-width: 737px){
   .list-products{
-    display: none;
+    width: 100vw;
+    height: 100vh;
+      display: none;
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
   }
 
-  .filter-category{
-    display: flex;
-}
-
-.check-container input[type='checkbox']{
-  width: 50%;
-}
-
-}
-
-@media only screen and (max-width: 484px){
-  .filter-category{
-    flex-direction: column-reverse;
+  .filter{
+      display: flex;
+      justify-content: flex-end;
   }
 
-  .tab{
-    width: 100%;
-border: 1px solid #fff;
-border-top:none ;
-
+  .filter-sub{
+position: static;
   }
 
-  .tabcontent{
-    width: 100%;
-border: 1px solid #fff;
-
-  }
-}
-
-@media only screen and (max-width: 462px){
-  .top img{
-    background-color: #000;
-    border-radius: 50%;
-  }
+  
 }
