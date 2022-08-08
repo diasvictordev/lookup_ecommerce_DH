@@ -2,11 +2,10 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 
-const indexRouter = require('./src/routes/index');
+const indexRouter = require('./src/routes/indexRouter');
 const userRouter = require('./src/routes/userRouter');
 
 const path = require('path');
-const { index } = require('./src/controllers/mainController');
 
 app.use(express.json());
 
