@@ -11,7 +11,7 @@ module.exports = {
         allowNull: false
       },
       price: {
-        type: sequelize.INTEGER,
+        type: sequelize.FLOAT,
         allowNull: false
       },
       category: {
