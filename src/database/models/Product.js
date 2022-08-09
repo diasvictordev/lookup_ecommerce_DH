@@ -7,7 +7,7 @@ module.exports = (sequelize, datatypes)=>{
             allowNull: false
           },
           price: {
-            type: datatypes.INTEGER,
+            type: datatypes.FLOAT,
             allowNull: false
           },
           category: {
