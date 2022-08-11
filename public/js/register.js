@@ -19,7 +19,7 @@ function checkInputs() {
     const emailValue = email.value;
     const passwordValue = password.value;
     const passwordConfirmeValue = passwordConfirme.value;
-
+    
     if(nameValue == ""){
         setErrorFor(name, "Preencha este Campo")
     } else {
