@@ -37,6 +37,10 @@ module.exports = {
       brand: {
         type: sequelize.STRING,
         allowNull: false
+      },
+      image: {
+        type: sequelize.STRING,
+        allowNull: false
       }
     });
   },

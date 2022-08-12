@@ -25,7 +25,7 @@ module.exports = (sequelize, datatypes)=>{
 
     Cart.associate = (models)=>{
         Cart.belongsTo(models.User, {
-            foreignKey: 'user_id', as : 'user'
+            foreignKey: 'user_id', as : 'users'
         }),
         Cart.belongsTo(models.Product, {
             foreignKey: 'product_id', as : 'product'
