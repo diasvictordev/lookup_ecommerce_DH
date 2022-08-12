@@ -6,6 +6,9 @@ const mainController = {
     carrinho: (req,res) => {
         res.render('cart');
     },
+    detail: (req, res)=>{
+        res.render('detail-product')
+    }
 
 }
 

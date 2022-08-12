@@ -11,7 +11,7 @@ module.exports = {
         category: "Notebook",
         amount: 26,
         state: "Em oferta",
-        name: ''
+        name: "Notebook Acer Aspire 5 Intel Core i5-10210U, 8GB RAM, SSD 256GB, 15.6 Full HD"
         description:
         brand:
         image:

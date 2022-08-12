@@ -315,11 +315,6 @@ span {
   border: none;
 }
 
-.openbtn:hover {
-  background-color: #444;
-}
-
-
 .highlights {
   margin: 30px auto;
   max-width: var(--max-width-pattern);
