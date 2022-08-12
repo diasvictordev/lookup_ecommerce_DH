@@ -1,4 +1,4 @@
-@import "/style.css";
+@import "style.css";
 
 .info-price{
     max-width: var(--max-width-pattern);
