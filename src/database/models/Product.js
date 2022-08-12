@@ -27,10 +27,14 @@ module.exports = (sequelize, datatypes)=>{
             allowNull: false
           },
           description: {
-            type: dataypes.STRING,
+            type: datatypes.STRING,
             allowNull: false
           },
           brand: {
+            type: datatypes.STRING,
+            allowNull: false
+          },
+          image: {
             type: datatypes.STRING,
             allowNull: false
           }
