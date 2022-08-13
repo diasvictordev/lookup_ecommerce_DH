@@ -34,11 +34,15 @@ module.exports = {
         type: sequelize.STRING,
         allowNull: false
       },
-      brand: {
+      description_2: {
+        type: sequelize.STRING,
+        allowNullfalse
+      },
+      image: {
         type: sequelize.STRING,
         allowNull: false
       },
-      image: {
+      extension: {
         type: sequelize.STRING,
         allowNull: false
       }
