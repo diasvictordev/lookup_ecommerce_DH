@@ -30,11 +30,15 @@ module.exports = (sequelize, datatypes)=>{
             type: datatypes.STRING,
             allowNull: false
           },
-          brand: {
+            description_2: {
+              type: datatypes.STRING,
+              allowNullfalse
+            },
+          image: {
             type: datatypes.STRING,
             allowNull: false
           },
-          image: {
+          extension: {
             type: datatypes.STRING,
             allowNull: false
           }
