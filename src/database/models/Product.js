@@ -27,11 +27,11 @@ module.exports = (sequelize, datatypes)=>{
             allowNull: false
           },
           description: {
-            type: datatypes.STRING,
+            type: datatypes.TEXT,
             allowNull: false
           },
             description_2: {
-              type: datatypes.STRING,
+              type: datatypes.TEXT,
               allowNullfalse
             },
           image: {

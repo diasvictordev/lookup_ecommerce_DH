@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
-const bcrypt = require('bcrypt')
 
 const indexRouter = require('./src/routes/indexRouter');
 const userRouter = require('./src/routes/userRouter');
