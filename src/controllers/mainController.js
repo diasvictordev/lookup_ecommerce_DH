@@ -23,7 +23,7 @@ const mainController = {
         
         productsResume.map(available=>{if(available.amount > 0){ productAvailable.push(available) }})
 
-        res.render("index",{productAvailable})
+        return res.render("index",{productAvailable})
       })
       .catch((erro) => {
         console.log(erro);

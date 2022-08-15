@@ -87,11 +87,19 @@
 
       <div class="products-container">
 
+
+        <% productAvailable.forEach(product=> {%>
+
+
+
         <div class="add-product-container">
           <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
+
+            <% const imageFile = product.image +"-1"+ product.extension %>
+
+            <img src="/images/products/<%=imageFile%>" alt="">
+            <h2 class="description-card"> <%= product.name%> </h2>
+            <span class="price-cash"> <%= product.price%> </span>
             <span class="text1-card">ou</span>
             <span class="price-card">R$ 1.400,00</span>
             <span class="text2-card">em até</span>
@@ -99,6 +107,9 @@
           </div>
           <button class="add-product">Adicionar ao Carrinho</button>
         </div>
+
+      <% }) %>
+      
 
        
 
