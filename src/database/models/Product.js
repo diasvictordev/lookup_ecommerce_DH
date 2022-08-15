@@ -27,7 +27,7 @@ module.exports = (sequelize, datatypes)=>{
             allowNull: false
           },
           description: {
-            type: dataypes.STRING,
+            type: datatypes.STRING,
             allowNull: false
           },
           brand: {
