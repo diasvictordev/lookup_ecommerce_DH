@@ -130,31 +130,7 @@ module.exports = {
           "Marca: Philco, Modelo: Hit P8 32 GB, Tela Infinita Drop Notch IPS HD +: Tela com 6’’ IPS e resolução HD, Processador: Octa Core A55 1.6 GHz, Sistema Operacional: Android 11, Memória interna: 32 GB | mais suporte para cartão SD de até 512 GB, Memória RAM: 3 GB, Bateria: 3000 mAh, Câmera Frontal: 5 MP, Câmera Traseira: Multi Cam – 13 MP + 2x 0.3 MP1 + 2 MP, Redes: 2G/3G/4G, Sensor de digital: Sim, Reconhecimento facial: Sim",
         image: "Smartphone-Philco-Hit-P8-3GB-RAM-32GB-Octa-Core-Gold",
         extension: "jpg",
-      },
-      {
-        product_id: uuidv4().toString(),
-        price: 00,
-        category: "",
-        amount: 28,
-        state: "",
-        name: "",
-        description: "",
-        description_2: "",
-        image: "",
-        extension: "",
-      },
-      {
-        product_id: uuidv4().toString(),
-        price: 00,
-        category: "",
-        amount: 28,
-        state: "",
-        name: "",
-        description: "",
-        description_2: "",
-        image: "",
-        extension: "",
-      },
+      }
     ]);
   },
 
@@ -162,4 +138,3 @@ module.exports = {
     await queryInterface.bulkDelete("products", null, {});
   },
 };
-s;

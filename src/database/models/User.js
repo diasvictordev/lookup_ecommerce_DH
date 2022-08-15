@@ -16,7 +16,7 @@ module.exports = (sequelize, datatypes)=>{
             allowNull: false
           },
           tel: {
-            type: datatypes.INTEGER,
+            type: datatypes.STRING,
             allowNull: false
           },
           email:{
@@ -32,7 +32,7 @@ module.exports = (sequelize, datatypes)=>{
             allowNull: false
           },
           cpf: {
-            type: datatypes.INTEGER(11),
+            type: datatypes.STRING,
             allowNull: false
           }
     }
