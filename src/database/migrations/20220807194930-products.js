@@ -31,10 +31,18 @@ module.exports = {
         allowNull: false
       },
       description: {
+        type: sequelize.TEXT,
+        allowNull: false
+      },
+      description_2: {
+        type: sequelize.TEXT,
+        allowNull:false
+      },
+      image: {
         type: sequelize.STRING,
         allowNull: false
       },
-      brand: {
+      extension: {
         type: sequelize.STRING,
         allowNull: false
       }

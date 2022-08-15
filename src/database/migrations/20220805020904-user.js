@@ -19,7 +19,7 @@ module.exports = {
         allowNull: false
       },
       tel: {
-        type: sequelize.INTEGER,
+        type: sequelize.STRING,
         allowNull: false
       },
       email:{
@@ -35,7 +35,7 @@ module.exports = {
         allowNull: false
       },
       cpf: {
-        type: sequelize.INTEGER(11),
+        type: sequelize.STRING,
         allowNull: false
       }
     });
