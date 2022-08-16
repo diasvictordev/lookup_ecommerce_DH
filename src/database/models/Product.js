@@ -33,7 +33,7 @@ module.exports = (sequelize, datatypes)=>{
           },
             description_2: {
               type: datatypes.TEXT,
-              allowNullfalse
+              allowNull: false
 
             },
           image: {
