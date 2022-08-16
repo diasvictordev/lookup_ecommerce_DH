@@ -7,6 +7,7 @@ module.exports = {
     await queryInterface.createTable('orders', {
       order_id: {
         type: sequelize.STRING,
+        primaryKey: true,
         allowNull: false
       },
       order_status: {

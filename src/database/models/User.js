@@ -4,8 +4,8 @@ module.exports = (sequelize, datatypes)=>{
     const collumns = {
         id: {
             type: datatypes.STRING,
-            allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            allowNull: false
           },
           user_name: {
             type: datatypes.STRING,
