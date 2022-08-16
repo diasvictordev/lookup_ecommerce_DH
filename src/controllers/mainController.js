@@ -7,7 +7,7 @@ const mainController = {
       where: {
         [Op.or]: [
           {
-            category: "Notebook",
+            state: "Em oferta",
           },
           { category: "Smartphone" },
         ],
@@ -19,11 +19,13 @@ const mainController = {
           productsResume.push(product._previousDataValues)
         });
 
-        const productAvailable = []
+        const offer = []
+        const smartphone = []
         
-        productsResume.map(available=>{if(available.amount > 0){ productAvailable.push(available) }})
+        productsResume.map(product1=>{if(product1.state == "Em oferta"){ offer.push(product1) }})
+        productsResume.map(product2=>{if(product2.category == "Smartphone"){ smartphone.push(product2) }})
 
-        return res.render("index",{productAvailable})
+        return res.render("index",{offer, smartphone})
       })
       .catch((erro) => {
         console.log(erro);
