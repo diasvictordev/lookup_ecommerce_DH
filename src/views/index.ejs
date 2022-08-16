@@ -50,17 +50,6 @@
       </div>
     </div>
 
-    <script>
-      let value = 1;
-      setInterval(function () {
-        document.getElementById("slide" + value).checked = true;
-        value++;
-        if (value > 3) {
-          return (value = 1);
-        }
-      }, 5000);
-    </script>
-
     <div class="highlights">
 
       <div class="highlights-card">
@@ -89,28 +78,27 @@
 
         <% offer.forEach(product=> {%>
 
-        <div class="add-product-container">
-          <div class="products-card">
+          <div class="add-product-container">
+            <div class="products-card">
 
-            <% const imageFile = product.image +"-1"+ product.extension %>
+              <% const imageFile=product.image +"-1"+ product.extension %>
 
-            <img src="/images/products/<%=imageFile%>" alt="">
-            <h2 class="description-card"> <%= product.name%> </h2>
-            <span class="price-cash"> <%= product.price%> </span>
-            <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
-            <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
+                <img src="/images/products/<%=imageFile%>" alt="">
+                <h2 class="description-card">
+                  <%= product.name%>
+                </h2>
+                <span class="price-cash">
+                  <%= product.price%>
+                </span>
+                <span class="text1-card">ou</span>
+                <span class="price-card">R$ 1.400,00</span>
+                <span class="text2-card">em até</span>
+                <span class="parcel-price">12x de R$ 142,00</span>
+            </div>
+            <button class="add-product">Adicionar ao Carrinho</button>
           </div>
-          <button class="add-product">Adicionar ao Carrinho</button>
-        </div>
 
-      <% }) %>
-      
-
-       
-
-      
+          <% }) %>
 
       </div>
 
@@ -137,61 +125,31 @@
 
       <div class="products-container">
 
-        <div class="add-product-container">
-          <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
-            <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
-            <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
-          </div>
-          <button class="add-product">Adicionar ao Carrinho</button>
-        </div>
+        <% smartphone.forEach(product=> {%>
 
-        <div class="add-product-container">
-          <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
-            <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
-            <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
-          </div>
-          <button class="add-product">Adicionar ao Carrinho</button>
-        </div>
+          <div class="add-product-container">
+            <div class="products-card">
 
-        <div class="add-product-container">
-          <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
-            <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
-            <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
-          </div>
-          <button class="add-product">Adicionar ao Carrinho</button>
-        </div>
+              <% const imageFile=product.image +"-1"+ product.extension %>
 
-        <div class="add-product-container">
-          <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
-            <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
-            <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
+                <img src="/images/products/<%=imageFile%>" alt="">
+                <h2 class="description-card">
+                  <%= product.name%>
+                </h2>
+                <span class="price-cash">
+                  <%= product.price%>
+                </span>
+                <span class="text1-card">ou</span>
+                <span class="price-card">R$ 1.400,00</span>
+                <span class="text2-card">em até</span>
+                <span class="parcel-price">12x de R$ 142,00</span>
+            </div>
+            <button class="add-product">Adicionar ao Carrinho</button>
           </div>
-          <button class="add-product">Adicionar ao Carrinho</button>
-        </div>
+
+          <% }) %>
 
       </div>
-
-    </div>
 
     <div class="ipu-container">
 
@@ -224,13 +182,15 @@
     <img src="/images/icons/arrowUp.svg" alt="">
   </div>
 
-  <script src="/js/scrollTop.js">
 
-  </script>
 
   <footer>
     <%- include('./partials/footer'); %>
   </footer>
+
+  <script src="/js/scrollTop.js"></script>
+  <script src="/js/carrousel.js"></script>
+  <script src="/js/formatPrice.js"></script>
 
 </body>
 
