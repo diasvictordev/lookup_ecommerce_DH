@@ -8,8 +8,6 @@ const userController = require('../controllers/userController');
 // Middlewares
 
 const upload = require('../middlewares/multerMiddleware');
-const registerValidator = require('../middlewares/registerMiddleware');
-const loginValidator = require('../middlewares/loginMiddleware');
 
 // Formulario de Registro 
 
@@ -25,7 +23,7 @@ router.get('/login', userController.login);
 
 // Processo de Login 
 
-router.post('/login',loginValidator, userController.processoLogin);
+router.post('/login', userController.processoLogin);
 
 
 
