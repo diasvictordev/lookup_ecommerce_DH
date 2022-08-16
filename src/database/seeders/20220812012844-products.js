@@ -129,7 +129,7 @@ module.exports = {
         description_2:
           "Marca: Philco, Modelo: Hit P8 32 GB, Tela Infinita Drop Notch IPS HD +: Tela com 6’’ IPS e resolução HD, Processador: Octa Core A55 1.6 GHz, Sistema Operacional: Android 11, Memória interna: 32 GB | mais suporte para cartão SD de até 512 GB, Memória RAM: 3 GB, Bateria: 3000 mAh, Câmera Frontal: 5 MP, Câmera Traseira: Multi Cam – 13 MP + 2x 0.3 MP1 + 2 MP, Redes: 2G/3G/4G, Sensor de digital: Sim, Reconhecimento facial: Sim",
         image: "Smartphone-Philco-Hit-P8-3GB-RAM-32GB-Octa-Core-Gold",
-        extension: "jpg",
+        extension: ".jpg",
       },
       {
       product_id: uuidv4().toString(),
@@ -143,7 +143,7 @@ module.exports = {
       description_2:
         "Marca: Samsung, Referência: SM-P615NZAVZTO, Modelo: Tab S6 Lite, Linha: Galaxy, Memória interna: 64GB, Acessórios: Caneta S-Pen - Capa protetora, Tamanho da tela: 10,4, Tecnologia: 4G, Conectividade: Bluetooth - Wi-Fi, Conexões: USB tipo C ,Sistema operacional: Android 10",
       image: "Tablet Samsung Galaxy Tab S6 Lite 10,4” 4G Wi-Fi - 64GB Android 10 Octa-Core com Caneta e Capa",
-      extension: "jpg",
+      extension: ".jpg",
     },
     {
       product_id: uuidv4().toString(),
@@ -157,7 +157,7 @@ module.exports = {
       description_2:
         "Câmera: Câmera Traseira Resolução: 8.0 MP | Câmeras Traseiras Foco Automático: Sim | Câmera Frontal Resolução: 5.0MP | Câmera Traseira Flash: Não | Resolução de Gravação de Vídeos: FHD (1920 x 1080) @30fps, Bateria, Capacidade da Bateria (mAh, Typical): 7040 | Removível: Não, Processador: Velocidade do Processador: 2GHz | Tipo de Processador: Octa Core",
       image: "Tablet Samsung Galaxy Tab A8, 64GB, 4GB RAM, WiFi, Tela 10.5, Câmera 8MP, Android 11, Cinza - SM-X200NZAUZTO",
-      extension: "jpg",
+      extension: ".jpg",
     },
     {
       product_id: uuidv4().toString(),
@@ -171,7 +171,7 @@ module.exports = {
       description_2:
         "Marca: Positivo, Referência: 11160919, Modelo: Twist Tab, Memória interna: 32GB ,Tamanho da tela: 7 ,Conectividade: Wi-Fi, Sistema operacional: Android Oreo versão GO",
       image: "Tablet Positivo Twist Tab 7” Wi-Fi 32GB - Android Oreo Quad-Core",
-      extension: "jpg",
+      extension: ".jpg",
     },
     {
       product_id: uuidv4().toString(),
@@ -185,7 +185,7 @@ module.exports = {
       description_2:
         "Tela: Tamanho: 8.7' (220.5mm) | Resolução: 1340 x 800 (WXGA+) | Tecnologia: TFT | Profundidade de Cor: 16 Milhões, Suporte de engrenagem: Galaxy Buds Pro, Galaxy Buds Live, Galaxy Buds +, Galaxy Buds, Gear IconX (2018) | S voz: Não | Mobile TV: Não",
       image: "Tablet Samsung Galaxy A7 Lite 4G, 32GB, Android 11, Tela de 8.7, Grafite - SM-T225NZAPZTO",
-      extension: "jpg",
+      extension: ".jpg",
     },
     {
       product_id: uuidv4().toString(),
@@ -199,7 +199,7 @@ module.exports = {
       description_2:
         "Marca: Philco, Referência: 58203023, Modelo: PTB8RSG 4G, Memória interna: 32GB ,Tamanho da tela: 8 , Tecnologia: 4G, Conectividade: Wi-Fi - Bluetooth ,Sistema operacional: Android 10",
       image: "Tablet Philco PTB8RRG 8” 4G Wi-Fi 32GB - Android 10 Quad-Core Câm. 5MP + Selfie 2MP",
-      extension: "jpg",
+      extension: ".jpg",
     },
     {
       product_id: uuidv4().toString(),
@@ -213,7 +213,7 @@ module.exports = {
       description_2:
         "Marca: TCL, Recursos de Vídeos: HDR, MICRO DIMMING , Modo de Imagem Dinâmica, Padrão, Smart HDR, Esporte, Filme, Jogos e PC - AJUSTE DE COR Frio, Padrão, Quente e Personalizado, Recursos/Funcionalidades: Reconhecimento de Voz: Sim, através do controle remoto (Google Assistant embutido em português), Bluetooth, Chromecast Integrado ,Processador: Quad Core, Consumo (KW/h): Consumo Stand BY < 0,5W - CONSUMO MÁXIMO = 50W, Recursos de Áudio: Modo Som Dinâmico, Padrão, Esporte, Filmes, Música, Voz e Jogos, Tipo de TV: Smart TV Android",
       image: "Smart TV TCL Android 32 HD S615 HDR - Controle Remoto com Comando por Controle de Voz Google Assistant",
-      extension: "jpg",
+      extension: ".jpg",
     },
     {
       product_id: uuidv4().toString(),
@@ -227,7 +227,7 @@ module.exports = {
       description_2:
         "Marca: Philco, Recursos de Vídeos: Conversor digital integrado | Recepção em ATV, DTV e CATV | Menu nos idiomas Português e Inglês | Busca automática de canais | Ajustes de temperatura de cor, Recursos/Funcionalidades: Mute | Mts¹ | Sleep | Closed Caption | Guide¹ | Info¹ | Bloqueio De Canal¹, Processador: Quad Core, Consumo(KW/h):	<0,5",
       image: "TV Philco 32 Led HD",
-      extension: "jpg",
+      extension: ".jpg",
     },
     {
       product_id: uuidv4().toString(),
@@ -241,8 +241,69 @@ module.exports = {
       description_2:
         "Marca: Philco, Tipo de TV: Comum, Cor: Preto, Tecnologia da Tela: LED, Polegadas: 39, Resolução: HD, Taxa de Atualização: 60Hz, Taxa de atualização com Tecnologia: 60Hz, Recursos de Vídeo: DNR, Receptor DTV, CC, Info, Guide, Sleep, Recursos de Áudio: SAP/MTS, Som Surround, Equalizadores de som predefinidos",
       image: "TV LED 39 Philco HD com Conversor Digital 3 HDMI 1 USB Som Surround 60Hz - Preta",
-      extension: "jpg",
+      extension: ".jpg",
     },
+    {
+      product_id: uuidv4().toString(),
+      price: 240.19,
+      category: "Periféricos",
+      amount: 28,
+      state: "Em oferta",
+      name: "Headset Gamer Redragon Pandora, RGB - H350RGB",
+      description: "Construído pensado para os mais exigentes. O HeadSet Gamer Pandora entrega uma excelente qualidade de construção e conforto. ",
+      description_2: "Marca: Redragon, Modelo: H350RGB, Diametro do driver: 50mm, Sensibilidade: 93+-3dB S.P.L. at 1KHz. Frequencia de resposta: 20~20000 Hz, Impedancia: 24 Ohm +- 15%, Sensibilidade do Microfone: -42+-4dB (0dB = 1V/PA), Tipo de microfone: Omnidirectional, Conexão: USB",
+      image: "Headset-Gamer-Redragon-Pandora",
+      extension: ".jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 900,
+      category: "Periféricos",
+      amount: 7,
+      state: "Disponível",
+      name: "Headset Gamer Sem Fio Logitech G733 7.1 Dolby Surround RGB LIGHTSYNC, Blue VOICE para PC e PlayStation, Preto",
+      description: "Conheça o G733, um Headset Gamer desenvolvido para se adequar ao seu estilo. Adote a tecnologia sem fio LIGHTSPEED de 2,4 GHz, alcance de até 20 m e até 29 horas de duração da bateria. Personalize a aparência e o som em tempo real através do software Logitech G HUB com os filtros de voz Blue VO!CE e iluminação RGB LIGHTSYNC frontal de zona dupla. O G733 possui tecnologias avançadas de áudio, incluindo drivers de áudio PRO-G de 40 mm, câmaras acústicas internas e tecnologia DTS Headphone:X 2.0. Jogue com conforto com uma faixa de cabeça confortável e reversível, almofadas dos fones de ouvido em espuma viscoelástica de camada dupla e um headset realmente leve, que pesa apenas 278 g.",
+      description_2: "Marca: Logitech G, Modelo: 981-000882, Resposta de frequência: 20 Hz - 20 kHz, Padrão de captação do microfone: Cardioide (unidirecional), Tamanho: 6 mm, Resposta de frequência: 100 Hz - 10 KHz, Alcance da rede sem fio até 20 metros, Tipo de conexão: LIGHTSPEED sem fio via USB, Vida útil da bateria (recarregável), Sem iluminação: 29 horas, Iluminação padrão: 20 horas, Requisito do sistema: Porta USB 2.0 (porta tipo A) | PC com Windows 7 ou superior | macOS X 10.12 ou superior | PlayStation 4 | Acesso à Internet para o software Logitech G HUB (opcional)",
+      image: "Headset-Gamer-Sem-Fio-Logitech-preto",
+      extension: ".jpg",
+    },
+{
+      product_id: uuidv4().toString(),
+      price: 301.20,
+      category: "Periféricos",
+      amount: 2,
+      state: "Disponível",
+      name: "Fone de Ouvido Gamer Intra-Auricular Logitech G333 K/DA Edição Oficial League of Legends KDA com Conexão 3.5mm/USB-C",
+      description: "Fone de Ouvido Intra-Auricular Logitech G333 K/DA JOGUE SEM TRÉGUA. CONTINUE JOGANDO. Os fones de ouvido para jogos G333 K/DA foram desenvolvidos para oferecer uma experiência de jogo completa e imersiva. Pronto para computadores e dispositivos móveis, Xbox, PlayStation e Nintendo com conexão auxiliar padrão de 3,5 mm. O adaptador USB-C permite conectar a ainda mais dispositivos. Conta com drivers de áudio duplo, um para agudos/médios e um para graves, proporciona também som incrivelmente rico em detalhes e, microfone e controles integrados que permitem comunicação mais clara e fácil controle de mídia. Escolha entre três tamanhos de ponteiras de ouvido fabricados em peças de silicone flexíveis e macias que se acomodam suavemente dentro de suas orelhas. A estrutura feita em alumínio resistente garante durabilidade confiável e uma aparência premium.",
+      description_2: "Marca: Logitech, Modelo: 981-000983, Microfone: Tamanho 4mm | Sensibilidade -42 dB, Recursos: Conectividade de 3.5 mm e USB-C | Drivers duplos dinâmicos de 5.8 mm e 9.2 mm | Conforto excelente, Requisitos de Sistema: Porta auxiliar de 3,5 mm ou USB-C",
+      image: "Fone-de-Ouvido-Gamer-Intra-Auricular-Logitech-G333-K",
+      extension: ".jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 170,
+      category: "Periféricos",
+      amount: 45,
+      state: "disponível",
+      name: "Carregador USB-C de 20W",
+      description: "O adaptador de energia USB-C de 20W Apple oferece recarga rápida e eficiente. É ideal para usar em casa, no trabalho ou onde você estiver. Ele é compatível com qualquer aparelho com porta USB-C. Mas a Apple recomenda usá-lo com o iPad Pro ou iPad Air para obter o melhor rendimento de recarga. Ele também pode ser usado com o iPhone 8 ou posterior para aproveitar as vantagens da recarga rápida.",
+      description_2: "USB-C",
+      image: "Carregador-USB-C-de-20W",
+      extension: ".jpg",
+    },
+{
+      product_id: uuidv4().toString(),
+      price: 240,
+      category: "Periféricos",
+      amount: 7,
+      state: "Disponível",
+      name: "Carregador Portátil Power Bank, Samsung, Sem Fio, 10000mAh, Fast Charge, Rose",
+      description: "A verdadeira vida sem fio. Viaje com a conveniência do carregamento sem fio. Carregue seu Galaxy S10e, S10, S10+ ou Galaxy Watch Active com a nova Bateria Externa Sem Fio, assim você não precisará se preocupar mesmo quando não houver uma tomada por perto. A nova Bateria Externa Sem Fio recarrega seu celular rapidamente com o recurso Fast Wireless Charging, seja com ou sem fio. Você pode até recarregar dois celulares simultaneamente, então quando você estiver recarregando seu Galaxy S10e, S10, ou S10+, você também pode ajudar um amigo. Compatível com dispositivos com padrão Qi. Leve seus outros dispositivos também sabendo que você poderá recarregá-los tranquilamente. A nova Bateria Externa Sem Fio é compatível com o padrão Qi, então se o seu celular também for, é só colocar seu smartphone sobre ela para recarregá-lo...",
+      description_2: "Marca: Samsung, Modelo: Fast Charge, Conexões: Entrada USB Tipo C, Capacidade: 10000 mAh, Tempo de recarga: Rápida por indução, Quantidade média de carga: 02 Vezes à 02 vezes e meia, Voltagem: Bivolt, Cor: Rosê, Frequência de entrada: 7.5W / Qi 5W, Luz indicadora de carga: Sim",
+      image: "Carregador-Portátil-Power-Bank-Samsung-Fast-Charge-Rose",
+      extension: ".jpg",
+    }
+
     ]);
   },
 
