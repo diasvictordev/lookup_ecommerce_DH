@@ -4,6 +4,7 @@ module.exports = (sequelize, datatypes)=>{
     const collumns = {
         address_id: {
             type: datatypes.STRING,
+            primaryKey: true,
             allowNull: false,
           },
           cep: {

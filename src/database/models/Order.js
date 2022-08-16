@@ -4,6 +4,7 @@ module.exports = (sequelize, datatypes)=>{
     const collumns = {
       order_id: {
         type: datatypes.STRING,
+        primaryKey: true,
         allowNull: false
       },
       order_status: {

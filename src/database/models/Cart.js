@@ -4,6 +4,7 @@ module.exports = (sequelize, datatypes)=>{
     const collumns = {
         cart_id: {
             type: datatypes.STRING,
+            primaryKey: true,
             allowNull: false
           },
           product_id: {

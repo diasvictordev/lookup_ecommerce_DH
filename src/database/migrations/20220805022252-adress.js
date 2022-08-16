@@ -7,6 +7,7 @@ module.exports = {
     await queryInterface.createTable("adress", {
       adress_id: {
         type: sequelize.STRING,
+        primaryKey: true,
         allowNull: false,
       },
       cep: {
