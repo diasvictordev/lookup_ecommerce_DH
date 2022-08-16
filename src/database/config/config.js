@@ -5,7 +5,7 @@ module.exports = {
     "username": "root",
     "password": process.env.DATABASE_PASSWORD,
     "database": "lookup_db",
-    "host": "127.0.0.1",
+    "host": process.env.DATABASE_HOST,
     "dialect": "mysql"
   },
   "test": {

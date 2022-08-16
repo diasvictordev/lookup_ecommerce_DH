@@ -106,7 +106,7 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 8400,
-        category: "smartphone",
+        category: "Smartphone",
         amount: 8,
         state: "Em Oferta",
         name: "Smartphone Samsung Galaxy S22 Ultra, 12GB RAM, 256GB, Câmera Tripla 108MP, Tela Infinita 6.8, Vinho",
@@ -132,29 +132,117 @@ module.exports = {
         extension: "jpg",
       },
       {
-        product_id: uuidv4().toString(),
-        price: 00,
-        category: "",
-        amount: 28,
-        state: "",
-        name: "",
-        description: "",
-        description_2: "",
-        image: "",
-        extension: "",
-      },
-      {
-        product_id: uuidv4().toString(),
-        price: 00,
-        category: "",
-        amount: 28,
-        state: "",
-        name: "",
-        description: "",
-        description_2: "",
-        image: "",
-        extension: "",
-      },
+      product_id: uuidv4().toString(),
+      price: 2185,
+      category: "Tablet",
+      amount: 5,
+      state: "Disponível",
+      name: "Tablet Samsung Galaxy Tab S6 Lite 10,4” 4G Wi-Fi - 64GB Android 10 Octa-Core com Caneta e Capa",
+      description:
+        "Tenha criatividade sem limites com este produto da Samsung. O Galaxy Tab S6 Lite é um tablet que o ajuda a se preparar para todos os desafios que a vida tem para lhe oferecer. Desfrute de uma imagem impressionante em sua tela de 10,4, sendo ideal para você mergulhar nos seus conteúdos favoritos. Com um processador Octa-Core e 4GB de memória RAM ele é perfeito para multi tarefas! Fique sempre conectado nas redes sociais com a tecnologia Wi-Fi e 4G",
+      description_2:
+        "Marca: Samsung, Referência: SM-P615NZAVZTO, Modelo: Tab S6 Lite, Linha: Galaxy, Memória interna: 64GB, Acessórios: Caneta S-Pen - Capa protetora, Tamanho da tela: 10,4, Tecnologia: 4G, Conectividade: Bluetooth - Wi-Fi, Conexões: USB tipo C ,Sistema operacional: Android 10",
+      image: "Tablet Samsung Galaxy Tab S6 Lite 10,4” 4G Wi-Fi - 64GB Android 10 Octa-Core com Caneta e Capa",
+      extension: "jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 1259,
+      category: "Tablet",
+      amount: 15,
+      state: "Disponível",
+      name: "Tablet Samsung Galaxy Tab A8, 64GB, 4GB RAM, WiFi, Tela 10.5, Câmera 8MP, Android 11, Cinza - SM-X200NZAUZTO",
+      description:
+        "Tablet Samsung Galaxy Tab A8, 64GB, 4GB RAM, WiFi, Tela 10.5, Câmera 8MP, Android 11, Cinza Uma visão maior de um mundo mais amplo A tela de 10,5 ” traz uma moldura simétrica permitindo que você fique totalmente imerso no que está na tela. Explore e desfrute sem preocupações. Suas séries e filmes no seu streaming favorito, jogos e conteúdos de como fazer para um hobby que você adora, o Galaxy Tab A8 o convida a um mundo mais amplo por meio de uma visão maior e melhor.",
+      description_2:
+        "Câmera: Câmera Traseira Resolução: 8.0 MP | Câmeras Traseiras Foco Automático: Sim | Câmera Frontal Resolução: 5.0MP | Câmera Traseira Flash: Não | Resolução de Gravação de Vídeos: FHD (1920 x 1080) @30fps, Bateria, Capacidade da Bateria (mAh, Typical): 7040 | Removível: Não, Processador: Velocidade do Processador: 2GHz | Tipo de Processador: Octa Core",
+      image: "Tablet Samsung Galaxy Tab A8, 64GB, 4GB RAM, WiFi, Tela 10.5, Câmera 8MP, Android 11, Cinza - SM-X200NZAUZTO",
+      extension: "jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 359.10,
+      category: "Tablet",
+      amount: 20,
+      state: "Disponível",
+      name: "Tablet Positivo Twist Tab 7” Wi-Fi 32GB - Android Oreo Quad-Core",
+      description:
+        "O tablet Twist Tab da Positivo é versátil, moderno e perfeito para usar no dia a dia. Sua tela LCD de 7 polegadas tem o tamanho ideal para deixar seu momento de descontração ou trabalho mais agradável, além de garantir nitidez em qualquer ângulo de visualização. O processador Quad-Core e sua memória RAM de 1GB auxiliam muito nesta utilização.",
+      description_2:
+        "Marca: Positivo, Referência: 11160919, Modelo: Twist Tab, Memória interna: 32GB ,Tamanho da tela: 7 ,Conectividade: Wi-Fi, Sistema operacional: Android Oreo versão GO",
+      image: "Tablet Positivo Twist Tab 7” Wi-Fi 32GB - Android Oreo Quad-Core",
+      extension: "jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 959,
+      category: "Tablet",
+      amount: 8,
+      state: "Em oferta",
+      name: "Tablet Samsung Galaxy A7 Lite 4G, 32GB, Android 11, Tela de 8.7, Grafite - SM-T225NZAPZTO",
+      description:
+        "Galaxy Tab A7 Lite (4G) 32 GB, Projetado para ir aonde você for com gestos simples para usar com apenas uma mão e possui uma câmera para capturar seus momentos ao vivo Feito para ir aonde você for Não troque estilo por conveniência. O Galaxy Tab A7 Lite oferece os dois em uma estrutura fina. Com espessura de 8,0 mm e 371 g de peso, ele é super portátil e pode ser guardado com facilidade na bolsa sem pesar.",
+      description_2:
+        "Tela: Tamanho: 8.7' (220.5mm) | Resolução: 1340 x 800 (WXGA+) | Tecnologia: TFT | Profundidade de Cor: 16 Milhões, Suporte de engrenagem: Galaxy Buds Pro, Galaxy Buds Live, Galaxy Buds +, Galaxy Buds, Gear IconX (2018) | S voz: Não | Mobile TV: Não",
+      image: "Tablet Samsung Galaxy A7 Lite 4G, 32GB, Android 11, Tela de 8.7, Grafite - SM-T225NZAPZTO",
+      extension: "jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 557.07,
+      category: "Tablet",
+      amount: 10,
+      state: "Em oferta",
+      name: "Tablet Philco PTB8RRG 8” 4G Wi-Fi 32GB - Android 10 Quad-Core Câm. 5MP + Selfie 2MP",
+      description:
+        "O tablet PTB8RSG 4G da Philco é versátil, moderno e perfeito para usar no dia a dia. Sua tela IPS Multi-toque de 8 polegadas tem o tamanho ideal para deixar seu momento de descontração ou trabalho mais agradável, além de garantir nitidez em qualquer ângulo de visualização. O processador Quad-Core e sua memória RAM de 2GB auxiliam muito nesta utilização.",
+      description_2:
+        "Marca: Philco, Referência: 58203023, Modelo: PTB8RSG 4G, Memória interna: 32GB ,Tamanho da tela: 8 , Tecnologia: 4G, Conectividade: Wi-Fi - Bluetooth ,Sistema operacional: Android 10",
+      image: "Tablet Philco PTB8RRG 8” 4G Wi-Fi 32GB - Android 10 Quad-Core Câm. 5MP + Selfie 2MP",
+      extension: "jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 1199.99,
+      category: "TV",
+      amount: 15,
+      state: "Disponível",
+      name: "Smart TV TCL Android 32 HD S615 HDR - Controle Remoto com Comando por Controle de Voz Google Assistant",
+      description:
+        "Desfrute de músicas, filmes, games e mais - os essenciais de entretenimento vêm pré-instalados e você pode baixar mais através da google play store. Controle remoto com comando de voz - Google Assistant. Conectividade Bluetooth, Chromecast Built in - sua conexão sem fios possibilita que dispositivos se interliguem de maneira rápida, descomplicada e sem uso de cabos, bastando que um esteja próximo do outro. Desfrute do conteúdo de notebooks e celulares diretamente em sua tv. Design sem bordas - tela sem bordas com o máximo de imagem e design minimalista.",
+      description_2:
+        "Marca: TCL, Recursos de Vídeos: HDR, MICRO DIMMING , Modo de Imagem Dinâmica, Padrão, Smart HDR, Esporte, Filme, Jogos e PC - AJUSTE DE COR Frio, Padrão, Quente e Personalizado, Recursos/Funcionalidades: Reconhecimento de Voz: Sim, através do controle remoto (Google Assistant embutido em português), Bluetooth, Chromecast Integrado ,Processador: Quad Core, Consumo (KW/h): Consumo Stand BY < 0,5W - CONSUMO MÁXIMO = 50W, Recursos de Áudio: Modo Som Dinâmico, Padrão, Esporte, Filmes, Música, Voz e Jogos, Tipo de TV: Smart TV Android",
+      image: "Smart TV TCL Android 32 HD S615 HDR - Controle Remoto com Comando por Controle de Voz Google Assistant",
+      extension: "jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 1199.99,
+      category: "TV",
+      amount: 6,
+      state: "Disponível",
+      name: "TV Philco 32 Led HD",
+      description:
+        "A TV Philco 32” PTV32T10EDP Recepção Digital HD Led conta com 32 polegadas em resolução HD, com qualidade de imagem e som garantidas. As entradas de conexão para cabo HDMI, USB permitem que conecte seu dispositivo favorito e reproduza com alta qualidade suas imagens e leitura/gravação de arquivos digitais, através do seu pen-drive ou HD externo. Sendo assim é possível reproduzir vídeos, imagens e músicas",
+      description_2:
+        "Marca: Philco, Recursos de Vídeos: Conversor digital integrado | Recepção em ATV, DTV e CATV | Menu nos idiomas Português e Inglês | Busca automática de canais | Ajustes de temperatura de cor, Recursos/Funcionalidades: Mute | Mts¹ | Sleep | Closed Caption | Guide¹ | Info¹ | Bloqueio De Canal¹, Processador: Quad Core, Consumo(KW/h):	<0,5",
+      image: "TV Philco 32 Led HD",
+      extension: "jpg",
+    },
+    {
+      product_id: uuidv4().toString(),
+      price: 1099.99,
+      category: "TV",
+      amount: 18,
+      state: "Em oferta",
+      name: "TV LED 39 Philco HD com Conversor Digital 3 HDMI 1 USB Som Surround 60Hz - Preta",
+      description:
+        "Ter uma TV de tela grande em casa é muito bom, não é mesmo? Ainda mais quando ela conta com recursos modernos, que proporcionam conforto e bons momentos de entretenimento para quem está assistindo. A TV LED 39 Philco é assim, ela vai te proporcionar maior nitidez, clareza e definição, para você assistir e curtir ao máximo seus programas, filmes e series preferidos. Com resolução HD 1366 x 768 pixels, conexões USB e HDMI, função DNR, que reduz os ruídos de imagem e Som Surround, que recria um ambiente mais realista de áudio, aumentando a qualidade sonora. Aproveite, essa é a escolha perfeita para transformar a sua sala de estar em uma verdadeira sala de cinema.",
+      description_2:
+        "Marca: Philco, Tipo de TV: Comum, Cor: Preto, Tecnologia da Tela: LED, Polegadas: 39, Resolução: HD, Taxa de Atualização: 60Hz, Taxa de atualização com Tecnologia: 60Hz, Recursos de Vídeo: DNR, Receptor DTV, CC, Info, Guide, Sleep, Recursos de Áudio: SAP/MTS, Som Surround, Equalizadores de som predefinidos",
+      image: "TV LED 39 Philco HD com Conversor Digital 3 HDMI 1 USB Som Surround 60Hz - Preta",
+      extension: "jpg",
+    },
     ]);
   },
 
@@ -162,4 +250,4 @@ module.exports = {
     await queryInterface.bulkDelete("products", null, {});
   },
 };
-s;
+

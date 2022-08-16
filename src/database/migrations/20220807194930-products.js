@@ -31,12 +31,12 @@ module.exports = {
         allowNull: false
       },
       description: {
-        type: sequelize.STRING,
+        type: sequelize.TEXT,
         allowNull: false
       },
       description_2: {
-        type: sequelize.STRING,
-        allowNullfalse
+        type: sequelize.TEXT,
+        allowNull: false
       },
       image: {
         type: sequelize.STRING,
