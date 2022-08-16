@@ -1,8 +1,8 @@
 'use strict';
 
 const { v4: uuidv4 } = require('uuid');
-const bcrypt = require('bcrypt')
 
+const bcrypt = require('bcrypt')
 
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -11,6 +11,7 @@ module.exports = {
       id: uuidv4().toString(),
       user_name: "Rodrigo",
       last_name: "Santos",
+
       tel: "12123456789",
       email: "rodrigo@email",
       user_password: await bcrypt.hash('123456', 8),
@@ -35,6 +36,7 @@ module.exports = {
       user_password: await bcrypt.hash('123456', 8),
       date_birthday: new Date("2001-07-08"),
       cpf: "63259864125"},
+
     {
       id: uuidv4().toString(),
       user_name: "Jessica",
@@ -48,7 +50,7 @@ module.exports = {
       id: uuidv4().toString(),
       user_name: "cássio",
       last_name: "Lima",
-      tel: 12546986523,
+      tel: '12546986523',
       email: "cassio@email",
       user_password: await bcrypt.hash('123456', 8),
       date_birthday: new Date("1992-05-25"),
@@ -58,7 +60,7 @@ module.exports = {
       id: uuidv4().toString(),
       user_name: "Milena",
       last_name: "Santana",
-      tel: 15698453267,
+      tel: '15698453267',
       email: "milena@email",
       user_password: await bcrypt.hash('123456', 8),
       date_birthday: new Date("1985-01-20"),
