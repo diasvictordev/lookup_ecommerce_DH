@@ -35,16 +35,26 @@
                     </div>
                 </div>
 
+
                 <div class="image-container">
                     <div class="image-frame">
-                        <img src="/images/high/2.jpg" onclick="imageFunction(this)" alt="" />
-                        <img src="/images/high/1.jpg" onclick="imageFunction(this)" alt="" />
-                        <img src="/images/high/2.jpg" onclick="imageFunction(this)" alt="" />
-                        <img src="/images/high/1.jpg" onclick="imageFunction(this)" alt="" />
+
+
+                        <% for(let i=1; i <=4; i++) {%>
+
+                            <% const image=productInfo.image +"-"+i+ productInfo.extension %>
+
+
+                                <img src="/images/products/<%=image%>" onclick="imageFunction(this)" alt="" />
+
+                                <% }%>
+
                     </div>
 
                     <div class="frame-box">
-                        <img id="imageBox" src="/images/high/1.jpg" alt="" />
+                        <% const imageBox = productInfo.image +-1+ productInfo.extension%>
+
+                        <img id="imageBox" src="/images/products/<%=imageBox%>" alt="" />
 
                         <div class="offer-icon">
                             <img src="/images/icons/discount.svg" alt="">
@@ -55,22 +65,26 @@
             </div>
 
             <div class="price-container">
-                <h1>Computador Acer RGB</h1>
+                <h1>
+                    <%= productInfo.name%>
+                </h1>
 
                 <div class="price-detail-card card1">
                     <div class="price-total">
                         <img src="/images/icons/payments.svg" alt="" />
                         <div class="price-value">
                             <span class="price-text">á vista</span>
-                            <span class="value">R$ 454.000,00</span>
+                            <span class="value">
+                                <%=productInfo.price%>
+                            </span>
                         </div>
                     </div>
 
-                        <div class="discount-parcel">
-                            <span class="price-text">Desconto</span>
-                            <span class="discount">10%</span>
-                        </div>
-                    
+                    <div class="discount-parcel">
+                        <span class="price-text">Desconto</span>
+                        <span class="discount">10%</span>
+                    </div>
+
                 </div>
 
                 <div class="price-detail-card card2">
@@ -83,15 +97,15 @@
                         </div>
                     </div>
 
-                        <div class="discount-parcel">
-                            <span class="price-text">Parcelas</span>
-                           <a href="#parcel-list"><img src="/images/icons/arrow.svg" alt="" /></a>
-                        </div>
-                    
+                    <div class="discount-parcel">
+                        <span class="price-text">Parcelas</span>
+                        <a href="#parcel-list"><img src="/images/icons/arrow.svg" alt="" /></a>
+                    </div>
+
                 </div>
 
                 <button class="price-btn">Comprar</button>
-                
+
                 <div class="cep-info">
                     <label for="cep">Frete e Prazo:</label>
                     <input type="text" id="cep" name="cep" placeholder="Insira seu cep">
@@ -99,7 +113,7 @@
                 </div>
             </div>
         </div>
-        
+
 
 
         <div id="parcel-list" class="parcel-container">
@@ -110,23 +124,23 @@
             </div>
 
             <div class="parcel-list">
-            <ul>
-                <li>1x de R$798,78 (com 10% de desconto)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-            </ul>
+                <ul>
+                    <li>1x de R$798,78 (com 10% de desconto)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                </ul>
 
-            <ul>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-                <li>1x de R$798,78 (sem juros)</li>
-            </ul>
+                <ul>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                    <li>1x de R$798,78 (sem juros)</li>
+                </ul>
             </div>
 
             <div class="single-product-description">
@@ -135,17 +149,9 @@
                     <h2>Descrição do Produto</h2>
                 </div>
 
-                <p>Escolhemos um Gabinete Gamer com design bonito e arrojado com frontal com iluminação
-                    RGB que certamente trará mais evidência para o seu setup. O PC Gamer Concórdia vem equi
-                    pado com um poderoso processador Intel Core i5 de 10° Geração que oferece atualizações
-                    de desempenho incríveis para melhorar a produtividade, proporcionando entretenimento sur
-                    preendente.</p>
-                 <p>Escolhemos um Gabinete Gamer com design bonito e arrojado com frontal com iluminação
-                    RGB que certamente trará mais evidência para o seu setup. O PC Gamer Concórdia vem equi
-                    pado com um poderoso processador Intel Core i5 de 10° Geração que oferece atualizações
-                    de desempenho incríveis para melhorar a produtividade, proporcionando entretenimento sur
-                    preendente.</p>
-
+                <p>
+                    <%=productInfo.description%>
+                </p>
             </div>
 
             <div>
@@ -157,12 +163,12 @@
 
                 <div class="tech-container">
                     <ul class="technical-info">
-                    <li>Marca: Intel</li>
-                    <li>Peso: 2Kg</li>
-                    <li>Efeitos de LED: RGB</li>
-                    <li>Marca: Intel</li>
-                    <li>Peso: 2Kg</li>
-                    <li>Efeitos de LED: RGB</li>
+                        <li>Marca: Intel</li>
+                        <li>Peso: 2Kg</li>
+                        <li>Efeitos de LED: RGB</li>
+                        <li>Marca: Intel</li>
+                        <li>Peso: 2Kg</li>
+                        <li>Efeitos de LED: RGB</li>
                     </ul>
 
                     <ul class="tech-info">
@@ -170,14 +176,13 @@
                         <li>Peso: 2Kg</li>
                         <li>Efeitos de LED: RGB</li>
                         <li>Marca: Intel</li>
-                    <li>Peso: 2Kg</li>
-                    <li>Efeitos de LED: RGB</li>
-                        </ul>
+                        <li>Peso: 2Kg</li>
+                        <li>Efeitos de LED: RGB</li>
+                    </ul>
                 </div>
             </div>
 
         </div>
-
         <div class="box-container">
 
             <div class="title-container">
@@ -296,13 +301,13 @@
 
             </div>
 
-           </div>
+        </div>
 
         </div>
 
         <div class="support-container">
 
-        <%- include('./partials/support');%>
+            <%- include('./partials/support');%>
 
         </div>
 
