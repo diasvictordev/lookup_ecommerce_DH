@@ -8,5 +8,7 @@ router.get('/carrinho', mainController.carrinho);
 
 router.get('/detalhe', mainController.detail);
 
+router.get('/detalhe/:id', mainController.detailProduct);
+
 
 module.exports = router;

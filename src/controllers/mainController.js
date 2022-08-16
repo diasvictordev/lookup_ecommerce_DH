@@ -38,6 +38,21 @@ const mainController = {
   detail: (req, res) => {
     res.render("detail-product");
   },
-};
+  detailProduct: (req, res) => {
+
+    const {id} = req.params
+
+    Product.findByPk(id)
+
+    .then(product=>{
+      const productInfo = product._previousDataValues
+      return res.render("detail-product",{productInfo})
+    })
+    .catch((erro) => {
+      console.log(erro);
+    });
+},
+
+  }
 
 module.exports = mainController;
