@@ -243,9 +243,6 @@ module.exports = {
       image: "TV LED 39 Philco HD com Conversor Digital 3 HDMI 1 USB Som Surround 60Hz - Preta",
       extension: "jpg",
     },
-        extension: ".jpg",
-      }
-
     ]);
   },
 
