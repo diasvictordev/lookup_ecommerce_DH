@@ -87,11 +87,19 @@
 
       <div class="products-container">
 
+
+        <% productAvailable.forEach(product=> {%>
+
+
+
         <div class="add-product-container">
           <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
+
+            <% const imageFile = product.image +"-1"+ product.extension %>
+
+            <img src="/images/products/<%=imageFile%>" alt="">
+            <h2 class="description-card"> <%= product.name%> </h2>
+            <span class="price-cash"> <%= product.price%> </span>
             <span class="text1-card">ou</span>
             <span class="price-card">R$ 1.400,00</span>
             <span class="text2-card">em até</span>
@@ -100,44 +108,12 @@
           <button class="add-product">Adicionar ao Carrinho</button>
         </div>
 
-        <div class="add-product-container">
-          <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
-            <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
-            <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
-          </div>
-          <button class="add-product">Adicionar ao Carrinho</button>
-        </div>
+      <% }) %>
+      
 
-        <div class="add-product-container">
-          <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
-            <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
-            <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
-          </div>
-          <button class="add-product">Adicionar ao Carrinho</button>
-        </div>
+       
 
-        <div class="add-product-container">
-          <div class="products-card">
-            <img src="/images/high/2.jpg" alt="">
-            <h2 class="description-card">Nome do produto - mini descrição...</h2>
-            <span class="price-cash">A vista R$ 1.200,00</span>
-            <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
-            <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
-          </div>
-          <button class="add-product">Adicionar ao Carrinho</button>
-        </div>
+      
 
       </div>
 
@@ -158,8 +134,8 @@
     <div class="box-container">
 
       <div class="title-container">
-        <img src="/images/icons/upgrade.svg" alt="">
-        <span>Upgrade</span>
+        <img src="/images/icons/smartphone.svg" alt="">
+        <span>Smartphones</span>
       </div>
 
       <div class="products-container">

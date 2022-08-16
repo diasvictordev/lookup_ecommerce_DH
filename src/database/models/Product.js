@@ -4,8 +4,8 @@ module.exports = (sequelize, datatypes)=>{
     const collumns = {
         product_id: {
             type: datatypes.STRING,
-            allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            allowNull: false
           },
           price: {
             type: datatypes.FLOAT,
@@ -34,6 +34,7 @@ module.exports = (sequelize, datatypes)=>{
             description_2: {
               type: datatypes.TEXT,
               allowNullfalse
+
             },
           image: {
             type: datatypes.STRING,
@@ -46,7 +47,7 @@ module.exports = (sequelize, datatypes)=>{
     }
 
     const config = {
-        tableName: "product",
+        tableName: "products",
         timestamps: false
     }
 

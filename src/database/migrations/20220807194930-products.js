@@ -8,6 +8,7 @@ module.exports = {
      await queryInterface.createTable('products', { 
       product_id: {
         type: sequelize.STRING,
+        primaryKey: true,
         allowNull: false
       },
       price: {

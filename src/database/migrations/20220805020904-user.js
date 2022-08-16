@@ -7,8 +7,8 @@ module.exports = {
     await queryInterface.createTable("users", {
       id: {
         type: sequelize.STRING,
-        allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: false
       },
       user_name: {
         type: sequelize.STRING,
@@ -19,7 +19,7 @@ module.exports = {
         allowNull: false
       },
       tel: {
-        type: sequelize.INTEGER,
+        type: sequelize.STRING,
         allowNull: false
       },
       email:{
@@ -35,7 +35,7 @@ module.exports = {
         allowNull: false
       },
       cpf: {
-        type: sequelize.INTEGER(11),
+        type: sequelize.STRING,
         allowNull: false
       }
     });

@@ -87,7 +87,7 @@ module.exports = {
         description_2:
           "Marca: Apple, Modelo: MLK83BZ/A, Cor: Vermelho, Capacidade: 256GB, Dimensões: Largura 64.2 mm | Altura 131.5 mm | Espessura 7.65 mm, Câmera: Sistema de câmera dupla (grande-angular e ultra-angular) de 12 MP | Grande-angular: abertura ƒ/1.6 | Ultra-angular: abertura ƒ/2.4 e ângulo de visão de 120°, Gravação de vídeo: Modo Cinema para gravação de vídeos com profundidade de campo (1080p a 30 qps) | Gravação de vídeo HDR com Dolby Vision até 4K a 60 qps | Gravação de vídeo 4K a 24 qps, 25 qps, 30 qps ou 60 qps, Câmera TrueDepth: Câmera de 12 MP | Abertura ƒ/2.2 | Modo Retrato com efeito bokeh avançado e Controle de Profundidade, Face ID: Reconhecimento facial pela câmera TrueDepth, Energia e bateria: Reprodução de vídeo: Até 19 horas | Streaming de vídeo: Até 15 horas, Sistema operacional: iOS 15: O iOS é o sistema operacional móvel mais pessoal e seguro do mundo. Ele vem com muitos recursos poderosos e foi criado para proteger sua privacidade.",
         image: "iPhone-13-Mini-256GB-Vermelho",
-        extension: "jpg",
+        extension: ".jpg",
       },
       {
         product_id: uuidv4().toString(),
@@ -101,7 +101,7 @@ module.exports = {
         description_2:
           "Marca: Asus, Modelo: Zenfone 8, Cor: Prata, Tela: Tipo: AMOLED 120 Hz HDR10 + | Resolução: 1080x2400 | Proteção: Gorila Glass, Processador: QUALCOMM SNAPDRAGON 888, Armazenar: Tamanho de armazenamento: 256 GB, Dual SIM: Sim, Câmera frontal: 12 MP AF, Câmera traseira: Dual: 64 MP OIS + 12 MP Wide AF, Flash traseiro: Sim, Bateria: 1 Célula / 4000 mAh",
         image: "Smartphone-Asus-Zenfone-8-5G-ZS590KS-8J087BR",
-        extension: "jpg",
+        extension: ".jpg",
       },
       {
         product_id: uuidv4().toString(),
@@ -115,7 +115,7 @@ module.exports = {
         description_2:
           "Marca: Samsung, Modelo: Galaxy S22 Ultra, Dimensões do Aparelho (mm): 163.3 x 77.9 x 8.9, USB Conector: USB Type-C, Tecnologia: Super AMOLED 2x, Vidro Reforçado: Gorilla Glass Victus+, Resolução: Câmera quádrupla de 108MP OIS (Wide) + 10MP OIS (Zoom 3x) + 12MP (Ultra-Wide) + 10MP OIS (Zoom 10x), Foco Automático (AF): Sim, Flash: Flash-LED, Câmera Frontal: Resolução 40MP, Memória: Memória Interna total compartilhada: 256GB | Memória interna compartilhada com o sistema operacional e aplicativos pré embarcados., Suporte a Cartão de Memória: Não, Memória RAM: 12GB, Capacidade da Bateria (mAh): 5000mAh, Carregamento Sem Fio: Sim, Observação: Carregador não incluso na caixa",
         image: "Smartphone-Samsung-Galaxy-S22-Ultra-12GB-RAM-256GB",
-        extension: "jpg",
+        extension: ".jpg",
       },
       {
         product_id: uuidv4().toString(),
@@ -243,6 +243,9 @@ module.exports = {
       image: "TV LED 39 Philco HD com Conversor Digital 3 HDMI 1 USB Som Surround 60Hz - Preta",
       extension: "jpg",
     },
+        extension: ".jpg",
+      }
+
     ]);
   },
 
