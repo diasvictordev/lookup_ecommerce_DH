@@ -19,15 +19,19 @@
         <div class="info-price">
             <div class="info-image-container">
                 <div class="details-icons">
-                    <div class="di-card">
-                        <img src="/images/icons/home.svg" alt="" />
-                        <h2>Home</h2>
-                    </div>
+                    <a href="/">
+                        <div class="di-card">
+                            <img src="/images/icons/home.svg" alt="" />
+                            <h2>Home</h2>
+                        </div>
+                    </a>
 
-                    <div class="di-card info-tech">
-                        <img src="/images/icons/info.svg" alt="" />
-                        <h2>Informações</h2>
-                    </div>
+                    <a href="#info">
+                        <div class="di-card info-tech">
+                            <img src="/images/icons/info.svg" alt="" />
+                            <h2>Informações</h2>
+                        </div>
+                    </a>
 
                     <div class="di-card">
                         <img src="/images/icons/favorite.svg" alt="" />
@@ -52,14 +56,14 @@
                     </div>
 
                     <div class="frame-box">
-                        <% const imageBox = productInfo.image +-1+ productInfo.extension%>
+                        <% const imageBox=productInfo.image +-1+ productInfo.extension%>
 
-                        <img id="imageBox" src="/images/products/<%=imageBox%>" alt="" />
+                            <img id="imageBox" src="/images/products/<%=imageBox%>" alt="" />
 
-                        <div class="offer-icon">
-                            <img src="/images/icons/discount.svg" alt="">
-                            <span>Oferta</span>
-                        </div>
+                            <div class="offer-icon">
+                                <img src="/images/icons/discount.svg" alt="">
+                                <span>Oferta</span>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -149,7 +153,7 @@
                     <h2>Descrição do Produto</h2>
                 </div>
 
-                <p>
+                <p id="info">
                     <%=productInfo.description%>
                 </p>
             </div>
@@ -317,8 +321,8 @@
         <%- include('./partials/footer'); %>
     </footer>
 
+  <%- include('./partials/scrollTop');%>
     <script src="/js/detail-product.js"></script>
-
 
 </body>
 

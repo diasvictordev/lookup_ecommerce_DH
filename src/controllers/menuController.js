@@ -1,7 +1,23 @@
+const { Product } = require("../database/models");
+const { Op } = require("sequelize");
+
 const menuController = {
     smartphones: (req, res)=>{
-        res.render('smartphones')
-    },
+        Product.findAll({
+            where: {
+              [Op.or]: [
+                { category: "Smartphone" },
+              ],
+            },
+          })
+          .then((products) => {
+            const smartphones = []
+            products.map((product) => {
+              smartphones.push(product._previousDataValues)
+            });
+            res.render("smartphones",{smartphones})
+        
+    })},
     perifericos: (req, res)=>{
         res.render('perifericos')
     },
