@@ -5,9 +5,7 @@ const menuController = {
     smartphones: (req, res)=>{
         Product.findAll({
             where: {
-              [Op.or]: [
-                { category: "Smartphone" },
-              ],
+                category: "Smartphone" 
             },
           })
           .then((products) => {
@@ -16,14 +14,26 @@ const menuController = {
               smartphones.push(product._previousDataValues)
             });
             res.render("smartphones",{smartphones})
-        
-    })},
+    })
+        .catch(error=>{console.log(error)})
+  },
+
     perifericos: (req, res)=>{
-        res.render('perifericos')
+      Product.findAll({
+        where: {
+            category: "Periféricos" 
+        },
+      })
+      .then((products) => {
+        const perifericos = []
+        products.map((product) => {
+          perifericos.push(product._previousDataValues)
+        });
+        res.render("perifericos",{perifericos})
+})
+    .catch(error=>{console.log(error)})
     },
-    audio: (req, res)=>{
-        res.render('audio')
-    },
+
     cadeiras: (req, res)=>{
         res.render('cadeiras')
     },
@@ -31,11 +41,37 @@ const menuController = {
         res.render('hardware')
     },
     tablet: (req, res)=>{
-        res.render('tablet')
+      Product.findAll({
+        where: {
+            category: "Tablet" 
+        },
+      })
+      .then((products) => {
+        const tablet = []
+        products.map((product) => {
+          tablet.push(product._previousDataValues)
+        });
+        res.render("tablet",{tablet})
+})
+    .catch(error=>{console.log(error)})
     },
     tv: (req, res)=>{
-        res.render('tv')
-    }
+      
+      Product.findAll({
+        where: {
+            category: "TV" 
+        },
+      })
+      .then((products) => {
+        const tv = []
+        products.map((product) => {
+          tv.push(product._previousDataValues)
+        });
+        res.render("tv",{tv})
+})
+    .catch(error=>{console.log(error)})
+
+}
 }
 
 module.exports = menuController
