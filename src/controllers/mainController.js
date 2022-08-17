@@ -1,5 +1,6 @@
 const { Product } = require("../database/models");
 const { Op } = require("sequelize");
+const randomNumber = require("../utils/randomNumber");
 
 const mainController = {
   index: (req, res) => {
@@ -41,12 +42,26 @@ const mainController = {
   detailProduct: (req, res) => {
 
     const {id} = req.params
+    const randomNumberResult = randomNumber(0,1)
+    const category = randomNumberResult == 0? "Em oferta": "Disponível"
 
-    Product.findByPk(id)
+    Product.findAll({
+      where: {
+        [Op.or]:[{product_id:id}, {state:category}]
+      }
+    })
 
     .then(product=>{
-      const productInfo = product._previousDataValues
-      return res.render("detail-product",{productInfo})
+      const allProducts = [];
+      let productPk = null;
+      let productsToShow = null;
+
+      product.map((productMap)=>{allProducts.push(productMap._previousDataValues)})
+      productPk = allProducts.find(product=>product.product_id == id)
+      productsToShow = allProducts.filter(product=>product.product_id!= id)
+      console.log(productPk)
+      res.render("detail-product",{productPk, productsToShow})
+
     })
     .catch((erro) => {
       console.log(erro);
