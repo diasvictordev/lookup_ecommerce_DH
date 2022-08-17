@@ -49,12 +49,13 @@ const mainController = {
   },
   detailProduct: (req, res) => {
     const { id } = req.params;
-    const randomNumberResult = randomNumber(0, 1);
-    const category = randomNumberResult == 0 ? "Em oferta" : "Disponível";
+    const randomNumberResult = randomNumber(0, 4);
+    const categoryArray = ["Smartphone", "Tablet", "Tv", "Periféricos", "Notebook"]
+    const category = categoryArray[randomNumberResult]
 
     Product.findAll({
       where: {
-        [Op.or]: [{ product_id: id }, { state: category }],
+        [Op.or]: [{ product_id: id }, { category: category }],
       },
     })
 
