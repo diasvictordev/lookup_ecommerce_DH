@@ -1,6 +1,7 @@
 const { Product } = require("../database/models");
 const { Op } = require("sequelize");
 const randomNumber = require("../utils/randomNumber");
+const formatPrice = require("../utils/formatPrice");
 
 const mainController = {
   index: (req, res) => {
@@ -34,7 +35,7 @@ const mainController = {
           }
         });
 
-        return res.render("index", { offer, smartphone });
+        return res.render("index", { offer, smartphone, formatPrice});
       })
       .catch((erro) => {
         console.log(erro);
