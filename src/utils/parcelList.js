@@ -1,17 +1,34 @@
-function parcelList(value){
+const formatPrice = require('./formatPrice')
+
+const parcelList = {
+  one: (value) => {
 
     const array = []
-  
-      for(let i=1; i <=12; i++){
-  
-        const x = value / i
-        
-         array.push(i + " x de " + x.toFixed(2) + " sem juros")
-  
-      }
-  
+
+    for (let i = 2; i <= 6; i++) {
+
+      const x = formatPrice(value / i)
+
+      array.push(i + "x de " + x + " sem juros")
+
+    }
     return array
-  
+  },
+
+  two: (value) => {
+
+    const array = []
+
+    for (let i = 7; i <= 12; i++) {
+
+      const x = formatPrice(value / i)
+
+      array.push(i + "x de " + x + " sem juros")
+
+    }
+    return array
   }
-  
-  console.log(parcelList(500))
+
+}
+
+module.exports = parcelList

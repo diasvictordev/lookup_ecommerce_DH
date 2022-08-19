@@ -91,11 +91,14 @@
 
                 </div>
 
+                <% const parcelOne = parcelList.one(productPk.price) %>
+                <% const parcelTwo = parcelList.two(productPk.price) %>
+
                 <div class="price-detail-card card2">
                     <div class="price-total">
                         <img src="/images/icons/credit.svg" alt="" />
                         <div class="price-value">
-                            <span class="price-text">12x de 400,00</span>
+                            <span class="price-text"><%=parcelTwo[5]%></span>
                             <span class="price-text">sem juros no cartão</span>
                             <span class="value">R$ 13.000,00</span>
                         </div>
@@ -129,21 +132,21 @@
 
             <div class="parcel-list">
                 <ul>
-                    <li>1x de R$798,78 (com 10% de desconto)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
+
+                   <% parcelOne.forEach(value => { %>
+
+                    <li> <%= value %> </li>
+
+                   <% }) %>
+                   
                 </ul>
 
                 <ul>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
-                    <li>1x de R$798,78 (sem juros)</li>
+                    <% parcelTwo.forEach(value => { %>
+
+                        <li> <%= value %> </li>
+    
+                       <% }) %>
                 </ul>
             </div>
 
@@ -167,21 +170,16 @@
 
                 <div class="tech-container">
                     <ul class="technical-info">
-                        <li>Marca: Intel</li>
-                        <li>Peso: 2Kg</li>
-                        <li>Efeitos de LED: RGB</li>
-                        <li>Marca: Intel</li>
-                        <li>Peso: 2Kg</li>
-                        <li>Efeitos de LED: RGB</li>
-                    </ul>
 
-                    <ul class="tech-info">
-                        <li>Marca: Intel</li>
-                        <li>Peso: 2Kg</li>
-                        <li>Efeitos de LED: RGB</li>
-                        <li>Marca: Intel</li>
-                        <li>Peso: 2Kg</li>
-                        <li>Efeitos de LED: RGB</li>
+                        <% const description = splitDescription(productPk.description_2) %>
+
+                        <% description.forEach(text => { %>
+
+                            <li> <%= text %> </li>
+        
+                           <% }) %>
+                        
+
                     </ul>
                 </div>
             </div>
