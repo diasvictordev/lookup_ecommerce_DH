@@ -2,6 +2,7 @@ const { Product } = require("../database/models");
 const { Op } = require("sequelize");
 const randomNumber = require("../utils/randomNumber");
 const formatPrice = require("../utils/formatPrice");
+const {limiterText} = require('../utils/stringHelper');
 
 const mainController = {
   index: (req, res) => {
@@ -35,7 +36,8 @@ const mainController = {
           }
         });
 
-        return res.render("index", { offer, smartphone, formatPrice});
+
+        return res.render("index", { offer, smartphone, formatPrice, limiterText});
       })
       .catch((erro) => {
         console.log(erro);
@@ -59,11 +61,9 @@ const mainController = {
         [Op.or]: [{ product_id: id }, { category: category }],
       },
     })
-
       .then((product) => {
         const allProducts = [];
         let productPk = null;
-        let productsToShow = null;
 
         product.map((productMap) => {
           allProducts.push(productMap._previousDataValues);
@@ -73,12 +73,24 @@ const mainController = {
           (product) => product.product_id != id
         );
         
-        res.render("detail-product", { productPk, productsToShow });
+        res.render("detail-product", { productPk, productsToShow, formatPrice, limiterText});
       })
       .catch((erro) => {
         console.log(erro);
       });
   },
+
+  // findAll passando a categoria do produto que está na variavel productToshow
+  // where e um like pegando as informações atraves do name que está no productToShow
+  // renderiza essa view novamente passando as informações filtradas por TV
+
+  // const todasTvs = await Products.findAll({
+  //   where: {
+  //     [Op.like]: `%${productsToShow.category}%`
+  //   }
+  // })
+
+  // res.render('detail-product', todasTvs)
 };
 
 module.exports = mainController;
