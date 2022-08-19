@@ -85,7 +85,7 @@
 
                   <img src="/images/products/<%=imageFile%>" alt="">
                   <h2 class="description-card">
-                    <%= product.name%>
+                    <%= limiterText(product.name)%>
                   </h2>
                   <span class="price-cash">
 
@@ -137,10 +137,10 @@
 
                   <img src="/images/products/<%=imageFile%>" alt="">
                   <h2 class="description-card">
-                    <%= product.name%>
+                    <%= limiterText(product.name)%>
                   </h2>
                   <span class="price-cash">
-                    <%= product.price%>
+                    <%= formatPrice(product.price)%>
                   </span>
                   <span class="text1-card">ou</span>
                   <span class="price-card">R$ 1.400,00</span>
@@ -189,7 +189,6 @@
     </footer>
 
     <script src="/js/carrousel.js"></script>
-    <script src="/js/cutText.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/scrollTop.js"></script>
 

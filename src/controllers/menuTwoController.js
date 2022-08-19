@@ -1,6 +1,7 @@
 const { Product } = require("../database/models");
-
 const { Op } = require("sequelize");
+const formatPrice = require("../utils/formatPrice");
+const {limiterText} = require('../utils/stringHelper');
 
 const menuControllerTwo = {
     notebooks: (req, res)=>{
@@ -14,10 +15,11 @@ const menuControllerTwo = {
             products.map((product) => {
               notebooks.push(product._previousDataValues)
             });
-            res.render("notebooks",{notebooks})
+            res.render("notebooks",{notebooks, formatPrice, limiterText})
     })
         .catch(error=>{console.log(error)})
   },
+  
   gamer: (req, res)=>{
     Product.findAll({
     
@@ -32,7 +34,7 @@ const menuControllerTwo = {
       const gamers = []
 
       products.map((product)=>{ gamers.push(product._previousDataValues) })
-      res.render("gamer", {gamers})
+      res.render("gamer", {gamers, formatPrice, limiterText})
 })
     .catch(error=>{console.log(error)})
 }

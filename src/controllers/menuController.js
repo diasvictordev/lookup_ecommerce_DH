@@ -1,77 +1,88 @@
 const { Product } = require("../database/models");
 const { Op } = require("sequelize");
+const formatPrice = require("../utils/formatPrice");
+const {limiterText} = require('../utils/stringHelper');
 
 const menuController = {
-    smartphones: (req, res)=>{
-        Product.findAll({
-            where: {
-                category: "Smartphone" 
-            },
-          })
-          .then((products) => {
-            const smartphones = []
-            products.map((product) => {
-              smartphones.push(product._previousDataValues)
-            });
-            res.render("smartphones",{smartphones})
+  smartphones: (req, res) => {
+    Product.findAll({
+      where: {
+        category: "Smartphone",
+      },
     })
-        .catch(error=>{console.log(error)})
+      .then((products) => {
+        const smartphones = [];
+        products.map((product) => {
+          smartphones.push(product._previousDataValues);
+        });
+        res.render("smartphones", { smartphones, formatPrice, limiterText });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 
-    perifericos: (req, res)=>{
-      Product.findAll({
-        where: {
-            category: "Periféricos" 
-        },
-      })
+  perifericos: (req, res) => {
+    Product.findAll({
+      where: {
+        category: "Periféricos",
+      },
+    })
       .then((products) => {
-        const perifericos = []
+        const perifericos = [];
         products.map((product) => {
-          perifericos.push(product._previousDataValues)
+          perifericos.push(product._previousDataValues);
         });
-        res.render("perifericos",{perifericos})
-})
-    .catch(error=>{console.log(error)})
-    },
-
-    cadeiras: (req, res)=>{
-        res.render('cadeiras')
-    },
-    hardware: (req, res)=>{
-        res.render('hardware')
-    },
-    tablet: (req, res)=>{
-      Product.findAll({
-        where: {
-            category: "Tablet" 
-        },
+        res.render("perifericos", { perifericos, formatPrice, limiterText });
       })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+
+  cadeiras: (req, res) => {
+    res.render("cadeiras");
+  },
+
+  hardware: (req, res) => {
+    res.render("hardware");
+  },
+  
+  tablet: (req, res) => {
+    Product.findAll({
+      where: {
+        category: "Tablet",
+      },
+    })
       .then((products) => {
-        const tablet = []
+        const tablet = [];
         products.map((product) => {
-          tablet.push(product._previousDataValues)
+          tablet.push(product._previousDataValues);
         });
-        res.render("tablet",{tablet})
-})
-    .catch(error=>{console.log(error)})
-    },
-    tv: (req, res)=>{
-      
-      Product.findAll({
-        where: {
-            category: "TV" 
-        },
+const {limiterText} = require('../utils/stringHelper');
+        res.render("tablet", { tablet, formatPrice, limiterText});
       })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+  tv: (req, res) => {
+    Product.findAll({
+      where: {
+        category: "TV",
+      },
+    })
       .then((products) => {
-        const tv = []
+        const tv = [];
         products.map((product) => {
-          tv.push(product._previousDataValues)
+          tv.push(product._previousDataValues);
         });
-        res.render("tv",{tv})
-})
-    .catch(error=>{console.log(error)})
+        res.render("tv", { tv, formatPrice, limiterText });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
 
-}
-}
-
-module.exports = menuController
+module.exports = menuController;
