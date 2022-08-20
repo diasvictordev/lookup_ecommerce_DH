@@ -24,7 +24,8 @@ const schema = Joi.object({
     }),
     passwordConfirme: Joi.any().valid(Joi.ref('password')).required().messages({
         "any.only" : "as senhas não coincidem"
-    })
+    }),
+    timestamps: Joi.any().forbidden()
 })
 
 module.exports = schema;

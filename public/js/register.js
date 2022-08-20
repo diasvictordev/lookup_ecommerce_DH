@@ -8,12 +8,9 @@ const dateBirthday = document.getElementById('date');
 const password = document.getElementById('password');
 const passwordConfirme = document.getElementById('passwordConfirme');
 
-const error = []
 
-const formError = form.addEventListener('submit', function(event){
-    if(error.length > 0){
-        event.preventDefault();
-    }
+form.addEventListener('submit', function(event){
+    // event.preventDefault();
 
     checkErrorInputs();
 })
@@ -105,58 +102,48 @@ function checkErrorInputs() {
     const passwordValue = password.value;
     const passwordConfirmeValue = passwordConfirme.value;
     
-    if(nameValue == ""){
-        error.push("erro")        
+    if(nameValue == ""){        
 
         setErrorFor(name, "Preencha este Campo")
     }
 
     if(surNameValue == ""){
-        error.push("erro")
 
         setErrorFor(surName, "Preencha este Campo")
     }
 
     if(cpfValue == ""){
-        error.push("erro")
 
         setErrorFor(cpf, "Preencha este Campo")
     }
 
     if(telValue == ""){
-        error.push("erro")
 
         setErrorFor(tel, "Preencha este Campo")
     }
 
     if(emailValue == ""){
-        error.push("erro")
 
         setErrorFor(email, "Preencha este Campo")
     }
 
     if(dateBirthdayValue == ""){
-        error.push("erro")
 
         setErrorFor(dateBirthday, "Preencha este Campo")
     }
 
     if(passwordValue == ""){
-        error.push("erro")
 
         setErrorFor(password, "Preencha este Campo")
     } else if(passwordValue.length < 6) {
-        error.push("erro")
 
         setErrorFor(password, "Insira uma senha mais forte")
     }
 
     if(passwordConfirmeValue == ""){
-        error.push("erro")
 
         setErrorFor(passwordConfirme, "Preencha este Campo")
     } else if(passwordConfirmeValue != passwordValue) {
-        error.push("erro")
 
         setErrorFor(passwordConfirme, "As senhas não coincidem")
     }
@@ -195,5 +182,5 @@ function validacaoEmail(field) {
     else{
         setErrorFor(email, "Insira um email válido");
     }
-    }
+}
 
