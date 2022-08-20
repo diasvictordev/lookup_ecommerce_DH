@@ -97,7 +97,7 @@ module.exports = {
         description:
           "iPhone 13. O sistema de câmera dupla mais avançado em um iPhone. Chip A15 Bionic com velocidade impressionante. Um grande salto em bateria. Projetado para durar. 5G ultrarrápido. E tela Super Retina XDR mais brilhante. A tela tem bordas arredondadas que se ajustam ao design curvo do aparelho dentro da sua forma retangular. Quando medida como um retângulo, a tela tem 6,06 polegadas na diagonal. A área real de visualização é menor. A duração da bateria varia de acordo com o uso e a configuração. O iPhone 13 é resistente a respingos, água e poeira e foi testado em condições controladas em laboratório, classificado como IP68 segundo a norma IEC 60529.",
         description_2:
-          "Marca: Apple, Modelo: MLK83BZ/A, Cor: Vermelho, Capacidade: 256GB, Dimensões: Largura 64.2 mm | Altura 131.5 mm | Espessura 7.65 mm, Câmera: Sistema de câmera dupla (grande-angular e ultra-angular) de 12 MP | Grande-angular: abertura ƒ/1.6 | Ultra-angular: abertura ƒ/2.4 e ângulo de visão de 120°, Gravação de vídeo: Modo Cinema para gravação de vídeos com profundidade de campo (1080p a 30 qps) | Gravação de vídeo HDR com Dolby Vision até 4K a 60 qps | Gravação de vídeo 4K a 24 qps, 25 qps, 30 qps ou 60 qps, Câmera TrueDepth: Câmera de 12 MP | Abertura ƒ/2.2 | Modo Retrato com efeito bokeh avançado e Controle de Profundidade, Face ID: Reconhecimento facial pela câmera TrueDepth, Energia e bateria: Reprodução de vídeo: Até 19 horas | Streaming de vídeo: Até 15 horas, Sistema operacional: iOS 15: O iOS é o sistema operacional móvel mais pessoal e seguro do mundo. Ele vem com muitos recursos poderosos e foi criado para proteger sua privacidade.",
+          "Marca: Apple, Modelo: MLK83BZ/A, Cor: Vermelho, Capacidade: 256GB, Dimensões: Largura 64.2 mm | Altura 131.5 mm | Espessura 7.65 mm, Câmera: Sistema de câmera dupla (grande-angular e ultra-angular) de 12 MP | Grande-angular: abertura ƒ/1.6 | Ultra-angular: abertura ƒ/2.4 e ângulo de visão de 120°, Gravação de vídeo: Modo Cinema para gravação de vídeos com profundidade de campo (1080p a 30 qps) | Gravação de vídeo HDR com Dolby Vision até 4K a 60 qps | Gravação de vídeo 4K a 24 qps - 25 qps, 30 qps ou 60 qps, Câmera TrueDepth: Câmera de 12 MP | Abertura ƒ/2.2 | Modo Retrato com efeito bokeh avançado e Controle de Profundidade, Face ID: Reconhecimento facial pela câmera TrueDepth, Energia e bateria: Reprodução de vídeo: Até 19 horas | Streaming de vídeo: Até 15 horas, Sistema operacional: iOS 15: O iOS é o sistema operacional móvel mais pessoal e seguro do mundo. Ele vem com muitos recursos poderosos e foi criado para proteger sua privacidade.",
         image: "iPhone-13-Mini-256GB-Vermelho",
         extension: ".jpg",
       },
@@ -161,7 +161,7 @@ module.exports = {
       description:
         "Tenha criatividade sem limites com este produto da Samsung. O Galaxy Tab S6 Lite é um tablet que o ajuda a se preparar para todos os desafios que a vida tem para lhe oferecer. Desfrute de uma imagem impressionante em sua tela de 10,4, sendo ideal para você mergulhar nos seus conteúdos favoritos. Com um processador Octa-Core e 4GB de memória RAM ele é perfeito para multi tarefas! Fique sempre conectado nas redes sociais com a tecnologia Wi-Fi e 4G",
       description_2:
-        "Marca: Samsung, Referência: SM-P615NZAVZTO, Modelo: Tab S6 Lite, Linha: Galaxy, Memória interna: 64GB, Acessórios: Caneta S-Pen - Capa protetora, Tamanho da tela: 10,4, Tecnologia: 4G, Conectividade: Bluetooth - Wi-Fi, Conexões: USB tipo C ,Sistema operacional: Android 10",
+        "Marca: Samsung, Referência: SM-P615NZAVZTO, Modelo: Tab S6 Lite, Linha: Galaxy, Memória interna: 64GB, Acessórios: Caneta S-Pen - Capa protetora, Tamanho da tela: 10.4, Tecnologia: 4G, Conectividade: Bluetooth - Wi-Fi, Conexões: USB tipo C ,Sistema operacional: Android 10",
       image: "Tablet-Samsung-Galaxy-Tab-S6-Lite-10-4-4G-Wi-Fi",
       extension: ".jpg",
     },
@@ -241,7 +241,7 @@ module.exports = {
       description:
         "Desfrute de músicas, filmes, games e mais - os essenciais de entretenimento vêm pré-instalados e você pode baixar mais através da google play store. Controle remoto com comando de voz - Google Assistant. Conectividade Bluetooth, Chromecast Built in - sua conexão sem fios possibilita que dispositivos se interliguem de maneira rápida, descomplicada e sem uso de cabos, bastando que um esteja próximo do outro. Desfrute do conteúdo de notebooks e celulares diretamente em sua tv. Design sem bordas - tela sem bordas com o máximo de imagem e design minimalista.",
       description_2:
-        "Marca: TCL, Recursos de Vídeos: HDR, MICRO DIMMING , Modo de Imagem Dinâmica, Padrão, Smart HDR, Esporte, Filme, Jogos e PC - AJUSTE DE COR Frio, Padrão, Quente e Personalizado, Recursos/Funcionalidades: Reconhecimento de Voz: Sim, através do controle remoto (Google Assistant embutido em português), Bluetooth, Chromecast Integrado ,Processador: Quad Core, Consumo (KW/h): Consumo Stand BY < 0,5W - CONSUMO MÁXIMO = 50W, Recursos de Áudio: Modo Som Dinâmico, Padrão, Esporte, Filmes, Música, Voz e Jogos, Tipo de TV: Smart TV Android",
+        "Marca: TCL, Recursos de Vídeos: HDR, MICRO DIMMING | Modo de Imagem Dinâmica | Padrão, Smart HDR | Esporte | Filme | Jogos e PC, Ajuste de Cor: Frio | Padrão | Quente e Personalizado, Reconhecimento de Voz: Sim - através do controle remoto (Google Assistant embutido em português), Extras: Bluetooth e Chromecast Integrado, Processador: Quad Core, Consumo (KW/h): Consumo Stand BY < 0.5W - CONSUMO MÁXIMO = 50W, Recursos de Áudio: Modo Som Dinâmico | Padrão | Esporte | Filmes | Música | Voz e Jogos, Tipo de TV: Smart TV Android",
       image: "Smart-TV-TCL-Android-32-HD-S615-HDR",
       extension: ".jpg",
     },
@@ -257,7 +257,7 @@ module.exports = {
       description:
         "A TV Philco 32” PTV32T10EDP Recepção Digital HD Led conta com 32 polegadas em resolução HD, com qualidade de imagem e som garantidas. As entradas de conexão para cabo HDMI, USB permitem que conecte seu dispositivo favorito e reproduza com alta qualidade suas imagens e leitura/gravação de arquivos digitais, através do seu pen-drive ou HD externo. Sendo assim é possível reproduzir vídeos, imagens e músicas",
       description_2:
-        "Marca: Philco, Recursos de Vídeos: Conversor digital integrado | Recepção em ATV, DTV e CATV | Menu nos idiomas Português e Inglês | Busca automática de canais | Ajustes de temperatura de cor, Recursos/Funcionalidades: Mute | Mts¹ | Sleep | Closed Caption | Guide¹ | Info¹ | Bloqueio De Canal¹, Processador: Quad Core, Consumo(KW/h):	<0,5",
+        "Marca: Philco, Recursos de Vídeos: Conversor digital integrado | Recepção em ATV - DTV e CATV | Menu nos idiomas Português e Inglês | Busca automática de canais | Ajustes de temperatura de cor, Recursos/Funcionalidades: Mute | Mts¹ | Sleep | Closed Caption | Guide¹ | Info¹ | Bloqueio De Canal¹, Processador: Quad Core, Consumo(KW/h):	<0.5",
       image: "TV-Philco-32-Led-HD",
       extension: ".jpg",
     },
@@ -273,7 +273,7 @@ module.exports = {
       description:
         "Ter uma TV de tela grande em casa é muito bom, não é mesmo? Ainda mais quando ela conta com recursos modernos, que proporcionam conforto e bons momentos de entretenimento para quem está assistindo. A TV LED 39 Philco é assim, ela vai te proporcionar maior nitidez, clareza e definição, para você assistir e curtir ao máximo seus programas, filmes e series preferidos. Com resolução HD 1366 x 768 pixels, conexões USB e HDMI, função DNR, que reduz os ruídos de imagem e Som Surround, que recria um ambiente mais realista de áudio, aumentando a qualidade sonora. Aproveite, essa é a escolha perfeita para transformar a sua sala de estar em uma verdadeira sala de cinema.",
       description_2:
-        "Marca: Philco, Tipo de TV: Comum, Cor: Preto, Tecnologia da Tela: LED, Polegadas: 39, Resolução: HD, Taxa de Atualização: 60Hz, Taxa de atualização com Tecnologia: 60Hz, Recursos de Vídeo: DNR, Receptor DTV, CC, Info, Guide, Sleep, Recursos de Áudio: SAP/MTS, Som Surround, Equalizadores de som predefinidos",
+        "Marca: Philco, Tipo de TV: Comum, Cor: Preto, Tecnologia da Tela: LED, Polegadas: 39, Resolução: HD, Taxa de Atualização: 60Hz, Taxa de atualização com Tecnologia: 60Hz, Recursos de Vídeo: DNR | Receptor DTV | CC, Info | Guide | Sleep, Recursos de Áudio: SAP/MTS | Som Surround | Equalizadores de som predefinidos",
       image: "TV-LED-39-Philco-HD-com-Conversor-Digital-3-HDMI-1-USB-Som-Surround-60Hz-Preta",
       extension: ".jpg",
     },
