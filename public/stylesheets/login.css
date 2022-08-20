@@ -27,6 +27,7 @@
 }
 
 .signin-form{
+  position: relative;
   margin: 1.6rem;
   width: 100%;
 }
@@ -53,8 +54,24 @@
 
 .MuiGrid-item{
   display: flex;
-  margin: 0.1rem 0 0.5rem 0;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 10px;
+}
+
+.manterLogado{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.manterLogado label{
+  color: #fff;
+  font-family: 'Share';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
 }
 
 .MuiTypography-body{
@@ -66,7 +83,7 @@
 }
 
 .signin-btn{
-  margin: 1.2rem 0 0 0;
+  margin: 2.2rem 0 0 0;
   background: #1A06FA;
   border-radius: 10px;
   border: none;
