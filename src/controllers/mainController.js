@@ -1,9 +1,8 @@
 const { Product } = require("../database/models");
 const { Op } = require("sequelize");
 const randomNumber = require("../utils/randomNumber");
-const formatPrice = require("../utils/formatPrice");
 const {limiterText} = require('../utils/stringHelper');
-const parcelList = require('../utils/parcelList');
+const price = require('../utils/priceHelper');
 const splitDescription = require('../utils/splitDescription');
 
 const mainController = {
@@ -39,7 +38,7 @@ const mainController = {
         });
 
 
-        return res.render("index", { offer, smartphone, formatPrice, limiterText});
+        return res.render("index", { offer, smartphone, limiterText, price});
       })
       .catch((erro) => {
         console.log(erro);
@@ -75,7 +74,7 @@ const mainController = {
           (product) => product.product_id != id
         );
         
-        res.render("detail-product", { productPk, productsToShow, formatPrice, limiterText, parcelList, splitDescription});
+        res.render("detail-product", { productPk, productsToShow, limiterText, splitDescription, price});
       })
       .catch((erro) => {
         console.log(erro);

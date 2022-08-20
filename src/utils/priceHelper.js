@@ -1,7 +1,12 @@
 const formatPrice = require('./formatPrice')
 
-const parcelList = {
-  one: (value) => {
+const price = {
+
+  format: (value) =>{
+   return formatPrice(value)
+  },
+
+  parcelOne: (value) => {
 
     const array = []
 
@@ -15,7 +20,7 @@ const parcelList = {
     return array
   },
 
-  two: (value) => {
+  parcelTwo: (value) => {
 
     const array = []
 
@@ -27,8 +32,12 @@ const parcelList = {
 
     }
     return array
+  },
+  parcels: (value) => {
+    const x = value/12
+    return formatPrice(x)
   }
 
 }
 
-module.exports = parcelList
+module.exports = price

@@ -1017,6 +1017,12 @@ footer p {
   }
 }
 
+@media only screen and (max-width: 419px) {
+  .products-card img{
+    height: 280px;
+  }
+}
+
 /* CSS página de carrinho (falta adicionar imagem do produto ao invés de fundo cinza) */
 
 #cart-info {

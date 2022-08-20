@@ -289,9 +289,12 @@ padding: 10px;
     color: var(--white);
 }
 
+.parcel-list{
+    justify-content: space-around;
+}
+
 .parcel-list, .tech-container{
     display: flex;
-    justify-content: space-around;
     padding-bottom: 40px;
     font-weight: 400;
     font-size: 2.5rem;
@@ -321,20 +324,12 @@ padding: 10px;
     .di-card h2{
         font-size: 2rem;
     }
-
-    #imageBox{
-    padding: 60px 20px;
-    }
 }
 
 @media only screen and (max-width: 996px){
     .info-price{
         flex-direction: column;
     }
-
-    #imageBox{
-        padding: 20px;
-        }
 
     .price-container, .info-image-container{
         width: 100%;
@@ -464,6 +459,12 @@ padding: 10px;
         gap: 20px;
     }
 
+}
+
+@media only screen and (max-width: 484px){
+    .price-container h1{
+        font-size: 2rem;
+    }
 }
 
 

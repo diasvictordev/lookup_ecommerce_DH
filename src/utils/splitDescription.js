@@ -1,6 +1,6 @@
 const splitDescription = (description)=>{
 
-   return description.split("|")
+   return description.split(",")
 
 }
 

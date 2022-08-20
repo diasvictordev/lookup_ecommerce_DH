@@ -8,6 +8,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 3599.99,
+        discount: 5,
+        price_discount: 3419.99,
         category: "Notebook",
         amount: 28,
         state: "Em oferta",
@@ -22,6 +24,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 3499.99,
+        discount: 5,
+        price_discount: 3324.99,
         category: "Notebook",
         amount: 5,
         state: "Disponível",
@@ -36,6 +40,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 2929.99,
+        discount: 2,
+        price_discount: 2871.39,
         category: "Notebook",
         amount: 15,
         state: "Disponível",
@@ -50,6 +56,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 7399.99,
+        discount: 3,
+        price_discount: 7177.99,
         category: "Notebook",
         amount: 3,
         state: "Disponível",
@@ -64,6 +72,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 6000,
+        discount: 1,
+        price_discount: 5940,
         category: "Notebook",
         amount: 10,
         state: "Em Oferta",
@@ -78,6 +88,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 6250.98,
+        discount: 7,
+        price_discount: 5812.50,
         category: "Smartphone",
         amount: 2,
         state: "Disponível",
@@ -92,6 +104,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 5300.56,
+        discount: 4,
+        price_discount: 5088.54,
         category: "Smartphone",
         amount: 18,
         state: "Disponível",
@@ -106,6 +120,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 8400,
+        discount: 10,
+        price_discount: 7560,
         category: "Smartphone",
         amount: 8,
         state: "Em Oferta",
@@ -120,6 +136,8 @@ module.exports = {
       {
         product_id: uuidv4().toString(),
         price: 550,
+        discount: 2,
+        price_discount: 539,
         category: "Smartphone",
         amount: 10,
         state: "Disponível",
@@ -134,6 +152,8 @@ module.exports = {
       {
       product_id: uuidv4().toString(),
       price: 2185,
+      discount: 3,
+      price_discount: 2119.45,
       category: "Tablet",
       amount: 5,
       state: "Disponível",
@@ -148,6 +168,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 1259,
+      discount: 2,
+      price_discount: 1233.82,
       category: "Tablet",
       amount: 15,
       state: "Disponível",
@@ -162,6 +184,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 359.10,
+      discount: 1,
+      price_discount: 355.51,
       category: "Tablet",
       amount: 20,
       state: "Disponível",
@@ -176,6 +200,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 959,
+      discount: 3,
+      price_discount: 930.23,
       category: "Tablet",
       amount: 8,
       state: "Em oferta",
@@ -190,6 +216,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 557.07,
+      discount: 2,
+      price_discount: 545.93,
       category: "Tablet",
       amount: 10,
       state: "Em oferta",
@@ -204,6 +232,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 1199.99,
+      discount: 4,
+      price_discount: 1151.99,
       category: "TV",
       amount: 15,
       state: "Disponível",
@@ -218,10 +248,12 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 1199.99,
+      discount: 5,
+      price_discount: 1139.99,
       category: "TV",
       amount: 6,
       state: "Disponível",
-      name: "TV Philco 32 Led HD",
+      name: "A TV Philco 32” PTV32T10EDP Recepção Digital HD",
       description:
         "A TV Philco 32” PTV32T10EDP Recepção Digital HD Led conta com 32 polegadas em resolução HD, com qualidade de imagem e som garantidas. As entradas de conexão para cabo HDMI, USB permitem que conecte seu dispositivo favorito e reproduza com alta qualidade suas imagens e leitura/gravação de arquivos digitais, através do seu pen-drive ou HD externo. Sendo assim é possível reproduzir vídeos, imagens e músicas",
       description_2:
@@ -232,6 +264,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 1099.99,
+      discount: 5,
+      price_discount: 1044.99,
       category: "TV",
       amount: 18,
       state: "Em oferta",
@@ -246,6 +280,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 240.19,
+      discount: 3,
+      price_discount: 232.98,
       category: "Periféricos",
       amount: 28,
       state: "Em oferta",
@@ -258,6 +294,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 900,
+      discount: 4,
+      price_discount: 864,
       category: "Periféricos",
       amount: 7,
       state: "Disponível",
@@ -270,6 +308,8 @@ module.exports = {
 {
       product_id: uuidv4().toString(),
       price: 301.20,
+      discount: 2,
+      price_discount: 295.18,
       category: "Periféricos",
       amount: 2,
       state: "Disponível",
@@ -282,6 +322,8 @@ module.exports = {
     {
       product_id: uuidv4().toString(),
       price: 170,
+      discount: 2,
+      price_discount: 166.60,
       category: "Periféricos",
       amount: 45,
       state: "disponível",
@@ -294,6 +336,8 @@ module.exports = {
 {
       product_id: uuidv4().toString(),
       price: 240,
+      discount: 2,
+      price_discount: 237.60,
       category: "Periféricos",
       amount: 7,
       state: "Disponível",

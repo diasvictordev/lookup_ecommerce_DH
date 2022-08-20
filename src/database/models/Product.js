@@ -11,6 +11,14 @@ module.exports = (sequelize, datatypes)=>{
           type: datatypes.FLOAT,
           allowNull: false
         },
+        discount: {
+          type: datatypes.INTEGER,
+          allowNull: false
+        },
+        price_discount:{
+          type: datatypes.FLOAT,
+          allowNull: false
+        },
         category: {
           type: datatypes.STRING,
           allowNull: false

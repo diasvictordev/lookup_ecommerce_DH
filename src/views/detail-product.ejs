@@ -79,28 +79,28 @@
                         <div class="price-value">
                             <span class="price-text">á vista</span>
                             <span class="value">
-                                <%= formatPrice(productPk.price) %>
+                                <%= price.format(productPk.price_discount) %>
                             </span>
                         </div>
                     </div>
 
                     <div class="discount-parcel">
                         <span class="price-text">Desconto</span>
-                        <span class="discount">10%</span>
+                        <span class="discount"> <%=productPk.discount%> %</span>
                     </div>
 
                 </div>
 
-                <% const parcelOne = parcelList.one(productPk.price) %>
-                <% const parcelTwo = parcelList.two(productPk.price) %>
+                <% const parcelOne = price.parcelOne(productPk.price) %>
+                <% const parcelTwo = price.parcelTwo(productPk.price) %>
 
                 <div class="price-detail-card card2">
                     <div class="price-total">
                         <img src="/images/icons/credit.svg" alt="" />
                         <div class="price-value">
                             <span class="price-text"><%=parcelTwo[5]%></span>
-                            <span class="price-text">sem juros no cartão</span>
-                            <span class="value">R$ 13.000,00</span>
+                            <span class="price-text">no cartão</span>
+                            <span class="value"> <%= price.format(productPk.price) %> </span>
                         </div>
                     </div>
 
@@ -132,6 +132,8 @@
 
             <div class="parcel-list">
                 <ul>
+
+                    <li> 1x de <%=price.format(productPk.price_discount) %> (à vista com desconto) </li>
 
                    <% parcelOne.forEach(value => { %>
 
@@ -207,12 +209,12 @@
                           <%= limiterText(product.name) %>
                         </h2>
                         <span class="price-cash">
-                          <%= formatPrice(product.price)%>
+                          <%= price.format(product.price_discount)%>
                         </span>
                         <span class="text1-card">ou</span>
-                        <span class="price-card">R$ 1.400,00</span>
+                        <span class="price-card"> <%= price.format(product.price) %></span>
                         <span class="text2-card">em até</span>
-                        <span class="parcel-price">12x de R$ 142,00</span>
+                        <span class="parcel-price">12x de <%= price.parcels(product.price) %></span>
                     </div>
                     <button class="add-product">Adicionar ao Carrinho</button>
                   </div>

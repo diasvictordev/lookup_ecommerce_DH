@@ -41,12 +41,12 @@
               <%= limiterText(product.name)%>
             </h2>
             <span class="price-cash">
-              <%= formatPrice(product.price) %>
+              <%= price.format(product.price_discount) %>
             </span>
             <span class="text1-card">ou</span>
-            <span class="price-card">R$ 1.400,00</span>
+            <span class="price-card"> <%= price.format(product.price) %> </span>
             <span class="text2-card">em até</span>
-            <span class="parcel-price">12x de R$ 142,00</span>
+            <span class="parcel-price">12x de <%= price.parcels(product.price) %> </span>
         </div>
         <button class="add-product">Adicionar ao Carrinho</button>
       </div>
