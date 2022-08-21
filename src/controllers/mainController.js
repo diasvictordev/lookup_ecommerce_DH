@@ -1,9 +1,13 @@
 const { Product } = require("../database/models");
+const { Cart } = require("../database/models");
+const { User } = require("../database/models");
 const { Op } = require("sequelize");
+const { v4: uuidv4 } = require('uuid');
 const randomNumber = require("../utils/randomNumber");
 const {limiterText} = require('../utils/stringHelper');
 const price = require('../utils/priceHelper');
 const splitDescription = require('../utils/splitDescription');
+const url = require('url')
 
 const mainController = {
   index: (req, res) => {
@@ -48,6 +52,24 @@ const mainController = {
   carrinho: (req, res) => {
     res.render("cart");
   },
+
+  cartCreate: async (req, res) => {
+    
+    const user_id = req.session.user.id
+
+    const id = req.url.id
+
+    console.log(id)
+
+    const cart = []
+
+
+    // Cart.create({cart_id: uuidv4(),
+    //               })
+    
+
+  },
+
   detail: (req, res) => {
     res.render("detail-product");
   },
