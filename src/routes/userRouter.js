@@ -8,6 +8,7 @@ const userController = require('../controllers/userController');
 // Middlewares
 
 const upload = require('../middlewares/multerMiddleware');
+const auth = require('../middlewares/loginMiddleware');
 
 // Formulario de Registro 
 
@@ -24,6 +25,10 @@ router.get('/login', userController.login);
 // Processo de Login 
 
 router.post('/login', userController.processoLogin);
+
+// Painel do Usuario 
+
+router.get('/user', userController.PainelDeUsuario);
 
 
 

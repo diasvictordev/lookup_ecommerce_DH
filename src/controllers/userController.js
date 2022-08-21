@@ -33,6 +33,9 @@ const userController = {
             res.cookie('usuarioLogado', userExists.email, {maxAge:60000})
         }
 
+        req.session.user = userExists.User;
+        console.log(req.session.user)
+
         if (bcrypt.compareSync(password, userExists.user_password)) {
             
             return res.redirect("/");
@@ -41,6 +44,13 @@ const userController = {
         return res.render('login', { erro: 'Usuario ou senha incorretos.' })
 
         
+    },
+
+    PainelDeUsuario: (req, res) => {
+        
+        if(req.session.user){
+            res.render('user');
+        }
     }
 
 }

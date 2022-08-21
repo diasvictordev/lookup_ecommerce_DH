@@ -43,6 +43,7 @@
   text-align: center;
   border-radius: 30px;
   border: none;
+  outline: none;
   margin: 0.3rem 0;
   height: 2.5rem;
   width: 100%;
@@ -83,7 +84,7 @@
 }
 
 .signin-btn{
-  margin: 2.2rem 0 0 0;
+  margin: 1rem 0 0 0;
   background: #1A06FA;
   border-radius: 10px;
   border: none;
@@ -120,6 +121,17 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
+}
+
+.loginErrors-list{
+  color: red;
+  display: flex;
+  margin: 0.5rem 0 0 1rem;
+}
+
+.loginErrors-list li{
+  font-size: 11px;
+  font-weight: 800;
 }
 
 

@@ -1,11 +1,11 @@
 function auth(req, res, next) {
-    const userIslogged = Boolean(req.session.user) || Boolean(req.user)
+    const userIslogged = req.session.user;
   
-    if(userIslogged) {
+    if(userIslogged != "undefined") {
       return next();
     }
   
-    return res.send('Você não está logado no sistema')
+    return res.render('login');
   }
   
   module.exports = auth;

@@ -41,7 +41,11 @@
                 </div>
 
                 <div class="loginErrors-container">
-                    
+                    <ul class="loginErrors-list">
+                        <% if(typeof erro != "undefined"){ %>
+                            <li>Usuário ou senha incorretos</li>
+                       <% } %>
+                    </ul>
                 </div>
                 
                 <button type="submit" class="signin-btn">Acessar</button>
