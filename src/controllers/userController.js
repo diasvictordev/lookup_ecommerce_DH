@@ -26,23 +26,27 @@ const userController = {
 
     processoLogin: async (req,res) => {
         const { email, password, logado } = req.body;
-        const userExists = await User.findOne({ email })
+
+        const userExists = await User.findOne({ where:{email} })
+
 
         if(logado != undefined){
             
             res.cookie('usuarioLogado', userExists.email, {maxAge:60000})
         }
 
-        req.session.user = userExists.User;
-        console.log(req.session.user)
+        if(userExists){
+            const correct = await bcrypt.compareSync(password, userExists.user_password)
 
-        if (bcrypt.compareSync(password, userExists.user_password)) {
+            req.session.user = {
+                id: userExists.id,
+                email: userExists.email,
+              };
             
             return res.redirect("/");
         }
 
         return res.render('login', { erro: 'Usuario ou senha incorretos.' })
-
         
     },
 
