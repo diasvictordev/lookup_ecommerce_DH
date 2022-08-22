@@ -57,7 +57,7 @@ const mainController = {
     
     const user_id = req.session.user.id
 
-    const id = req.url.id
+    const {id} = req.params
 
     console.log(id)
 
