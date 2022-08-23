@@ -17,7 +17,99 @@
 
   <main>
 
-    <%- include('./partials/filter'); %>    
+    <div class="filter">
+      <a class="filter-btn" onclick="filterOpen()">Filtrar</a>
+  </div>
+  
+  <form id="filter-form" class="list-products" action="/menu/smartphones" method="POST">
+  
+      <div class="list-checkbox">
+          <span class="list-typography">Marcas</span>
+          <div>
+              <div class="check-container brand1">
+                  <input type="checkbox" id="brand1" name="samsung" onchange="checkBox()">
+                  <label for="brand1">Samsung</label>
+              </div>
+  
+              <div class="check-container brand2">
+                  <input type="checkbox" id="brand2" name="asus" onchange="checkBox()">
+                  <label for="brand2">Asus</label>
+              </div>
+  
+              <div class="check-container brand3">
+                  <input type="checkbox" id="brand3" name="iphone" onchange="checkBox(this)">
+                  <label for="brand3">Iphone</label>
+              </div>
+  
+              <div class="check-container brand4">
+                  <input type="checkbox" id="brand4" name="philco" onchange="checkBox(this)">
+                  <label for="brand4">Philco</label>
+              </div>
+          </div>
+      </div>
+  
+      <div class="list-checkbox">
+          <span class="list-typography">Ordem</span>
+          <div>
+              <div class="check-container priceUp">
+                  <input type="checkbox" id="priceUp" name="priceUp" onchange="order()">
+                  <label for="priceUp">Preço Crescente</label>
+              </div>
+  
+              <div class="check-container priceDown">
+                  <input type="checkbox"  id="priceDown" name="priceDown" onchange="order()">
+                  <label for="priceDown">Preço Decrescente</label>
+              </div>
+  
+              <div class="check-container orderA">
+                  <input type="checkbox" id="orderA" name="orderA" onchange="order()">
+                  <label for="orderA">A - Z</label>
+              </div>
+  
+              <div class="check-container orderZ">
+                  <input type="checkbox" id="orderZ" name="orderZ" onchange="order()">
+                  <label for="orderZ">Z - A</label>
+              </div>
+          </div>
+  
+  
+      </div>
+  
+      <div class="list-checkbox">
+          <span class="list-typography">Preço</span>
+          <div>
+              <div class="check-container value1">
+                  <input type="checkbox" id="value1" name="value1" onchange="valueCheck()">
+                  <label for="value1">Até 500</label>
+              </div>
+  
+              <div class="check-container value2">
+                  <input type="checkbox" id="value2" name="value2" onchange="valueCheck()">
+                  <label for="value2">Até 1000</label>
+              </div>
+  
+              <div class="check-container value3">
+                  <input type="checkbox" id="value3" name="value3" onchange="valueCheck()">
+                  <label for="value3">Até 1500</label>
+              </div>
+  
+              <div class="check-container value4">
+                  <input type="checkbox" id="value4" name="value4" onchange="valueCheck()">
+                  <label for="value4">Até 2000</label>
+              </div>
+  
+              <div class="check-container value5">
+                  <input type="checkbox" id="value5" name="value5" onchange="valueCheck()">
+                  <label for="value5">Mais de 2000</label>
+              </div>
+  
+              </div>
+          </div>
+  
+      </div>
+  
+      <button class="filter-sub" type="submit" form="filter-form">Filtrar</button>
+  </form>
 
     <div class="box-container">
 
@@ -76,6 +168,7 @@
   <script src="/js/filter.js"></script>
   <script src="/js/index.js"></script>
   <script src="/js/scrollTop.js"></script>
+  <script src="/js/checkBox.js"></script>
 
 
 </body>
