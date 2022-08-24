@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookieParser = require('cookie-parser')
 
 const indexRouter = require('./src/routes/indexRouter');
 const userRouter = require('./src/routes/userRouter');

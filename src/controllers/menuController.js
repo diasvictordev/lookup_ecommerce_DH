@@ -2,7 +2,7 @@ const { Product } = require("../database/models");
 const { Op } = require("sequelize");
 const { limiterText } = require("../utils/stringHelper");
 const price = require("../utils/priceHelper");
-const filter = require("../utils/filterProduct");
+const filters = require('../utils/filterProduct')
 
 const menuController = {
   smartphones: async (req, res) => {
@@ -22,7 +22,7 @@ const menuController = {
 
   smartphonesFilter: (req, res)=>{
 
-    filter(req, res, Product)
+    filters.filter(req, res, Product);
    
   },
 

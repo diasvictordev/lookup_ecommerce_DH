@@ -47,61 +47,20 @@ function checkBox(){
 
 const priceUp = document.querySelector("#priceUp")
 const priceDown = document.querySelector("#priceDown")
-const orderA = document.querySelector("#orderA")
-const orderZ = document.querySelector("#orderZ")
 const priceUpClass = document.querySelector(".priceUp")
 const priceDownClass = document.querySelector(".priceDown")
-const orderAClass = document.querySelector(".orderA")
-const orderZClass = document.querySelector(".orderZ")
-
 
 function order(){
     if(priceUp.checked){
         priceDownClass.style.display = "none"
-        orderAClass.style.display = "none"
-        orderZClass.style.display = "none"
     }if(!priceUp.checked){
         priceDownClass.style.display = "block"
-        orderAClass.style.display = "block"
-        orderZClass.style.display = "block"
     } if(priceDown.checked && !priceUp.checked){
         priceUpClass.style.display = "none"
-        orderAClass.style.display = "none"
-        orderZClass.style.display = "none"
     }if(!priceDown.checked && !priceUp.checked){
         priceUpClass.style.display = "block"
-        orderAClass.style.display = "block"
-        orderZClass.style.display = "block"
-    }if(orderA.checked && !priceUp.checked && !priceDown.checked){
-        orderZClass.style.display = "none"
-        priceDownClass.style.display = "none"
-        priceUpClass.style.display = "none"
-    }if(!orderA.checked && !priceUp.checked && !priceDown.checked){
-        priceUpClass.style.display = "block"
-        priceDownClass.style.display = "block"
-        orderZClass.style.display = "block"
-}if(orderZ.checked && !priceUp.checked && !priceDown.checked && !orderA.checked){
-    priceUpClass.style.display = "none"
-    priceDownClass.style.display = "none"
-    orderAClass.style.display = "none"
-}if(!orderZ.checked && !priceDown.checked && !priceUp.checked && !orderA.checked){
-    priceUpClass.style.display = "block"
-    priceDownClass.style.display = "block"
-    orderAClass.style.display = "block"
+    }
 }
-}
-
-const value1 = document.querySelector("#value1")
-const value2 = document.querySelector("#value2")
-const value3 = document.querySelector("#value3")
-const value4 = document.querySelector("#value4")
-const value5 = document.querySelector("#value5")
-
-const value1Class = document.querySelector(".value1")
-const value2Class = document.querySelector(".value2")
-const value3Class = document.querySelector(".value3")
-const value4Class = document.querySelector(".value4")
-const value5Class = document.querySelector(".value5")
 
 function valueCheck(){
     if(value1.checked){

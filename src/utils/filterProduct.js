@@ -2,55 +2,95 @@ const { Op } = require("sequelize");
 const { limiterText } = require("../utils/stringHelper");
 const price = require("../utils/priceHelper");
 
-async function filter (req, res, model){
+const filters = {
+  filter: async (req, res, model) => {
+    let brands;
+    let value;
+    let order;
 
-let brand = null
-let ordem
-let value = null
+    const { brand1, brand2, brand3, brand4 } = req.body;
+    const { value1, value2, value3, value4 } = req.body;
+    const { priceUp, priceDown } = req.body;
 
-const {brand1, brand2, brand3, brand4} = req.body
-const {priceUp, priceDown, orderA, orderZ} = req.body
-const {value1, value2, value3, value4, value5} = req.body
+    if (brand1) {
+      brands = "Samsung";
+    }
+    if (brand2) {
+      brands = "Asus";
+    }
+    if (brand3) {
+      brands = "Apple";
+    }
+    if (brand4) {
+      brands = "Philco";
+    }
+    if (priceUp) {
+      order = "ASC";
+    }
+    if (priceDown) {
+      order = "DESC";
+    }
+    if (value1) {
+      value = 600;
+    }
+    if (value2) {
+      value = 1000;
+    }
+    if (value3) {
+      value = 1500;
+    }
+    if (value4) {
+      value = 2000;
+    }
 
-if(brand1){brand = "Samsung"}
-if(brand2){brand = "Asus"}
-if(brand3){brand = "Iphone"}
-if(brand4){brand = "Philco"}
-if(priceUp || orderA){ordem = "DESC"}
-if(priceDown || orderZ){ordem = "ASC"}
+    let smartphones;
 
+    if (brands) {
+      smartphones = await model.findAll({
+        where: {
+          [Op.and]: [{ category: "Smartphone" }, { brand: brands }],
+        },
+        if(order) {
+          order: [["price_discount", order]];
+        },
+      });
+    }
 
-const x = brand?[{category: "smartphone"}, {name: "brand"}]
+    if (priceDown || priceUp) {
+      smartphones = await model.findAll({
+        where: {
+          category: "Smartphone",
+        },
+        order: [["price_discount", order]],
+      });
+    }
 
-const smartphones = await model.findAll({
-    where:{
-        [Op.and]: [
-            {category: "Smartphone"}
-            
-        ]
-})
+    if (value) {
+      smartphones = await model.findAll({
+        where: {
+          category: "Smartphone",
+          price_discount: { [Op.lt]: value },
+        },
+        if(order) {
+          order: [["price_discount", order]];
+        },
+      });
+    }
+    if (brands && value) {
+      smartphones = await model.findAll({
+        where: {
+          category: "Smartphone",
+          brand: brands,
+          price_discount: { [Op.lt]: value },
+        },
+        if(order) {
+          order: [["price_discount", order]];
+        },
+      });
+    }
 
-console.log(smartphones)
+    return res.render("smartphones", { smartphones, limiterText, price });
+  },
+};
 
-
-return res.render("smartphones", {smartphones, limiterText, price})
-
-
-
-}
-
-
-// async function filterProducts(req, model) {
-//     const { valueChecked } = req.body
-
-//     const result = await model.findAll({
-//         where: {
-//             price: valueChecked
-//         }
-//     })
-
-//     return result
-// }
-
-
-module.exports = filter
+module.exports = filters;
