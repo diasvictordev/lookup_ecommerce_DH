@@ -53,6 +53,10 @@ module.exports = {
       extension: {
         type: sequelize.STRING,
         allowNull: false
+      },
+      brand: {
+        type: sequelize.STRING, 
+        allowNull: false
       }
     });
   },
