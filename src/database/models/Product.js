@@ -51,6 +51,10 @@ module.exports = (sequelize, datatypes)=>{
         extension: {
           type: datatypes.STRING,
           allowNull: false
+        }, 
+        brand: {
+          type: datatypes.STRING,
+          allowNull: false
         }
   }
 

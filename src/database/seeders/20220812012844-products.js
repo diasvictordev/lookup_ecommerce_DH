@@ -20,6 +20,7 @@ module.exports = {
           "Marca: Acer, Modelo: 82MF0003BR, Processador: Ryzen 5-5500U | cache 3MB L2 / 8MB L3 |  Cores/Threads: HexaCore / 12 Threads, Memória RAM: 8GB, SSD: SSD de 256GB PCIe NVMe M.2 | Máxima expansão de armazenamento: 1x Slot 2.5 HDD até 1TB + 1x Slot M.2 2242 SSD até 512GB ou M.2 2280 SSD até 1TB, Placa de vídeo: Integrada AMD Radeon Graphics, Resolução de Tela: Full HD (1920 x 1080) Antirreflexo, Audio (alto-falantes): Alto-falantes com certificação Dolby Audio (2 x 1.5W), Camera: HD-720p com Privacidade, Bateria: 2 células 38Wh,Wi-Fi: WiFi 2x2 AC, Leitor de Cartões: Leitor de Cartões 4 em 1 (SD, SDHC, SDXC, MMC)",
         image: "Notebook-Lenovo-Ultrafino-IdeaPad-3-Ryzen-5-5500U",
         extension: ".jpg",
+        brand: "Lenovo"
       },
       {
         product_id: uuidv4().toString(),
@@ -36,6 +37,7 @@ module.exports = {
           "Marca: Acer, Modelo: A515-54-57CS, Sistema Operacional: Windows 11 Home 64-bits, Processador:	Intel® Core™ i5 – 10210U | Quad Core (8 Threads) | Frequência: 1.60 GHz até 4.20 GHz | 6 MB Intel® Smart Cache, Memória: 8 GB RAM DDR4 (4 GB Soldada + 4 GB Módulo) | Expansível até 20 GB, Tela: 15,6” LED com design ultrafino | Resolução: Full HD (1920x1080) | Tecnologia Anti reflexo Acer ComfyView, Armazenamento:  256 GB SSD PCIe 3.0 x4 NVMe (M.2 2280), Webcam: Webcam HD com 1280 x 720 de resolução e Gravação de áudio e vídeo em 720p, Bateria: Bateria de 4 células (Li-Íon) 48Wh | Autonomia da bateria de até 8 horas10 (depende das condições de uso), Touchpad: Multi-gestual com dois botões | Certificação Microsoft Precision Touchpad",
         image: "Notebook-Acer-Aspire-5-Intel-Core-i5-10210U",
         extension: ".jpg",
+        brand: "Acer"
       },
       {
         product_id: uuidv4().toString(),
@@ -52,6 +54,7 @@ module.exports = {
           "Marca: Asus, Sistema Operacional: windows 11 Home, Modelo: M515DA-BR1213W, Processador: AMD Ryzen 5 3500U 2,1 GHz (Cache de 4 M, até 3,7 GHz), - 15,6'', HD (1366 x 768), Armazenamento: 256 GBPCIe NVMe 3.0 x2 M.2 SSD, Rede: Wi-Fi 5 (802.11ac) + Bluetooth 4.1 (Dual band), Bateria: 45W, 2 Cells / 3300 mAh, Conectividade: - 1x 3.5mm Combo Audio Jack | 1x HDMI 1.4 | 1x USB 3.2 Gen 1 Type-A | 1x USB 3.2 Gen 1 Type-C | 2x USB 2.0 Type-A",
         image: "Notebook-Asus-AMD-Ryzen-5-3500U",
         extension: ".jpg",
+        brand: "Asus"
       },
       {
         product_id: uuidv4().toString(),
@@ -68,6 +71,7 @@ module.exports = {
           "Marca: Lenovo, Modelo: 82QJ0000BR, Sistema Operacional: Windows 11 Home, Wireless: Wi-Fi 6 (2x2 AX), Processador: AMD Ryzen 7 5800H | Cores / Threads: Octa Core / 16 Threads | Cache: 4MB L2 / 16MB L3 | Clock: 3.2GHz (até 4.4GHz Max Turbo), Memória RAM: 16GB | 2x 8GB DDR4 3200MHz | Expansível até 32GB (2 slots DDR4 3200MHz), Armazenamento: SSD de 512GB M.2 PCIe NVMe, Placa de Vídeo: Placa Dedicada NVIDIA GeForce RTX 3050 4GB GDDR6, Tela: Resolução de Tela: Full HD (1920 x 1080) IPS Antirreflexo | Taxa de atualização da Tela (Refresh Rate): 120 Hz, Bateria: Bateria: Integrada: 60Wh | Adaptador AC: 230W Slim",
         image: "Notebook-Gamer-Lenovo-Legion-5-AMD-Ryzen-7-5800H",
         extension: ".jpg",
+        brand: "Lenovo"
       },
       {
         product_id: uuidv4().toString(),
@@ -84,6 +88,7 @@ module.exports = {
           "Marca: Acer, Modelo: AN515-55-79X0, Sistema Operacional: Windows 11 Home 64-bits, CPU: Intel Core i7-10750H | Six Core (12 threads) | Frequência: 2.60 GHz até 5.0 GHz | 12 MB de SmartCache, Memória: 8 GB RAM DDR4 2666 MHz (1 x 8 GB em módulo) | Expansível até 32GB DDR4 2666 MHz (2 Slots SO-DIMM com capacidade para até 16 GB cada), Tela: 15.6 com design ultrafino | Painel: IPS (In-Plane Switching) | Resolução: Full HD (1920 x 1080) | Taxa de atualização: 144 Hz | Tecnologia antirreflexo Acer ComfyView,Gráficos: NVIDIA GeForce GTX 1650 com 4 GB de memória dedicada GDDR6 | UHD intel Graphics para processadores de 10ª geração com memória compartilhada com a memória RAM., Armazenamento: 512 GB SSD M.2 2280 PCIe 3.0 NVMe x4, Webcam: Webcam com resolução HD (1280 x 720)  e gravação de áudio e vídeo em 720p com tecnologia SHDR (Super high dynamic range imaging), Bateria: Bateria de 4 células (li-ion) 57 Wh | Autonomia de até 11 h (depende das condições de uso)",
         image: "Notebook-Gamer-Acer-Nitro-5-Intel-Core-i7-10750H",
         extension: ".jpg",
+        brand: "Acer"
       },
       {
         product_id: uuidv4().toString(),
@@ -100,6 +105,7 @@ module.exports = {
           "Marca: Apple, Modelo: MLK83BZ/A, Cor: Vermelho, Capacidade: 256GB, Dimensões: Largura 64.2 mm | Altura 131.5 mm | Espessura 7.65 mm, Câmera: Sistema de câmera dupla (grande-angular e ultra-angular) de 12 MP | Grande-angular: abertura ƒ/1.6 | Ultra-angular: abertura ƒ/2.4 e ângulo de visão de 120°, Gravação de vídeo: Modo Cinema para gravação de vídeos com profundidade de campo (1080p a 30 qps) | Gravação de vídeo HDR com Dolby Vision até 4K a 60 qps | Gravação de vídeo 4K a 24 qps - 25 qps, 30 qps ou 60 qps, Câmera TrueDepth: Câmera de 12 MP | Abertura ƒ/2.2 | Modo Retrato com efeito bokeh avançado e Controle de Profundidade, Face ID: Reconhecimento facial pela câmera TrueDepth, Energia e bateria: Reprodução de vídeo: Até 19 horas | Streaming de vídeo: Até 15 horas, Sistema operacional: iOS 15: O iOS é o sistema operacional móvel mais pessoal e seguro do mundo. Ele vem com muitos recursos poderosos e foi criado para proteger sua privacidade.",
         image: "iPhone-13-Mini-256GB-Vermelho",
         extension: ".jpg",
+        brand: "Apple"
       },
       {
         product_id: uuidv4().toString(),
@@ -116,6 +122,7 @@ module.exports = {
           "Marca: Asus, Modelo: Zenfone 8, Cor: Prata, Tela: Tipo: AMOLED 120 Hz HDR10 + | Resolução: 1080x2400 | Proteção: Gorila Glass, Processador: QUALCOMM SNAPDRAGON 888, Armazenar: Tamanho de armazenamento: 256 GB, Dual SIM: Sim, Câmera frontal: 12 MP AF, Câmera traseira: Dual: 64 MP OIS + 12 MP Wide AF, Flash traseiro: Sim, Bateria: 1 Célula / 4000 mAh",
         image: "Smartphone-Asus-Zenfone-8-5G-ZS590KS-8J087BR",
         extension: ".jpg",
+        brand: "Asus"
       },
       {
         product_id: uuidv4().toString(),
@@ -132,6 +139,7 @@ module.exports = {
           "Marca: Samsung, Modelo: Galaxy S22 Ultra, Dimensões do Aparelho (mm): 163.3 x 77.9 x 8.9, USB Conector: USB Type-C, Tecnologia: Super AMOLED 2x, Vidro Reforçado: Gorilla Glass Victus+, Resolução: Câmera quádrupla de 108MP OIS (Wide) + 10MP OIS (Zoom 3x) + 12MP (Ultra-Wide) + 10MP OIS (Zoom 10x), Foco Automático (AF): Sim, Flash: Flash-LED, Câmera Frontal: Resolução 40MP, Memória: Memória Interna total compartilhada: 256GB | Memória interna compartilhada com o sistema operacional e aplicativos pré embarcados., Suporte a Cartão de Memória: Não, Memória RAM: 12GB, Capacidade da Bateria (mAh): 5000mAh, Carregamento Sem Fio: Sim, Observação: Carregador não incluso na caixa",
         image: "Smartphone-Samsung-Galaxy-S22-Ultra-12GB-RAM-256GB",
         extension: ".jpg",
+        brand: "Samsung"
       },
       {
         product_id: uuidv4().toString(),
@@ -148,6 +156,7 @@ module.exports = {
           "Marca: Philco, Modelo: Hit P8 32 GB, Tela Infinita Drop Notch IPS HD +: Tela com 6’’ IPS e resolução HD, Processador: Octa Core A55 1.6 GHz, Sistema Operacional: Android 11, Memória interna: 32 GB | mais suporte para cartão SD de até 512 GB, Memória RAM: 3 GB, Bateria: 3000 mAh, Câmera Frontal: 5 MP, Câmera Traseira: Multi Cam – 13 MP + 2x 0.3 MP1 + 2 MP, Redes: 2G/3G/4G, Sensor de digital: Sim, Reconhecimento facial: Sim",
         image: "Smartphone-Philco-Hit-P8-3GB-RAM-32GB-Octa-Core-Gold",
         extension: ".jpg",
+        brand: "Philco"
       },
       {
       product_id: uuidv4().toString(),
@@ -164,6 +173,7 @@ module.exports = {
         "Marca: Samsung, Referência: SM-P615NZAVZTO, Modelo: Tab S6 Lite, Linha: Galaxy, Memória interna: 64GB, Acessórios: Caneta S-Pen - Capa protetora, Tamanho da tela: 10.4, Tecnologia: 4G, Conectividade: Bluetooth - Wi-Fi, Conexões: USB tipo C ,Sistema operacional: Android 10",
       image: "Tablet-Samsung-Galaxy-Tab-S6-Lite-10-4-4G-Wi-Fi",
       extension: ".jpg",
+      brand: "Samsung"
     },
     {
       product_id: uuidv4().toString(),
@@ -180,6 +190,7 @@ module.exports = {
         "Câmera: Câmera Traseira Resolução: 8.0 MP | Câmeras Traseiras Foco Automático: Sim | Câmera Frontal Resolução: 5.0MP | Câmera Traseira Flash: Não | Resolução de Gravação de Vídeos: FHD (1920 x 1080) @30fps, Bateria, Capacidade da Bateria (mAh, Typical): 7040 | Removível: Não, Processador: Velocidade do Processador: 2GHz | Tipo de Processador: Octa Core",
       image: "Tablet-Samsung-Galaxy-Tab-A8-64GB-4GB-RAM-WiFi-SM-X200NZAUZTO",
       extension: ".jpg",
+      brand: "Samsung"
     },
     {
       product_id: uuidv4().toString(),
@@ -196,6 +207,7 @@ module.exports = {
         "Marca: Positivo, Referência: 11160919, Modelo: Twist Tab, Memória interna: 32GB ,Tamanho da tela: 7 ,Conectividade: Wi-Fi, Sistema operacional: Android Oreo versão GO",
       image: "Tablet-Positivo-Twist-Tab-7-Wi-Fi-32GB-Android-Oreo-Quad-Core",
       extension: ".jpg",
+      brand: "Positivo"
     },
     {
       product_id: uuidv4().toString(),
@@ -212,6 +224,7 @@ module.exports = {
         "Tela: Tamanho: 8.7' (220.5mm) | Resolução: 1340 x 800 (WXGA+) | Tecnologia: TFT | Profundidade de Cor: 16 Milhões, Suporte de engrenagem: Galaxy Buds Pro, Galaxy Buds Live, Galaxy Buds +, Galaxy Buds, Gear IconX (2018) | S voz: Não | Mobile TV: Não",
       image: "Tablet-Samsung-Galaxy-A7-Lite-4G-32GB-Android-11-Grafite-SM-T225NZAPZTO",
       extension: ".jpg",
+      brand: "Samsung"
     },
     {
       product_id: uuidv4().toString(),
@@ -228,6 +241,7 @@ module.exports = {
         "Marca: Philco, Referência: 58203023, Modelo: PTB8RSG 4G, Memória interna: 32GB ,Tamanho da tela: 8 , Tecnologia: 4G, Conectividade: Wi-Fi - Bluetooth ,Sistema operacional: Android 10",
       image: "Tablet-Philco-PTB8RRG-8-4G-Wi-Fi-32GB-Android-10",
       extension: ".jpg",
+      brand: "Philco"
     },
     {
       product_id: uuidv4().toString(),
@@ -244,6 +258,7 @@ module.exports = {
         "Marca: TCL, Recursos de Vídeos: HDR, MICRO DIMMING | Modo de Imagem Dinâmica | Padrão, Smart HDR | Esporte | Filme | Jogos e PC, Ajuste de Cor: Frio | Padrão | Quente e Personalizado, Reconhecimento de Voz: Sim - através do controle remoto (Google Assistant embutido em português), Extras: Bluetooth e Chromecast Integrado, Processador: Quad Core, Consumo (KW/h): Consumo Stand BY < 0.5W - CONSUMO MÁXIMO = 50W, Recursos de Áudio: Modo Som Dinâmico | Padrão | Esporte | Filmes | Música | Voz e Jogos, Tipo de TV: Smart TV Android",
       image: "Smart-TV-TCL-Android-32-HD-S615-HDR",
       extension: ".jpg",
+      brand: "TCL"
     },
     {
       product_id: uuidv4().toString(),
@@ -260,6 +275,7 @@ module.exports = {
         "Marca: Philco, Recursos de Vídeos: Conversor digital integrado | Recepção em ATV - DTV e CATV | Menu nos idiomas Português e Inglês | Busca automática de canais | Ajustes de temperatura de cor, Recursos/Funcionalidades: Mute | Mts¹ | Sleep | Closed Caption | Guide¹ | Info¹ | Bloqueio De Canal¹, Processador: Quad Core, Consumo(KW/h):	<0.5",
       image: "TV-Philco-32-Led-HD",
       extension: ".jpg",
+      brand: "Philco"
     },
     {
       product_id: uuidv4().toString(),
@@ -276,6 +292,7 @@ module.exports = {
         "Marca: Philco, Tipo de TV: Comum, Cor: Preto, Tecnologia da Tela: LED, Polegadas: 39, Resolução: HD, Taxa de Atualização: 60Hz, Taxa de atualização com Tecnologia: 60Hz, Recursos de Vídeo: DNR | Receptor DTV | CC, Info | Guide | Sleep, Recursos de Áudio: SAP/MTS | Som Surround | Equalizadores de som predefinidos",
       image: "TV-LED-39-Philco-HD-com-Conversor-Digital-3-HDMI-1-USB-Som-Surround-60Hz-Preta",
       extension: ".jpg",
+      brand: "Philco"
     },
     {
       product_id: uuidv4().toString(),
@@ -290,6 +307,7 @@ module.exports = {
       description_2: "Marca: Redragon, Modelo: H350RGB, Diametro do driver: 50mm, Sensibilidade: 93+-3dB S.P.L. at 1KHz. Frequencia de resposta: 20~20000 Hz, Impedancia: 24 Ohm +- 15%, Sensibilidade do Microfone: -42+-4dB (0dB = 1V/PA), Tipo de microfone: Omnidirectional, Conexão: USB",
       image: "Headset-Gamer-Redragon-Pandora",
       extension: ".jpg",
+      brand: "Redragon"
     },
     {
       product_id: uuidv4().toString(),
@@ -304,6 +322,7 @@ module.exports = {
       description_2: "Marca: Logitech G, Modelo: 981-000882, Resposta de frequência: 20 Hz - 20 kHz, Padrão de captação do microfone: Cardioide (unidirecional), Tamanho: 6 mm, Resposta de frequência: 100 Hz - 10 KHz, Alcance da rede sem fio até 20 metros, Tipo de conexão: LIGHTSPEED sem fio via USB, Vida útil da bateria (recarregável), Sem iluminação: 29 horas, Iluminação padrão: 20 horas, Requisito do sistema: Porta USB 2.0 (porta tipo A) | PC com Windows 7 ou superior | macOS X 10.12 ou superior | PlayStation 4 | Acesso à Internet para o software Logitech G HUB (opcional)",
       image: "Headset-Gamer-Sem-Fio-Logitech-preto",
       extension: ".jpg",
+      brand: "Logitech"
     },
 {
       product_id: uuidv4().toString(),
@@ -318,6 +337,7 @@ module.exports = {
       description_2: "Marca: Logitech, Modelo: 981-000983, Microfone: Tamanho 4mm | Sensibilidade -42 dB, Recursos: Conectividade de 3.5 mm e USB-C | Drivers duplos dinâmicos de 5.8 mm e 9.2 mm | Conforto excelente, Requisitos de Sistema: Porta auxiliar de 3,5 mm ou USB-C",
       image: "Fone-de-Ouvido-Gamer-Intra-Auricular-Logitech-G333-K",
       extension: ".jpg",
+      brand: "Logitech"
     },
     {
       product_id: uuidv4().toString(),
@@ -329,9 +349,10 @@ module.exports = {
       state: "disponível",
       name: "Carregador USB-C de 20W",
       description: "O adaptador de energia USB-C de 20W Apple oferece recarga rápida e eficiente. É ideal para usar em casa, no trabalho ou onde você estiver. Ele é compatível com qualquer aparelho com porta USB-C. Mas a Apple recomenda usá-lo com o iPad Pro ou iPad Air para obter o melhor rendimento de recarga. Ele também pode ser usado com o iPhone 8 ou posterior para aproveitar as vantagens da recarga rápida.",
-      description_2: "USB-C",
+      description_2: "USB-C, Dimensões do produto: Altura: 8,3cm - Largura: 3cm - Comprimento: 6,7cm, Prazo de garantia: 01 ano (3 meses de garantia legal e mais 9 meses de garantia especial concedida pelo fabricante), Aviso do carregador USB 20W: Para utilizar o carregador USB 20W é necessário um cabo compatível com a entrada USB.",
       image: "Carregador-USB-C-de-20W",
       extension: ".jpg",
+      brand: "Apple"
     },
 {
       product_id: uuidv4().toString(),
@@ -346,6 +367,7 @@ module.exports = {
       description_2: "Marca: Samsung, Modelo: Fast Charge, Conexões: Entrada USB Tipo C, Capacidade: 10000 mAh, Tempo de recarga: Rápida por indução, Quantidade média de carga: 02 Vezes à 02 vezes e meia, Voltagem: Bivolt, Cor: Rosê, Frequência de entrada: 7.5W / Qi 5W, Luz indicadora de carga: Sim",
       image: "Carregador-Portátil-Power-Bank-Samsung-Fast-Charge-Rose",
       extension: ".jpg",
+      brand: "Samsung"
     }
 
     ]);
