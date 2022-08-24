@@ -2,10 +2,11 @@ const { Product } = require("../database/models");
 const { Op } = require("sequelize");
 const { limiterText } = require("../utils/stringHelper");
 const price = require("../utils/priceHelper");
-const filterProduct = require("../utils/filterProduct");
+const filter = require("../utils/filterProduct");
 
 const menuController = {
   smartphones: async (req, res) => {
+
 
 
     const allSmartphones = await Product.findAll({
@@ -21,9 +22,8 @@ const menuController = {
 
   smartphonesFilter: (req, res)=>{
 
-    // const filtrar = filterProduct(req)
-    const x = req.body.value1
-    console.log(x)
+    filter(req, res, Product)
+   
   },
 
   perifericos: (req, res) => {
