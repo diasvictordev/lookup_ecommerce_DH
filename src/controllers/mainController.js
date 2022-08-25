@@ -59,13 +59,19 @@ const mainController = {
 
     const {id} = req.params
 
-    console.log(id)
+    let product = [id]
 
-    const cart = []
+    console.log(product)
 
+  const newCart = await Cart.create({cart_id: uuidv4(), product_id: product, user_id})
 
-    // Cart.create({cart_id: uuidv4(),
-    //               })
+  let cartMap
+   
+  cartMap = newCart.dataValues
+
+  console.log(cartMap)
+
+  // res.render("index")
     
 
   },

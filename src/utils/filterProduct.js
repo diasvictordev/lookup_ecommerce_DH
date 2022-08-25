@@ -3,7 +3,7 @@ const { limiterText } = require("../utils/stringHelper");
 const price = require("../utils/priceHelper");
 
 const filters = {
-  filter: async (req, res, model) => {
+  smartphones: async (req, res, model) => {
     let brands;
     let value;
     let order;
@@ -25,10 +25,10 @@ const filters = {
       brands = "Philco";
     }
     if (priceUp) {
-      order = "ASC";
+      order = "DESC";
     }
     if (priceDown) {
-      order = "DESC";
+      order = "ASC";
     }
     if (value1) {
       value = 600;
@@ -56,7 +56,7 @@ const filters = {
       });
     }
 
-    if (priceDown || priceUp) {
+    if (priceDown || priceUp && !brands) {
       smartphones = await model.findAll({
         where: {
           category: "Smartphone",

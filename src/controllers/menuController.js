@@ -22,7 +22,7 @@ const menuController = {
 
   smartphonesFilter: (req, res)=>{
 
-    filters.filter(req, res, Product);
+    filters.smartphones(req, res, Product);
    
   },
 
