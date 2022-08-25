@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look Up</title>
+    <link rel="stylesheet" href="/stylesheets/error.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header class="header-container">
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main>
+        <div class="error-container">
+            <!-- <img src="./images/icons/error-icon.svg" alt=""> -->
+            <h2>Ops.. parece que ocorreu um erro no processamento dos dados, tente novamente mais tarde !</h2>
+            <button type="submit">Voltar  para Home</button>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+</html>

@@ -1,9 +1,16 @@
-function auth(req, res, next) {
-  if (req.session.user !== undefined) {
-  return next();
-  }else{
-    res.redirect('/usuario/login')
-}}
+const loginMiddleware = (req, res, next) => {
+  if(!req.session.user && !req.cookies.logado) {
+      return res.redirect('/login');
+  }
+  const user = req.session.user ? 
+      JSON.parse(req.session.user) : 
+      JSON.parse(req.cookies.logado)
 
+      // console.log(user)
 
-module.exports = auth
+  req.user = user
+
+  next()
+}
+
+module.exports = loginMiddleware

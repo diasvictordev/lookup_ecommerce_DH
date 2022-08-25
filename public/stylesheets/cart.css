@@ -29,6 +29,7 @@
   
   .remove-flex {
     display: flex;
+    margin-top: 50px;
   }
   
   .remove-flex h2 {
@@ -37,6 +38,7 @@
   
   .remove-container {
     display: flex;
+    justify-content: space-between;
     gap: 30px;
     max-width: 1280px;
   }
@@ -45,6 +47,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+
+  .remove-flex button {
+    border: none;
+    background-color: black;
+    cursor: pointer;
   }
   
   #product-photo {
@@ -95,7 +103,8 @@
     padding: 10px;
   }
   
-  #button-final {
+  #button-final button {
+    cursor: pointer;
     margin-left: 150px;
   }
   
