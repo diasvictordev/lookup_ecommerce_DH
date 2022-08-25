@@ -1,47 +1,87 @@
-const check1 = document.querySelector("#brand1")
-const check2 = document.querySelector("#brand2")
-const check3 = document.querySelector("#brand3")
-const check4 = document.querySelector("#brand4")
+const computer = document.querySelector("#brand1")
+const notebooks = document.querySelector("#brand2")
+const smartphones = document.querySelector("#brand3")
+const perifericos = document.querySelector("#brand4")
+const tablet = document.querySelector("#brand5")
+const tvs = document.querySelector("#brand6")
+const gamer = document.querySelector("#brand7")
 
-const check5 = document.querySelector(".brand1")
-const check6 = document.querySelector(".brand2")
-const check7 = document.querySelector(".brand3")
-const check8 = document.querySelector(".brand4")
+const computerContainer = document.querySelector(".brand1")
+const notebookContainer = document.querySelector(".brand2")
+const smartphoneContainer = document.querySelector(".brand3")
+const perifericoContainer = document.querySelector(".brand4")
+const tabletContainer = document.querySelector(".brand5")
+const tvsContainer = document.querySelector(".brand6")
+const gamerContainer = document.querySelector(".brand7")
 
 
 function checkBox(){
-    if(check1.checked){
-        check6.style.display = "none"
-        check7.style.display = "none"
-        check8.style.display = "none"
-    }if(!check1.checked){
-        check6.style.display = "block"
-        check7.style.display = "block"
-        check8.style.display = "block"
-    } if(check2.checked && !check1.checked){
-        check5.style.display = "none"
-        check7.style.display = "none"
-        check8.style.display = "none"
-    }if(!check2.checked && !check1.checked){
-        check5.style.display = "block"
-        check7.style.display = "block"
-        check8.style.display = "block"
-    }if(check3.checked && !check1.checked && !check2.checked){
-        check5.style.display = "none"
-        check6.style.display = "none"
-        check8.style.display = "none"
-    }if(!check3.checked && !check1.checked && !check2.checked){
-        check5.style.display = "block"
-        check6.style.display = "block"
-        check8.style.display = "block"
-}if(check4.checked && !check1.checked && !check2.checked && !check3.checked){
-    check5.style.display = "none"
-    check6.style.display = "none"
-    check7.style.display = "none"
-}if(!check4.checked && !check1.checked && !check2.checked && !check3.checked){
-    check5.style.display = "block"
-    check6.style.display = "block"
-    check7.style.display = "block"
+    if(computer.checked){
+        notebookContainer.style.display = "none"
+        smartphoneContainer.style.display = "none"
+        perifericoContainer.style.display = "none"
+        tabletContainer.style.display = "none"
+        tvsContainer.style.display = "none"
+        gamerContainer.style.display = "none"
+    }if(!computer.checked){
+        notebookContainer.style.display = "block"
+        smartphoneContainer.style.display = "block"
+        perifericoContainer.style.display = "block"
+        tabletContainer.style.display = "block"
+        tvsContainer.style.display = "block"
+        gamerContainer.style.display = "block"
+    } if(notebooks.checked){
+        computerContainer.style.display = "none"
+        smartphoneContainer.style.display = "none"
+        perifericoContainer.style.display = "none"
+        tabletContainer.style.display = "none"
+        tvsContainer.style.display = "none"
+        gamerContainer.style.display = "none"
+    }if(smartphones.checked){
+        computerContainer.style.display = "none"
+        notebookContainer.style.display = "none"
+        perifericoContainer.style.display = "none"
+        tabletContainer.style.display = "none"
+        tvsContainer.style.display = "none"
+        gamerContainer.style.display = "none"
+    }if(perifericos.checked){
+    computerContainer.style.display = "none"
+    notebookContainer.style.display = "none"
+    smartphoneContainer.style.display = "none"
+    tabletContainer.style.display = "none"
+    tvsContainer.style.display = "none"
+    gamerContainer.style.display = "none"
+}if(perifericos.checked){
+    computerContainer.style.display = "none"
+    tvsContainer.style.display = "none"
+    notebookContainer.style.display = "none"
+    smartphoneContainer.style.display = "none"
+    gamerContainer.style.display = "none"
+}if(gamer.checked){
+    tvsContainer.style.display = "none"
+    tabletContainer.style.display = "none"
+    computerContainer.style.display = "none"
+    notebookContainer.style.display = "none"
+    smartphoneContainer.style.display = "none"
+    perifericoContainer.style.display = "none"
+}if(tablet.checked){
+    tvsContainer.style.display = "none"
+    gamerContainer.style.display = "none"
+    computerContainer.style.display = "none"
+    notebookContainer.style.display = "none"
+    smartphoneContainer.style.display = "none"
+    perifericoContainer.style.display = "none"
+}if(tvs.checked){
+    tabletContainer.style.display = "none"
+    gamerContainer.style.display = "none"
+    computerContainer.style.display = "none"
+    notebookContainer.style.display = "none"
+    smartphoneContainer.style.display = "none"
+    perifericoContainer.style.display = "none"
+}if(!tablet.checked && !perifericos.checked && !computer.checked && !notebooks.checked && !smartphones.checked && !gamer.checked && !tvs.checked){
+    computerContainer.style.display = "block"
+    notebookContainer.style.display = "block"
+    smartphoneContainer.style.display = "block"
 }
 }
 
