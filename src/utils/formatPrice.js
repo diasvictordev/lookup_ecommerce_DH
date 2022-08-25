@@ -7,5 +7,3 @@ function formatPrice(price) {
   }
   
   module.exports = formatPrice
-  
-console.log(formatPrice(199 / 2))

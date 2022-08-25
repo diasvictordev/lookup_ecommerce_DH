@@ -2,7 +2,6 @@ const { Product } = require("../database/models");
 const { Op } = require("sequelize");
 const { limiterText } = require("../utils/stringHelper");
 const price = require("../utils/priceHelper");
-const filters = require('../utils/filterProduct')
 
 const menuController = {
   smartphones: async (req, res) => {
@@ -17,13 +16,7 @@ const menuController = {
     allSmartphones.map((product) => {
       smartphones.push(product._previousDataValues);
     });
-    res.render("smartphones", { smartphones, limiterText, price }, {user: req.session.user});
-  },
-
-  smartphonesFilter: (req, res)=>{
-
-    filters.smartphones(req, res, Product);
-   
+    res.render("smartphones", { smartphones, limiterText, price });
   },
 
   perifericos: (req, res) => {
@@ -37,7 +30,7 @@ const menuController = {
         products.map((product) => {
           perifericos.push(product._previousDataValues);
         });
-        res.render("perifericos", { perifericos, limiterText, price }, {user: req.session.user});
+        res.render("perifericos", { perifericos, limiterText, price });
       })
       .catch((error) => {
         console.log(error);

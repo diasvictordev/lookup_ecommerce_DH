@@ -19,7 +19,7 @@
 
 .list-checkbox{
   height: 200px;
-  width: 200px;
+  width: 250px;
 }
 
 .list-typography, .filter-btn{
@@ -154,6 +154,8 @@ top: 100%;
 
   .list-checkbox{
     height: auto;
+    max-width: 250px;
+    width: 90% ;
   }
   .list-products{
     width: 100vw;

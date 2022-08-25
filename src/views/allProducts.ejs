@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Periféricos</title>
+  <title>Todos os Produtos</title>
   <link rel="stylesheet" href="/stylesheets/list-products.css">
 </head>
 
@@ -24,29 +24,51 @@
     <div class="filter">
       <a class="filter-btn" onclick="filterOpen()">Filtrar</a>
   </div>
-
-    <form id="filter-form" class="list-products" action="/menu/smartphones" method="POST">
+  
+  <form id="filter-form" class="list-products" action="/menu/smartphones" method="POST">
   
       <div class="list-checkbox">
           <span class="list-typography">Tipo de Produto</span>
           <div>
               <div class="check-container brand1">
                   <input type="checkbox" id="brand1" name="brand1" onchange="checkBox()">
-                  <label for="brand1">Fones/ Headset</label>
+                  <label for="brand1">Computadores</label>
               </div>
   
               <div class="check-container brand2">
                   <input type="checkbox" id="brand2" name="brand2" onchange="checkBox()">
-                  <label for="brand2">Baterias / Carregadores</label>
+                  <label for="brand2">Notebooks</label>
               </div>
   
+              <div class="check-container brand3">
+                  <input type="checkbox" id="brand3" name="brand3" onchange="checkBox(this)">
+                  <label for="brand3">Smartphones</label>
+              </div>
+              
+              
               <div class="check-container brand4">
-                  <input type="checkbox" id="brand4" name="brand4" onchange="checkBox(this)">
-                  <label for="brand4">Philco</label>
+                <input type="checkbox" id="brand4" name="brand4" onchange="checkBox(this)">
+                <label for="brand4">Periféricos</label>
               </div>
+              
+              <div class="check-container brand5">
+                <input type="checkbox" id="brand5" name="brand5" onchange="checkBox(this)">
+                <label for="brand5">Tablet</label>
+              </div>
+              
+              <div class="check-container brand6">
+                <input type="checkbox" id="brand6" name="brand6" onchange="checkBox(this)">
+                <label for="brand6">Tv's</label>
+              </div>
+
+              <div class="check-container brand7">
+                <input type="checkbox" id="brand7" name="brand7" onchange="checkBox(this)">
+                <label for="brand7">Gamer</label>
+            </div>
+
+            </div>
           </div>
-      </div>
-  
+          
       <div class="list-checkbox">
           <span class="list-typography">Ordem</span>
           <div>
@@ -70,17 +92,22 @@
           <div>
               <div class="check-container value1">
                   <input type="checkbox" id="value1" name="value1" onchange="valueCheck()">
-                  <label for="value1">Até R$ 200,00</label>
+                  <label for="value1">Até R$ 600,00</label>
               </div>
   
               <div class="check-container value2">
                   <input type="checkbox" id="value2" name="value2" onchange="valueCheck()">
-                  <label for="value2">Até R$ 300,00</label>
+                  <label for="value2">Até R$ 1.000,00</label>
               </div>
   
               <div class="check-container value3">
                   <input type="checkbox" id="value3" name="value3" onchange="valueCheck()">
-                  <label for="value3">Até R$ 900,00</label>
+                  <label for="value3">Até R$ 1.500,00</label>
+              </div>
+  
+              <div class="check-container value4">
+                  <input type="checkbox" id="value4" name="value4" onchange="valueCheck()">
+                  <label for="value4">Até R$ 2.000,00</label>
               </div>
   
               </div>
@@ -89,48 +116,59 @@
       </div>
   
       <button class="filter-sub" type="submit" form="filter-form">Filtrar</button>
-  </form>  
+  </form>
 
     <div class="box-container">
 
       <div class="title-container">
-        <img src="/images/icons/mouse.svg" alt="">
-        <span>Periféricos</span>
+        <img src="/images/icons/Smartphone.svg" alt="">
+        <span>Todos os Produtos</span>
       </div>
 
       <div class="products-container">
 
-        <% perifericos.forEach(product=> {%>
+      <% products.forEach(product=> {%>
 
-          <a href="/detalhe/<%=product.product_id%>">
-            <div class="add-product-container">
-            <div class="products-card">
+      <a href="/detalhe/<%=product.product_id%>">
+        <div class="add-product-container">
+        <div class="products-card">
 
-              <% const imageFile=product.image +"-1"+ product.extension %>
+          <% const imageFile=product.image +"-1"+ product.extension %>
 
-                <img src="/images/products/<%=imageFile%>" alt="">
-                <h2 class="description-card">
-                  <%= limiterText(product.name) %>
-                </h2>
-                <span class="price-cash">
-                   <%= price.format(product.price_discount) %>
-                </span>
-                <span class="text1-card">ou</span>
-                <span class="price-card"> <%= price.format(product.price) %> </span>
-                <span class="text2-card">em até</span>
-                <span class="parcel-price">12x de <%= price.parcels(product.price) %></span>
-            </div>
-            <button class="add-product">Adicionar ao Carrinho</button>
-          </div>
-          </a>
-
-          <% }) %>
-
+            <img src="/images/products/<%=imageFile%>" alt="">
+            <h2 class="description-card">
+              <%= limiterText(product.name)%>
+            </h2>
+            <span class="price-cash">
+              <%= price.format(product.price_discount) %>
+            </span>
+            <span class="text1-card">ou</span>
+            <span class="price-card"> <%= price.format(product.price) %> </span>
+            <span class="text2-card">em até</span>
+            <span class="parcel-price">12x de <%= price.parcels(product.price) %> </span>
+        </div>
+        <button class="add-product">Adicionar ao Carrinho</button>
       </div>
+      </a>
+
+      <% }) %>
 
     </div>
 
-    <!-- <%- include('./partials/page');%> -->
+    <div class="page">
+
+      <span>Página:</span>
+      <ul>
+
+      <%  for(let i=1; i<=limit; i++ ){%>
+
+          <li><a href="/menu/todos-produtos?page=<%=i-1%>"><%=i%></a></li>
+
+        <%}%>
+       
+        </ul>
+  
+  </div>
 
 
     <div class="support-container">
@@ -151,6 +189,7 @@
   <script src="/js/index.js"></script>
   <script src="/js/scrollTop.js"></script>
   <script src="/js/checkBox.js"></script>
+
 
 </body>
 

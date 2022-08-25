@@ -347,7 +347,7 @@ module.exports = {
       category: "Periféricos",
       amount: 45,
       state: "disponível",
-      name: "Carregador USB-C de 20W",
+      name: "Carregador USB-C de 20W Apple Original",
       description: "O adaptador de energia USB-C de 20W Apple oferece recarga rápida e eficiente. É ideal para usar em casa, no trabalho ou onde você estiver. Ele é compatível com qualquer aparelho com porta USB-C. Mas a Apple recomenda usá-lo com o iPad Pro ou iPad Air para obter o melhor rendimento de recarga. Ele também pode ser usado com o iPhone 8 ou posterior para aproveitar as vantagens da recarga rápida.",
       description_2: "USB-C, Dimensões do produto: Altura: 8,3cm - Largura: 3cm - Comprimento: 6,7cm, Prazo de garantia: 01 ano (3 meses de garantia legal e mais 9 meses de garantia especial concedida pelo fabricante), Aviso do carregador USB 20W: Para utilizar o carregador USB 20W é necessário um cabo compatível com a entrada USB.",
       image: "Carregador-USB-C-de-20W",
