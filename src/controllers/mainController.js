@@ -42,7 +42,7 @@ const mainController = {
         });
 
 
-        return res.render("index", { offer, smartphone, limiterText, price});
+        return res.render("index", { offer, smartphone, limiterText, price}, {user: req.session.user});
       })
       .catch((erro) => {
         console.log(erro);
@@ -50,7 +50,7 @@ const mainController = {
   },
 
   carrinho: (req, res) => {
-    res.render("cart");
+    res.render("cart", {user: req.session.user});
   },
 
   cartCreate: async (req, res) => {
@@ -77,7 +77,7 @@ const mainController = {
   },
 
   detail: (req, res) => {
-    res.render("detail-product");
+    res.render("detail-product", {user: req.session.user});
   },
   detailProduct: (req, res) => {
     const { id } = req.params;
@@ -102,7 +102,7 @@ const mainController = {
           (product) => product.product_id != id
         );
         
-        res.render("detail-product", { productPk, productsToShow, limiterText, splitDescription, price});
+        res.render("detail-product", { productPk, productsToShow, limiterText, splitDescription, price}, {user: req.session.user});
       })
       .catch((erro) => {
         console.log(erro);

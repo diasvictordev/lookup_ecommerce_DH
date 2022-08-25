@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 const userController = {
 
     cadastro: (req,res) => {
-        res.render('cadastro');
+        res.render('cadastro', {user: req.session.user});
     },
 
     processoCadastro: (req, res) => {
@@ -21,40 +21,37 @@ const userController = {
     },
 
     login: (req,res) => {
-        res.render('login');
+        res.render('login', {user: req.session.user});
     },
 
     processoLogin: async (req,res) => {
         const { email, password, logado } = req.body;
+        const userExists = await User.findOne({ where: { email }})
+        const user = {
+            id: userExists.id,
+            email: userExists.email,
+            nome: userExists.user_name,
+        };
+        const passCorrect = await bcrypt.compareSync(password, userExists.user_password);
 
-        const userExists = await User.findOne({ where:{email} })
-
-
-        if(logado != undefined){
+        if(!passCorrect){
             
-            res.cookie('usuarioLogado', userExists.email, {maxAge:60000})
+            return res.render('login', {error: "Usuário ou senha incorreto"});
+        }
+       
+        req.session.user = user;
+
+        if(logado != "undefined"){
+
+            res.cookie("logado", user, {maxAge: 90000})
         }
 
-        if(userExists){
-            const correct = await bcrypt.compareSync(password, userExists.user_password)
-
-            req.session.user = {
-                id: userExists.id,
-                email: userExists.email,
-              };
-            
-            return res.redirect("/");
-        }
-
-        return res.render('login', { erro: 'Usuario ou senha incorretos.' })
-        
+        return res.redirect("/");
     },
+    
+    painelDeUsuario: function(req, res){
 
-    PainelDeUsuario: (req, res) => {
-        
-        if(req.session.user){
-            res.render('user');
-        }
+        res.render('user', {user: req.session.user})
     }
 
 }

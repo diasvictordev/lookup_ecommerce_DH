@@ -11,7 +11,11 @@
 <body>
     
     <header class="header-container">
-        <%- include('./partials/header'); %>
+        <% if(typeof user==='undefined' ) {%>
+            <%- include('./partials/header', {user: undefined}); %>
+              <% } else { %>
+                <%- include('./partials/header', {user: user}); %>
+                  <% } %>
     </header>
 
     <main id="cart-info">
@@ -32,19 +36,19 @@
             <div class="product-name">
                 <h2>Nome do produto</h2>
 
-                <!--Função remover do carrinho-->
-            
-                <div class="remove-flex">
-                    <img src="/images/icons/remove_shopping_cart_white_24dp 1.svg" alt="">
-                    <h2>Remover do carrinho</h2>
-                </div>
-
             </div>
-        </div>
 
-        <div id="buy-value">
-            <h2 id="value-title">Valor do produto: </h2>
-            <h2 id="value-number">R$2.700</h2>
+            <div id="buy-value">
+                <h2 id="value-title">Valor do produto: </h2>
+                <h2 id="value-number">R$2.700</h2>
+
+                <div class="remove-flex">
+                    <button type="submit">
+                        <img src="/images/icons/remove_shopping_cart_white_24dp 1.svg" alt="">
+                        <h2>Remover do carrinho</h2>
+                    </button>
+                </div>
+            </div>
         </div>
 
             <!-- Adicionar função para receber valores dos produtos adicionados no carrinho e somá-los mostrando o valor total da compra-->

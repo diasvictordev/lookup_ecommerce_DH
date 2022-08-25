@@ -36,8 +36,13 @@
 
         <div class="logo-test">
             <div class="user-nav">
+                <% if(typeof user == 'undefined') { %>
                 <a href="/usuario/login" class="nav-icon-links"><img src="/images/icons/account.svg" alt="" /></a>
                 <a href="/usuario/login" class="nav-text-links">Minha Conta</a>
+               <% } else { %>
+                <a href="/usuario/user" class="nav-icon-links"><img src="/images/icons/account.svg" alt="" /></a>
+                <a href="/usuario/user" class="nav-text-links">Minha Conta</a>
+                <% } %>
             </div>
 
             <div class="user-nav">

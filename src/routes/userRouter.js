@@ -28,7 +28,7 @@ router.post('/login', userController.processoLogin);
 
 // Painel do Usuario 
 
-router.get('/user', userController.PainelDeUsuario);
+router.get('/user', userController.painelDeUsuario);
 
 
 

@@ -17,7 +17,7 @@ const menuController = {
     allSmartphones.map((product) => {
       smartphones.push(product._previousDataValues);
     });
-    res.render("smartphones", { smartphones, limiterText, price });
+    res.render("smartphones", { smartphones, limiterText, price }, {user: req.session.user});
   },
 
   smartphonesFilter: (req, res)=>{
@@ -37,7 +37,7 @@ const menuController = {
         products.map((product) => {
           perifericos.push(product._previousDataValues);
         });
-        res.render("perifericos", { perifericos, limiterText, price });
+        res.render("perifericos", { perifericos, limiterText, price }, {user: req.session.user});
       })
       .catch((error) => {
         console.log(error);
@@ -45,11 +45,11 @@ const menuController = {
   },
 
   cadeiras: (req, res) => {
-    res.render("cadeiras");
+    res.render("cadeiras", {user: req.session.user});
   },
 
   hardware: (req, res) => {
-    res.render("hardware");
+    res.render("hardware", {user: req.session.user});
   },
 
   tablet: (req, res) => {
@@ -64,7 +64,7 @@ const menuController = {
           tablet.push(product._previousDataValues);
         });
         const { limiterText } = require("../utils/stringHelper");
-        res.render("tablet", { tablet, price, limiterText });
+        res.render("tablet", { tablet, price, limiterText }, {user: req.session.user});
       })
       .catch((error) => {
         console.log(error);
@@ -81,7 +81,7 @@ const menuController = {
         products.map((product) => {
           tv.push(product._previousDataValues);
         });
-        res.render("tv", { tv, price, limiterText });
+        res.render("tv", { tv, price, limiterText }, {user: req.session.user});
       })
       .catch((error) => {
         console.log(error);
