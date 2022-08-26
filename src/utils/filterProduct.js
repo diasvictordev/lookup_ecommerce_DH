@@ -3,28 +3,38 @@ const { limiterText } = require("../utils/stringHelper");
 const price = require("../utils/priceHelper");
 
 const filters = {
-  smartphones: async (req, res, model) => {
+  filter: async (req, res, model) => {
     let brands;
     let value;
     let order;
 
-    const { brand1, brand2, brand3, brand4 } = req.body;
+    const { brand1, brand2, brand3, brand4, brand5, brand6, brand7 } = req.body;
     const { value1, value2, value3, value4 } = req.body;
     const { priceUp, priceDown } = req.body;
 
     if (brand1) {
-      brands = "Samsung";
+      brands = "Computador";
     }
     if (brand2) {
-      brands = "Asus";
+      brands = "Notebook";
     }
     if (brand3) {
-      brands = "Apple";
+      brands = "Smartphone";
     }
     if (brand4) {
-      brands = "Philco";
+      brands = "Periféricos";
+    }
+    if (brand5) {
+      brands = "Tablet";
+    }
+    if (brand6) {
+      brands = "Tv";
+    }
+    if (brand7) {
+      brands = "Gamer";
     }
     if (priceUp) {
+      console.log(5)
       order = "DESC";
     }
     if (priceDown) {
@@ -37,59 +47,88 @@ const filters = {
       value = 1000;
     }
     if (value3) {
-      value = 1500;
+      value = 2000;
     }
     if (value4) {
       value = 2000;
     }
 
-    let smartphones;
+    let allProducts;
 
-    if (brands) {
-      smartphones = await model.findAll({
-        where: {
-          [Op.and]: [{ category: "Smartphone" }, { brand: brands }],
-        },
-        if(order) {
-          order: [["price_discount", order]];
-        },
+    if(!brands && !value && !order){
+      res.redirect("/menu/todos-produtos")
+    }
+
+    if (brands && !order && !value) {
+      allProducts = await model.findAll({
+       where:{
+        category:brands
+       }
+      });
+    }
+
+    if (brands && order) {
+      allProducts = await model.findAll({
+       where:{
+        category:brands
+       },
+       order: [["price_discount", order]],
+       
       });
     }
 
     if (priceDown || priceUp && !brands) {
-      smartphones = await model.findAll({
-        where: {
-          category: "Smartphone",
-        },
+      allProducts = await model.findAll({
         order: [["price_discount", order]],
       });
     }
 
-    if (value) {
-      smartphones = await model.findAll({
+    if (value && brands && !order) {
+      allProducts = await model.findAll({
         where: {
-          category: "Smartphone",
-          price_discount: { [Op.lt]: value },
-        },
-        if(order) {
-          order: [["price_discount", order]];
-        },
-      });
-    }
-    if (brands && value) {
-      smartphones = await model.findAll({
-        where: {
-          category: "Smartphone",
-          brand: brands,
-          price_discount: { [Op.lt]: value },
-        },
-        if(order) {
-          order: [["price_discount", order]];
-        },
+          category: brands,
+          price_discount: { [Op.lt]: value }
+        }
       });
     }
 
-    return res.render("smartphones", { smartphones, limiterText, price });
+    if (value && order && !brands) {
+      allProducts = await model.findAll({
+        where: {
+          price_discount: { [Op.lt]: value },
+        },
+          order: [["price_discount", order]]
+      })};
+
+    if (brands && value && !order) {
+      allProducts = await model.findAll({
+        where: {
+          brand: brands,
+          price_discount: { [Op.lt]: value },
+        }
+      });
+    }
+
+    if (brands && value && order) {
+      allProducts = await model.findAll({
+        where: {
+          category: brands,
+          price_discount: { [Op.lt]: value },
+        },
+          order: [["price_discount", order]]
+      });
+    }
+
+    let limit = "none";
+
+    // console.log(all)
+
+    return res.render("allProducts", {
+      products: allProducts,
+      limiterText,
+      price,
+      limit,
+    });
   },
 };
 

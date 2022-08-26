@@ -187,8 +187,12 @@
     line-height: 35px;
     }
 
+    .buyBtn{
+    border-radius: 4px;
+    background-color: #fff;
+    }
+
 .price-btn{
-    background-color: var(--white);
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
@@ -495,5 +499,12 @@ padding: 10px;
 @media only screen and (max-width: 336px){
     .parcel-icon h2, .single-product-description h2, .tech-icon h2{
         font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #imageBox{
+        /* width: 400px; */
+        height: 300px;
     }
 }

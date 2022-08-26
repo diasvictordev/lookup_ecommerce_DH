@@ -275,7 +275,7 @@ span {
 }
 
 .sidepanel {
-  width: 0;
+  width: 0px;
   position: fixed;
   z-index: 1;
   height: 42%;
@@ -319,24 +319,7 @@ span {
   margin: 30px auto;
   max-width: var(--max-width-pattern);
   width: 90%;
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
 }
-
-.highlights-card {
-  max-width: 400px;
-  width: 100%;
-  background-color: var(--white);
-  border-radius: 4px;
-}
-
-.highlights-card img {
-  width: 100%;
-  border-radius: 4px;
-
-}
-
 
 .content{
   height: 450px;
@@ -919,6 +902,13 @@ footer p {
 
 @media only screen and (max-width: 736px) {
 
+  .support-flex{
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+
   .footer-container {
     flex-wrap: wrap;
     gap: 40px;
@@ -962,6 +952,10 @@ footer p {
     background-color: #000;
     border-radius: 50%;
   }
+
+  .sidepanel a{
+    font-size: 2.2rem;
+  }
 }
 
 @media only screen and (max-width: 482px) {
@@ -998,7 +992,6 @@ footer p {
   }
 }
 
-
 @media only screen and (max-width: 419px) {
   .footer-container {
     flex-direction: column;
@@ -1009,23 +1002,28 @@ footer p {
   .footer-container a {
     text-align: center;
   }
-}
 
-@media only screen and (max-width: 419px) {
   .searchTerm {
     font-size: 1.7rem;
   }
-}
 
-@media only screen and (max-width: 419px) {
   .products-card img{
     height: 280px;
   }
 }
 
+@media only screen and (max-width: 400px) {
+
+  .sidepanel a{
+    font-size: 2rem;
+    padding: 5px 5px 5px 20px;
+  }
+}
+
+
 /* CSS página de carrinho (falta adicionar imagem do produto ao invés de fundo cinza) */
 
-#cart-info {
+/* #cart-info {
   display: flex;
   flex-direction: column;
   margin-left: 90px;
@@ -1324,4 +1322,4 @@ footer p {
 
 ::-webkit-scrollbar-track {
   background: transparent;
-}
+} */

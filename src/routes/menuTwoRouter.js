@@ -4,7 +4,7 @@ const menuTwoController = require('../controllers/menuTwoController');
 
 menuTwoRouter.get('/menu/todos-produtos', menuTwoController.allProducts);
 
-menuTwoRouter.post('/menu/smartphones', menuTwoController.allProductsFilter);
+menuTwoRouter.post('/menu/todos-produtos', menuTwoController.allProductsFilter);
 
 menuTwoRouter.get('/menu/notebooks', menuTwoController.notebooks);
 

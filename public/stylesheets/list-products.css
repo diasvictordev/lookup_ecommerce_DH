@@ -186,5 +186,6 @@ position: static;
 
 .banner img{
   margin: 0 auto;
-  width: 80%;
+  max-width: var(--max-width-pattern);
+  width: 90%;
 }
