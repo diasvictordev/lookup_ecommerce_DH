@@ -77,7 +77,7 @@ const mainController = {
   },
 
   detail: (req, res) => {
-    res.render("detail-product", {user: req.session.user});
+    res.render("detail-product");
   },
   detailProduct: (req, res) => {
     const { id } = req.params;
@@ -102,7 +102,7 @@ const mainController = {
           (product) => product.product_id != id
         );
         
-        res.render("detail-product", { productPk, productsToShow, limiterText, splitDescription, price}, {user: req.session.user});
+        res.render("detail-product", { productPk, productsToShow, limiterText, splitDescription, price});
       })
       .catch((erro) => {
         console.log(erro);

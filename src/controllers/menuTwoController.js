@@ -12,7 +12,6 @@ const menuControllerTwo = {
     let pageCalc = countPages - (limit*2)
 const{page} = req.query
 
-console.log(page)
 
 let allProducts
   if(page>limit){
@@ -38,7 +37,7 @@ let allProducts
   
   allProductsFilter: (req, res)=>{
 
-    filters.smartphones(req, res, Product);
+    filters.filter(req, res, Product);
    
   },
 

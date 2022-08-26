@@ -37,14 +37,6 @@ const menuController = {
       });
   },
 
-  cadeiras: (req, res) => {
-    res.render("cadeiras", {user: req.session.user});
-  },
-
-  hardware: (req, res) => {
-    res.render("hardware", {user: req.session.user});
-  },
-
   tablet: (req, res) => {
     Product.findAll({
       where: {
@@ -57,7 +49,7 @@ const menuController = {
           tablet.push(product._previousDataValues);
         });
         const { limiterText } = require("../utils/stringHelper");
-        res.render("tablet", { tablet, price, limiterText }, {user: req.session.user});
+        res.render("tablet", { tablet, price, limiterText });
       })
       .catch((error) => {
         console.log(error);
@@ -74,7 +66,7 @@ const menuController = {
         products.map((product) => {
           tv.push(product._previousDataValues);
         });
-        res.render("tv", { tv, price, limiterText }, {user: req.session.user});
+        res.render("tv", { tv, price, limiterText });
       })
       .catch((error) => {
         console.log(error);

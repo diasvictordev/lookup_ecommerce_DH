@@ -25,7 +25,7 @@
       <a class="filter-btn" onclick="filterOpen()">Filtrar</a>
   </div>
   
-  <form id="filter-form" class="list-products" action="/menu/smartphones" method="POST">
+  <form id="filter-form" class="list-products" action="/menu/todos-produtos" method="POST">
   
       <div class="list-checkbox">
           <span class="list-typography">Tipo de Produto</span>
@@ -121,7 +121,7 @@
     <div class="box-container">
 
       <div class="title-container">
-        <img src="/images/icons/Smartphone.svg" alt="">
+        <img src="/images/icons/trophy.svg" alt="">
         <span>Todos os Produtos</span>
       </div>
 
@@ -157,6 +157,9 @@
 
     <div class="page">
 
+      <% if(limit != "none"){%>
+
+
       <span>Página:</span>
       <ul>
 
@@ -167,6 +170,7 @@
         <%}%>
        
         </ul>
+        <%}%>
   
   </div>
 
