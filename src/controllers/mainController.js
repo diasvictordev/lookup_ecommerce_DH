@@ -42,7 +42,7 @@ const mainController = {
         });
 
 
-        return res.render("index", { offer, smartphone, limiterText, price}, {user: req.session.user});
+        return res.render("index", { offer, smartphone, limiterText, price});
       })
       .catch((erro) => {
         console.log(erro);

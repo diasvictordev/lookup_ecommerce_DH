@@ -21,23 +21,23 @@ const userController = {
     },
 
     login: (req,res) => {
-        res.render('login', {user: req.session.user});
+        res.render('login');
     },
 
     processoLogin: async (req,res) => {
         const { email, password, logado } = req.body;
-        const userExists = await User.findOne({ where: { email }})
+        const userExists = await User.findOne({ where: { email }})        
+
+        if(!userExists){
+            
+            return res.render('login', {error: "Usuário ou senha incorreto"});
+        }
+        
         const user = {
             id: userExists.id,
             email: userExists.email,
             nome: userExists.user_name,
         };
-        const passCorrect = await bcrypt.compareSync(password, userExists.user_password);
-
-        if(!passCorrect){
-            
-            return res.render('login', {error: "Usuário ou senha incorreto"});
-        }
        
         req.session.user = user;
 
