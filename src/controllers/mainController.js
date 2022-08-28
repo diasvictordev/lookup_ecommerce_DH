@@ -7,7 +7,6 @@ const randomNumber = require("../utils/randomNumber");
 const {limiterText} = require('../utils/stringHelper');
 const price = require('../utils/priceHelper');
 const splitDescription = require('../utils/splitDescription');
-const url = require('url')
 
 const mainController = {
   index: (req, res) => {
@@ -49,8 +48,35 @@ const mainController = {
       });
   },
 
-  carrinho: (req, res) => {
-    res.render("cart", {user: req.session.user});
+  carrinho: async (req, res) => {
+
+    const userId = req.session.user.id
+
+    const findUserCart = await Cart.findOne({
+      where:{
+        user_id: userId
+      }
+    })
+
+
+    const allProducts = findUserCart.dataValues.product_id
+
+    const splitProducts = allProducts.split(",")
+
+    const productsBase = await Product.findAll({
+      where: {product_id: splitProducts}
+    })
+
+    let products = []
+
+    productsBase.map(product=> products.push(product.dataValues))
+   
+
+    console.log(products)
+
+    res.render("cart", {user: req.session.user, products});
+
+
   },
 
   cartCreate: async (req, res) => {
@@ -59,17 +85,22 @@ const mainController = {
 
     const {id} = req.params
 
-    let product = [id]
+    let product = id
 
-    console.log(product)
+    const cartExists = await Cart.findOne({
+      where:{
+        user_id: user_id
+      }
+    })
 
-  const newCart = await Cart.create({cart_id: uuidv4(), product_id: product, user_id})
+    if(cartExists){
+      return res.redirect("/carrinho", showCart)
+    }else{
+      const newCart = await Cart.create({cart_id: uuidv4(), product_id: product, user_id})
+    }
 
-  let cartMap
-   
-  cartMap = newCart.dataValues
 
-  console.log(cartMap)
+  // console.log(productToString)
 
   // res.render("index")
     

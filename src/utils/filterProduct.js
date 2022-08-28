@@ -103,7 +103,7 @@ const filters = {
     if (brands && value && !order) {
       allProducts = await model.findAll({
         where: {
-          brand: brands,
+          category: brands,
           price_discount: { [Op.lt]: value },
         }
       });

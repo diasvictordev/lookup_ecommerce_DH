@@ -30,11 +30,13 @@
         Para cada produto adicionado no carrinho, mostrar o código abaixo.
         -->
 
+        <% products.forEach(product=>{%>
+
         <div class="remove-container">
             <img id="product-photo">
             
             <div class="product-name">
-                <h2>Nome do produto</h2>
+                <h2> <%product.name%> </h2>
 
             </div>
 
@@ -58,6 +60,8 @@
                     <h1>Valor total da compra:</h1>
                     <h2>R$5.600,00</h2>
                 </div>
+
+            <%})%>
 
                 <!-- Adicionar rota para finalização de compra-->
                 <div id="button-final">
