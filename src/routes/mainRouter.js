@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const mainController = require('../controllers/mainController');
-const auth = require('../middlewares/loginMiddleware')
+const cartAuth = require('../middlewares/cartAuth')
 
 router.get('/', mainController.index);
 
-router.get('/carrinho',auth, mainController.carrinho);
+router.get('/carrinho',cartAuth, mainController.carrinho);
 
-router.post('/carrinho/:id',auth, mainController.cartCreate);
+router.post('/carrinho/:id',cartAuth, mainController.cartCreate);
 
 router.get('/detalhe', mainController.detail);
 

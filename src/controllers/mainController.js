@@ -50,7 +50,7 @@ const mainController = {
   },
 
   carrinho: (req, res) => {
-    res.render("cart", {user: req.session.user});
+    res.render("cart");
   },
 
   cartCreate: async (req, res) => {

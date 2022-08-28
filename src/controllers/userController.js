@@ -51,7 +51,7 @@ const userController = {
     
     painelDeUsuario: function(req, res){
 
-        res.render('user', {user: req.session.user})
+        res.render('user')
     }
 
 }

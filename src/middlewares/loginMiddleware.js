@@ -1,9 +1,9 @@
 function auth(req, res, next) {
-  if (!req.session.user !== undefined) {
-  return next();
-  }else{
-    res.render('user');
-}}
+  if (!Boolean(req.session.user)) {
+    return next()
+  } 
 
+  res.render('user')
+}
 
 module.exports = auth
