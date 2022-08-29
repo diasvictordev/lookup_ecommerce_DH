@@ -36,6 +36,13 @@ const price = {
   parcels: (value) => {
     const x = value/12
     return formatPrice(x)
+  },
+
+  finalCartValue:(price)=>{
+    
+   let total =  price.reduce((total, currentValue)=>total + currentValue, 0)
+
+   return formatPrice(total)
   }
 
 }
