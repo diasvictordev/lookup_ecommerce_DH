@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Look Up</title>
+    <title>Carinho</title>
     <link rel="stylesheet" href="/stylesheets/cart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 <body>
     
@@ -18,65 +18,96 @@
                   <% } %>
     </header>
 
-    <main id="cart-info">
+    <main>
 
-        <div id="cart-title">
-            <img src="/images/icons/shopping-car.svg" alt="">
-            <h2>Carrinho</h2>
-        </div>
+        <% if(!products){%>
+            <h1>Seu carrinho está um pouco vazio no momento.</h1>
+           <%}else{%>
 
-        <!--
-            Início da entrada do script
-        Para cada produto adicionado no carrinho, mostrar o código abaixo.
-        -->
+        <div class="cart-container">
 
-        <% products.forEach(product=>{%>
+         
 
-        <div class="remove-container">
-            <img id="product-photo">
-            
-            <div class="product-name">
-                <h2> <%product.name%> </h2>
-
+            <div class="cart-icon">
+                <img src="/images/icons/shopping-car.svg" alt="">
+                <h1>Carinho</h1>
             </div>
 
-            <div id="buy-value">
-                <h2 id="value-title">Valor do produto: </h2>
-                <h2 id="value-number">R$2.700</h2>
+           <% products.forEach(product=>{ %>
 
-                <div class="remove-flex">
-                    <button type="submit">
+            <div class="product-cart">
+
+                <% const imageFile=product.image +"-1"+ product.extension %>
+
+                <div class="product-image">
+                    <img src="/images/products/<%=imageFile%>" alt="">
+
+                </div>
+
+                <div class="product-cart-info">
+
+                    <h2><%= product.name %></h2>
+
+
+                    <form id="remove-item" action="/remover-produto/<%=product.product_id%>" class="remove-item" method="post">
                         <img src="/images/icons/remove_shopping_cart_white_24dp 1.svg" alt="">
-                        <h2>Remover do carrinho</h2>
-                    </button>
+                        <div>
+                            <button form="remove-item" class="remove-btn" type="submit">Remover do Carinho</button>
+                        </div>
+                    </form>
+
+
                 </div>
+
             </div>
-        </div>
 
-            <!-- Adicionar função para receber valores dos produtos adicionados no carrinho e somá-los mostrando o valor total da compra-->
-            <div id="final-buy-value">
-                <img src="/images/icons/bag.svg">
-                <div id="write-buy-value">
-                    <h1>Valor total da compra:</h1>
-                    <h2>R$5.600,00</h2>
-                </div>
-
-            <%})%>
-
-                <!-- Adicionar rota para finalização de compra-->
-                <div id="button-final">
-                    <button type="submit">Finalizar compra</button>
-                </div>
+            <div class="cart-value">
+                <span class="value-text">Valor do Produto:</span>
+                <span class="value-price"> <%= price.format(product.price) %> </span>
             </div>
+
+        <% })%>
+
+                <div class="finish-container">
+
+                    <div class="final-price">
+                        <img src="/images/icons/bag.svg" alt="">
+    
+                        <div class="final-text">
+                            <span>Valor total da Compra:</span>
+                            <span><%= finalPrice%></span>
+                        </div>
+                    </div>
+
+                    <div class="finish-btn">
+                        <button>Finalizar Compra</button>
+                    </div>
+
+
+                </div>
+
+                <%}%>
+
+            
+
         </div>
 
     </main>
+
+    <div class="support-container">
+
+        <%- include('./partials/support');%>
+
+      </div>
+
+  <%- include('./partials/scrollTop');%>
 
     <footer>
         <%- include('./partials/footer'); %>
     </footer>
 
-    <script src='/js/login.js'></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/scrollTop.js"></script>
         
 </body>
 </html>

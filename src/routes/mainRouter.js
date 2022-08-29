@@ -9,6 +9,8 @@ router.get('/carrinho',auth, mainController.carrinho);
 
 router.post('/carrinho/:id',auth, mainController.cartCreate);
 
+router.post('/remover-produto/:id',auth, mainController.removeItem);
+
 router.get('/detalhe', mainController.detail);
 
 router.get('/detalhe/:id', mainController.detailProduct);

@@ -58,23 +58,34 @@ const mainController = {
       }
     })
 
+    if(!findUserCart){ 
+      Cart.create({cart_id: uuidv4(), product_id: "notDefined", user_id: userId})
+      return res.redirect("/carrinho")
+    }
 
     const allProducts = findUserCart.dataValues.product_id
 
+    if(allProducts == "notDefined"){
+      const products = false
+      return res.render("cart",{products})
+    }
+
     const splitProducts = allProducts.split(",")
+
+    console.log(splitProducts)
 
     const productsBase = await Product.findAll({
       where: {product_id: splitProducts}
     })
 
     let products = []
+    let finalPrice = []
 
     productsBase.map(product=> products.push(product.dataValues))
-   
+    productsBase.map(product=> finalPrice.push(product.dataValues.price_discount))
+    finalPrice = price.finalCartValue(finalPrice)
 
-    console.log(products)
-
-    res.render("cart", {user: req.session.user, products});
+    res.render("cart", {user: req.session.user, products, price, finalPrice});
 
 
   },
@@ -93,18 +104,53 @@ const mainController = {
       }
     })
 
+    const allProducts = cartExists.dataValues.product_id
+
+    if(allProducts == "notDefined"){
+      const update = await Cart.update({
+        product_id: product
+      },
+      {
+        where: {user_id: user_id}
+      })
+
+      console.log(update)
+      return res.redirect("/carrinho")
+    }
+    console.log(products)
+
     if(cartExists){
-      return res.redirect("/carrinho", showCart)
+      //colocar cod para atualizar
+      return res.redirect("/carrinho")
     }else{
       const newCart = await Cart.create({cart_id: uuidv4(), product_id: product, user_id})
     }
 
+  },
 
-  // console.log(productToString)
+  removeItem: async(req, res)=>{
+    const userId = req.session.user.id
 
-  // res.render("index")
-    
+    const findUserCart = await Cart.findOne({
+      where:{
+        user_id: userId
+      }
+    })
 
+    const allProducts = findUserCart.dataValues.product_id
+
+    const splitProducts = allProducts.split(",")
+
+    const productsBase = await Product.findAll({
+      where: {product_id: splitProducts}
+    })
+
+    let products = []
+    let finalPrice = []
+
+    productsBase.map(product=> products.push(product.dataValues))
+    productsBase.map(product=> finalPrice.push(product.dataValues.price_discount))
+    finalPrice = price.finalCartValue(finalPrice)
   },
 
   detail: (req, res) => {
