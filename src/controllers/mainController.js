@@ -72,8 +72,6 @@ const mainController = {
 
     const splitProducts = allProducts.split(",")
 
-    console.log(splitProducts)
-
     const productsBase = await Product.findAll({
       where: {product_id: splitProducts}
     })
@@ -114,13 +112,19 @@ const mainController = {
         where: {user_id: user_id}
       })
 
-      console.log(update)
       return res.redirect("/carrinho")
     }
-    console.log(products)
 
     if(cartExists){
-      //colocar cod para atualizar
+
+  let updateCart = allProducts + "," + id
+  const update = await Cart.update({
+    product_id: updateCart
+  },
+  {
+    where: {user_id: user_id}
+  })
+
       return res.redirect("/carrinho")
     }else{
       const newCart = await Cart.create({cart_id: uuidv4(), product_id: product, user_id})
@@ -131,6 +135,8 @@ const mainController = {
   removeItem: async(req, res)=>{
     const userId = req.session.user.id
 
+    const {id} = req.params
+
     const findUserCart = await Cart.findOne({
       where:{
         user_id: userId
@@ -139,18 +145,34 @@ const mainController = {
 
     const allProducts = findUserCart.dataValues.product_id
 
+    if(allProducts.length <=36){
+      const update = await Cart.update({
+        product_id: "notDefined"
+      },
+      {
+        where: {user_id: userId}
+      })
+
+      return res.redirect("/carrinho")
+    }
+
     const splitProducts = allProducts.split(",")
 
-    const productsBase = await Product.findAll({
-      where: {product_id: splitProducts}
+    const newProductsArray = splitProducts.filter(x=> x != id)
+
+    const updateId = newProductsArray.reduce((x, y)=> x + "," + y)
+
+    const update = await Cart.update({
+      product_id: updateId
+    },
+    {
+      where: {user_id: userId}
     })
 
-    let products = []
-    let finalPrice = []
+    return res.redirect("/carrinho")
+  
 
-    productsBase.map(product=> products.push(product.dataValues))
-    productsBase.map(product=> finalPrice.push(product.dataValues.price_discount))
-    finalPrice = price.finalCartValue(finalPrice)
+    
   },
 
   detail: (req, res) => {
