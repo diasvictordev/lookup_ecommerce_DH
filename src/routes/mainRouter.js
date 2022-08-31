@@ -15,5 +15,13 @@ router.get('/detalhe', mainController.detail);
 
 router.get('/detalhe/:id', mainController.detailProduct);
 
+router.get('/meu-endereco', auth, mainController.myAddress);
+
+router.post('/meu-endereco',auth, mainController.newAddress);
+
+router.get('/endereco/resumo',auth, mainController.addressResume);
+
+// router.post('/endereco/resumo', mainController.addressResumeNext);
+
 
 module.exports = router;
