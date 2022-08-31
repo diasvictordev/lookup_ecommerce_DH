@@ -1,6 +1,7 @@
 const { Product } = require("../database/models");
 const { Cart } = require("../database/models");
 const { User } = require("../database/models");
+const {Address} = require("../database/models");
 const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const randomNumber = require("../utils/randomNumber");
@@ -208,17 +209,69 @@ const mainController = {
       });
   },
 
-  // findAll passando a categoria do produto que está na variavel productToshow
-  // where e um like pegando as informações atraves do name que está no productToShow
-  // renderiza essa view novamente passando as informações filtradas por TV
+  myAddress: async (req, res)=>{
+    const userId = req.session.user.id
+    
+    const addressExists = await Address.findOne({
+      where:{
+        user_id : userId
+      }
+    })
 
-  // const todasTvs = await Products.findAll({
-  //   where: {
-  //     [Op.like]: `%${productsToShow.category}%`
-  //   }
-  // })
+    if(!addressExists){
+      return res.render("my-address")
+    }else{
+      res.redirect("/endereco/resumo")
+    }
 
-  // res.render('detail-product', todasTvs)
+    console.log(addressExists)
+  },
+
+  newAddress: async (req, res)=>{
+    const userId = req.session.user.id
+
+    const {city, state, district, zipCode, street, number} = req.body
+
+    Address.create({
+      address_id: uuidv4(), cep: zipCode, state, number_address: number, user_id: userId, district, city, street
+    })
+
+    res.redirect("/endereco/resumo")
+
+},
+
+addressResume: async (req, res)=>{
+  const userId = req.session.user.id
+
+  const userExists = await User.findByPk(
+userId
+    )
+
+  const addressExists = await Address.findOne({
+    where:{
+      user_id : userId
+    }
+  })
+
+  const findUserCart = await Cart.findOne({
+    where:{
+      user_id: userId
+    }
+  })
+  
+  const address = addressExists.dataValues
+  const userName = userExists.dataValues.user_name + " " +userExists.dataValues.last_name
+
+  if(addressExists && findUserCart.dataValues.product_id != "notDefined" && findUserCart.dataValues.product_id){
+    return res.render("address-resume", {address, userName})
+  }
+  if(!addressExists){
+    return res.redirect("/meu-endereco")
+  }
+  if(findUserCart.dataValues.product_id != "notDefined" || !findUserCart)
+  console.log('op')
+  return res.redirect("/carrinho")
+}
 };
 
 module.exports = mainController;

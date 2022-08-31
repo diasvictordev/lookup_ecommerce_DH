@@ -4,8 +4,8 @@ const sequelize = require("sequelize");
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("adress", {
-      adress_id: {
+    await queryInterface.createTable("address", {
+      address_id: {
         type: sequelize.STRING,
         primaryKey: true,
         allowNull: false,
@@ -18,7 +18,7 @@ module.exports = {
         type: sequelize.STRING,
         allowNull: false,
       },
-      number_adress: {
+      number_address: {
         type: sequelize.INTEGER,
         allowNull: false,
       },
@@ -34,10 +34,14 @@ module.exports = {
         type: sequelize.STRING,
         allowNull: false,
       },
+      street: {
+        type: sequelize.STRING,
+        allowNull: false
+      }
     });
   },
 
   async down(queryInterface, Sequelize) {
-     await queryInterface.dropTable('adress');
+     await queryInterface.dropTable('address');
   },
 };

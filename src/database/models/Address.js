@@ -15,7 +15,7 @@ module.exports = (sequelize, datatypes)=>{
             type: datatypes.STRING,
             allowNull: false,
           },
-          number_adress: {
+          number_address: {
             type: datatypes.INTEGER,
             allowNull: false,
           },
@@ -30,6 +30,10 @@ module.exports = (sequelize, datatypes)=>{
           city: {
             type: datatypes.STRING,
             allowNull: false,
+          },
+          street:{
+            type:datatypes.STRING,
+            allowNull: false
           }
     }
 
