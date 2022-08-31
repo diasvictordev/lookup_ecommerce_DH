@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endereço de Entrega</title>
+  <link rel="stylesheet" href="/stylesheets/address-resume.css">
+</head>
+
+<body>
+
+  <header class="header-container">
+    <% if(typeof user==='undefined' ) {%>
+      <%- include('./partials/header', {user: undefined}); %>
+        <% } else { %>
+          <%- include('./partials/header', {user: user}); %>
+            <% } %>
+  </header>
+
+  <main>
+
+    <div class="address-resume">
+
+      <div class="address-info">
+          <h2>Endereço de Entrega</h2>
+
+
+          <span>
+              São Sebastião - São Paulo
+          </span>
+
+          <span>Boiçucanga, Rua Nova Boiçucanga 304</span>
+
+          <span>11618-456</span>
+
+          <span>Destino: Rodrigo Santos dias santana</span>
+
+      </div>
+
+      <div class="address-step">
+
+          <a href="">Editar Endereço</a>
+
+          <form action="" method="post">
+              <button>Próximo</button>
+          </form>
+
+      </div>
+
+  </div>
+     
+      <div class="support-container">
+
+        <%- include('./partials/support');%>
+
+      </div>
+
+  </main>
+
+  <%- include('./partials/scrollTop');%>
+
+    <footer>
+      <%- include('./partials/footer'); %>
+    </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/scrollTop.js"></script>
+
+</body>
+
+</html>

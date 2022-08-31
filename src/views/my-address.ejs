@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endereço de Entrega</title>
+  <link rel="stylesheet" href="/stylesheets/my-address.css">
+</head>
+
+<body>
+
+  <header class="header-container">
+    <% if(typeof user==='undefined' ) {%>
+      <%- include('./partials/header', {user: undefined}); %>
+        <% } else { %>
+          <%- include('./partials/header', {user: user}); %>
+            <% } %>
+  </header>
+
+  <main>
+
+    <div class="address-container">
+
+      <h1>Meu Endereço</h1>
+
+      <form action="" id="address-form">
+
+          <div class="address-info">
+
+              <div class="info-add">
+                  <label for="city">Cidade:</label>
+                  <input type="text" name="city" id="city" required
+                      oninvalid="this.setCustomValidity('Não esqueça de colocar sua Cidade!')">
+              </div>
+
+              <div class="info-add">
+                  <label for="state">Estado:</label>
+                  <input type="text" name="state" id="state">
+              </div>
+
+              <div class="info-add">
+                  <label for="district">Bairro:</label>
+                  <input type="text" name="district" id="district">
+              </div>
+
+          </div>
+
+          <div class="address-info">
+
+              <div class="info-add">
+                  <label for="zipCode" class="upper">Cep:</label>
+                  <input type="text" name="zipCode" id="zipCode">
+              </div>
+
+              <div class="info-add">
+                  <label for="street">Rua:</label>
+                  <input type="text" name="street" id="street">
+              </div>
+
+              <div class="info-add">
+                  <label for="number">Número:</label>
+                  <input type="number" name="number" id="number">
+              </div>
+
+          </div>
+
+
+      </form>
+
+      <div class="btn upper"><button type="submit" form="address-form">Cadastrar</button></div>
+
+  </div>
+     
+      <div class="support-container">
+
+        <%- include('./partials/support');%>
+
+      </div>
+
+  </main>
+
+  <%- include('./partials/scrollTop');%>
+
+    <footer>
+      <%- include('./partials/footer'); %>
+    </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/scrollTop.js"></script>
+
+</body>
+
+</html>

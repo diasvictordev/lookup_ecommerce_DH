@@ -1,0 +1,97 @@
+@import "style.css";
+
+:root {
+  --electric-indigo: #8400FF;
+  --white: #fff;
+  --black: #000;
+  --silver-sand: #c4c4c4;
+  --max-width-pattern: 1280px;
+  --centralize-container: 0 auto;
+}
+
+.address-resume {
+  max-width: var(--max-width-pattern);
+  width: 90%;
+  margin: 0 auto 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-info{
+  background-color: var(--electric-indigo);
+  /* width: 50%; */
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.address-info h2{
+  font-weight: 800;
+font-size: 3.2rem;
+line-height: 3rem;
+text-align: center;
+margin-bottom: 10px;
+}
+
+.address-info span {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 38px;
+  display: block;
+}
+
+.address-step{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.address-step a, .address-step button{
+  max-width: 500px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 38px;
+  padding: 10px 20px;
+  background-color: var(--electric-indigo);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+  .address-info h2{
+    font-size: 2.5rem;
+  }
+
+  .address-info span{
+    font-size: 1.6rem;
+  }
+
+.address-step a, .address-step button{
+  font-size: 2rem;
+}
+}
+
+@media only screen and (max-width: 700px){
+  .address-resume{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .address-step{
+    gap: 30px;
+    /* align-items: flex-end; */
+  align-items: stretch;
+  }
+
+.address-step a, .address-step button{
+max-width: 200px;
+}
+}
+
+@media only screen and (max-width: 700px){
+  .address-step a, .address-step button{
+    max-width: 100%;
+    text-align: center;
+  }
+}
