@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look Up</title>
+    <link rel="stylesheet" href="/stylesheets/endereço.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header class="header-container">
+        <% if(typeof user==='undefined' ) {%>
+            <%- include('./partials/header', {user: undefined}); %>
+              <% } else { %>
+                <%- include('./partials/header', {user: user}); %>
+                  <% } %>
+    </header>
+
+    <main>
+        <div class="addressConfirme-container">
+            <div class="addressConfirme-title">
+                <h1>Endereço de Entrega</h1>
+            </div>
+            
+            <div class="address">
+                <p>Cidade: </p>
+                <p>Estado: </p>
+                <p>Bairro: </p>
+                <p>CEP: </p>
+                <p>Rua: </p>
+                <p>Número: </p>
+                <p>Complemento: </p>
+            </div>
+        </div>
+
+        <button type="submit">Próximo</button>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

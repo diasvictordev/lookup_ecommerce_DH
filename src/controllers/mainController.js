@@ -132,6 +132,12 @@ const mainController = {
     }
 
   },
+  paymentMethod: (req, res) => {
+    res.render("pagamento")
+  },
+  addressConfirme: (req, res) => {
+    res.render("endereço2")
+  },
 
   removeItem: async(req, res)=>{
     const userId = req.session.user.id

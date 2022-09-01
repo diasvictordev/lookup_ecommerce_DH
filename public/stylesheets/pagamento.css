@@ -1,0 +1,84 @@
+@import "style.css";
+
+main{
+    text-align: center;
+}
+
+main h1{
+    font-family: 'Share';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.payment-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.paymentMethod-container, .discount-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #9731F6;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.paymentMethod-container h2, .discount-container h2{
+    font-family: 'Share';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.paymentMethod{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+
+.paymentMethod button, .discount button{
+    margin: 1rem 0 0 0;
+    background: #1A06FA;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+    font-family: 'Share';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.discount-container input{
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 7px;
+    font-family: 'Share';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.discount{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+
+.discount small{
+    visibility: hidden;
+    font-family: 'Share';
+    font-style: normal;
+    font-size: 10px;
+}

@@ -20,15 +20,11 @@ router.post('/cadastro', userController.processoCadastro);
 
 // Formulario de Login 
 
-router.get('/login', userController.login);
+router.get('/login', auth, userController.login);
 
 // Processo de Login 
 
 router.post('/login', userController.processoLogin);
-
-// Painel do Usuario 
-
-router.get('/user', userController.painelDeUsuario);
 
 
 
