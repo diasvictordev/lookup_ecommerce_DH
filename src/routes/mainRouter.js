@@ -15,6 +15,12 @@ router.get('/pagamento/confirmacao', mainController.addressConfirme);
 
 router.get('/detalhe', mainController.detail);
 
+router.get('/meu-endereco', auth, mainController.myAddress);
+
+router.post('/meu-endereco',auth, mainController.newAddress);
+
+router.get('/endereco/resumo',auth, mainController.addressResume);
+
 router.get('/detalhe/:id', mainController.detailProduct);
 
 
