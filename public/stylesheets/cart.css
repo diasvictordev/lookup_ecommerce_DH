@@ -117,7 +117,7 @@ flex-wrap: wrap;
   font-size: 3rem;
 }
 
-.finish-btn button{
+.finish-btn{
   background-color: var(--electric-indigo);
   border: none;
   color: #fff;
@@ -125,6 +125,29 @@ flex-wrap: wrap;
   border-radius: 4px;
   font-size: 2.4rem;
   cursor: pointer;
+}
+
+.empty{
+  max-width: var(--max-width-pattern);
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.empty img{
+  max-width: 400px;
+  width: 100%;
+}
+
+.empty span{
+  font-size: 3rem;
+}
+
+.header-container{
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 733px){
@@ -175,3 +198,9 @@ flex-wrap: wrap;
     font-size: 2.5rem;
   }
 }
+
+/* @media only screen and (max-width: 424px){
+  .finish-btn{
+    padding: 20px 30px;
+  }
+} */

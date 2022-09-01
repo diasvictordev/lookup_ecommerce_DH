@@ -21,7 +21,10 @@
     <main>
 
         <% if(!products){%>
-            <h1>Seu carrinho está um pouco vazio no momento.</h1>
+            <div class="empty">
+                <img src="/images/icons/Lost-amico.svg" alt="">
+                <span>Parece que seu carrinho está vazio!</span>
+            </div>
            <%}else{%>
 
         <div class="cart-container">
