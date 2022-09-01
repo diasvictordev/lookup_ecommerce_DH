@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,46 +9,56 @@
     <link rel="stylesheet" href="/stylesheets/pagamento.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    
+
     <header class="header-container">
         <% if(typeof user==='undefined' ) {%>
             <%- include('./partials/header', {user: undefined}); %>
-              <% } else { %>
-                <%- include('./partials/header', {user: user}); %>
-                  <% } %>
+                <% } else { %>
+                    <%- include('./partials/header', {user: user}); %>
+                        <% } %>
     </header>
 
     <main>
-        <h1>Pagamento</h1>
-        <div class="payment-container">
-            <div class="paymentMethod-container">
-                <h2>Método de pagamento</h2>
+        <div class="payment">
+            <div class="method">
+                <label for="payment-method">Método de Pagamento</label>
+                <select name="payment-method" id="payment-method">
     
-                <div class="paymentMethod">
-                    <button>Pix</button>
-                    <button>Boleto</button>
-                    <button>Cartão de Crédito</button>
-                    <button>Cartão de Débito</button>
-                </div>
+                    <option value="pix">Pix</option>
+                    <option value="boleto">Boleto</option>
+                    <option value="credit">Cartão de Crédito</option>
+                    <option value="debit">Cartão de Débito</option>
+    
+                </select>
             </div>
-            <div class="discount-container">
-                <h2>Cupom de Desconto</h2>
-                <div class="discount">
-                    <input type="text" name="" id="">
-                    <small>Cupom Aplicado com Sucesso</small>
-                    <h3>Valor Descontado: R$38,50</h3>
-                    <button>Aplicar</button>
-                </div>
-            </div>
-        </div>
-        
+    
+            
+                <form action="/pagamento" class="pay" id="pay" method="post">
+                    <label for="secretCode" class="sc">Secret Code</label>
+                    <input type="text" name="secretCode" id="secretCode">
+                  <div>  <button type="submit" form="pay">Pagar</button></div>
+                </form>
+            
+    </div>
+
+    <div class="support-container">
+
+        <%- include('./partials/support');%>
+
+      </div>
 
     </main>
+
+  <%- include('./partials/scrollTop');%>
 
     <footer>
         <%- include('./partials/footer'); %>
     </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/scrollTop.js"></script>
 
 </body>
 

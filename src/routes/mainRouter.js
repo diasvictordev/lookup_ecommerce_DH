@@ -9,7 +9,11 @@ router.get('/carrinho',auth, mainController.carrinho);
 
 router.post('/carrinho/:id',auth, mainController.cartCreate);
 
-router.get('/pagamento', mainController.paymentMethod);
+router.post('/remover-produto/:id',auth, mainController.removeItem);
+
+router.get('/pagamento', auth, mainController.paymentMethod);
+
+router.post('/pagamento',auth, mainController.paymentNext);
 
 router.get('/pagamento/confirmacao', mainController.addressConfirme);
 

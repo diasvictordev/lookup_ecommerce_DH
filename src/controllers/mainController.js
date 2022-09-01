@@ -1,7 +1,5 @@
 const { Product } = require("../database/models");
-const { Cart } = require("../database/models");
-const { User } = require("../database/models");
-const {Address} = require("../database/models");
+const { Cart, User, Address, Order } = require("../database/models");
 const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const randomNumber = require("../utils/randomNumber");
@@ -132,8 +130,35 @@ const mainController = {
     }
 
   },
-  paymentMethod: (req, res) => {
-    res.render("pagamento")
+  paymentMethod: async (req, res) => {
+    const userId = req.session.user.id
+
+    const cart = await Cart.findOne({
+      where: {user_id:userId}
+    })
+
+   const cartIsEmpty = cart.dataValues.product_id
+
+   if(!cartIsEmpty || cartIsEmpty == "notDefined" ){
+    return res.redirect("/carrinho")
+   }
+    return res.render("pagamento")
+
+  },
+
+  paymentNext: async (req, res)=>{
+    const userId = req.session.user.id
+    const {secretCode} = req.body
+
+    
+    
+
+    if(secretCode == "DigitalHouse"){
+
+    }
+
+    
+
   },
   addressConfirme: (req, res) => {
     res.render("endereço2")

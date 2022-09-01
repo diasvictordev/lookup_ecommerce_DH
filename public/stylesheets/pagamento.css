@@ -1,84 +1,101 @@
 @import "style.css";
 
-main{
-    text-align: center;
-}
-
-main h1{
-    font-family: 'Share';
-    font-style: normal;
+label{
     font-weight: 500;
-    font-size: 40px;
-}
-
-.payment-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 80px;
-}
-
-.paymentMethod-container, .discount-container{
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  .method{
+    max-width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
     align-items: center;
-    background-color: #9731F6;
-    border-radius: 10px;
+    border-radius: 4px;
+    background-color: var(--electric-indigo);
     padding: 20px;
     gap: 20px;
-}
+    height: 270px;
+  }
 
-.paymentMethod-container h2, .discount-container h2{
-    font-family: 'Share';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-}
-
-.paymentMethod{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 90%;
-}
-
-.paymentMethod button, .discount button{
-    margin: 1rem 0 0 0;
-    background: #1A06FA;
-    border-radius: 10px;
+select{
+    max-width: 200px;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 4px;
     border: none;
-    padding: 1rem;
-    font-family: 'Share';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.discount-container input{
-    border: none;
-    border-radius: 10px;
     outline: none;
-    padding-left: 7px;
-    font-family: 'Share';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 15px;
-}
-
-.discount{
+  border-radius: 4px;
+  }
+  
+  .payment{
+    display: flex;
+    max-width: var(--max-width-pattern);
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .sc{
+    margin-bottom: 5px;
+  }
+  
+  .pay{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 90%;
-}
-
-.discount small{
-    visibility: hidden;
-    font-family: 'Share';
-    font-style: normal;
-    font-size: 10px;
-}
+    background-color: var(--electric-indigo);
+    border-radius: 4px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  input{
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    padding:  5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  input:focus{
+    outline: none;
+  }
+  
+  .pay button{
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 50px;
+    background-color: #fff;
+    font-size: 2rem;
+    justify-self: center;
+    transition: all 1s;
+  }
+  
+  .pay button:hover{
+    background-color: #000;
+    color: #fff;
+    transition: all 1s;
+  }
+  
+  @media only screen and (max-width: 799px){
+    .payment{
+      flex-direction: column;
+    }
+    .pay{
+      max-width: 500px;
+    }
+  }
+  
+  @media only screen and (max-width: 383px){
+    label{
+      font-size: 2rem;
+    }
+  }
