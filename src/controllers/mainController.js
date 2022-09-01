@@ -75,7 +75,12 @@ const mainController = {
     
 
   },
-
+  paymentMethod: (req, res) => {
+    res.render("pagamento")
+  },
+  addressConfirme: (req, res) => {
+    res.render("endereço2")
+  },
   detail: (req, res) => {
     res.render("detail-product", {user: req.session.user});
   },

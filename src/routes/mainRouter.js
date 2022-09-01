@@ -9,6 +9,10 @@ router.get('/carrinho',cartAuth, mainController.carrinho);
 
 router.post('/carrinho/:id',cartAuth, mainController.cartCreate);
 
+router.get('/pagamento', mainController.paymentMethod);
+
+router.get('/pagamento/confirmacao', mainController.addressConfirme);
+
 router.get('/detalhe', mainController.detail);
 
 router.get('/detalhe/:id', mainController.detailProduct);

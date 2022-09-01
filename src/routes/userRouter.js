@@ -26,10 +26,6 @@ router.get('/login', auth, userController.login);
 
 router.post('/login', userController.processoLogin);
 
-// Painel do Usuario 
-
-router.get('/user', userController.painelDeUsuario);
-
 
 
 module.exports = router;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look Up</title>
+    <link rel="stylesheet" href="/stylesheets/pagamento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header class="header-container">
+        <% if(typeof user==='undefined' ) {%>
+            <%- include('./partials/header', {user: undefined}); %>
+              <% } else { %>
+                <%- include('./partials/header', {user: user}); %>
+                  <% } %>
+    </header>
+
+    <main>
+        <h1>Pagamento</h1>
+        <div class="payment-container">
+            <div class="paymentMethod-container">
+                <h2>Método de pagamento</h2>
+    
+                <div class="paymentMethod">
+                    <button>Pix</button>
+                    <button>Boleto</button>
+                    <button>Cartão de Crédito</button>
+                    <button>Cartão de Débito</button>
+                </div>
+            </div>
+            <div class="discount-container">
+                <h2>Cupom de Desconto</h2>
+                <div class="discount">
+                    <input type="text" name="" id="">
+                    <small>Cupom Aplicado com Sucesso</small>
+                    <h3>Valor Descontado: R$38,50</h3>
+                    <button>Aplicar</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

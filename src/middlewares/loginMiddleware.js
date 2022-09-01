@@ -3,7 +3,7 @@ function auth(req, res, next) {
     return next()
   } 
 
-  res.render('user')
+  res.render('user', {user: req.session.user})
 }
 
 module.exports = auth

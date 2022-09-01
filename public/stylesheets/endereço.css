@@ -1,0 +1,50 @@
+@import "style.css";
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addressConfirme-container{
+    background-color: #9731F6;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.addressConfirme-title{
+    display: flex;
+    justify-content: center;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.addressConfirme-container p{
+    font-family: 'Share';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+main button{
+    margin: 1rem 0 0 0;
+    background: #1A06FA;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+    width: 20%;
+    font-family: 'Share';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}

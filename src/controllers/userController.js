@@ -37,6 +37,7 @@ const userController = {
             id: userExists.id,
             email: userExists.email,
             nome: userExists.user_name,
+            sobrenome: userExists.last_name
         };
        
         req.session.user = user;
@@ -47,11 +48,6 @@ const userController = {
         }
 
         return res.redirect("/");
-    },
-    
-    painelDeUsuario: function(req, res){
-
-        res.render('user')
     }
 
 }
