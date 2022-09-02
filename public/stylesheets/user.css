@@ -57,12 +57,13 @@
     font-family: 'Share', cursive;
   }
 
-  .credit button {
-    height: 30px;
+  .credit a {
+    padding: 10px 0;
     width: 90%;
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    text-align: center;
     background: #1A06FA;
     font-family: 'Share';
     font-style: normal;

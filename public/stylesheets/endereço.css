@@ -14,11 +14,13 @@ main{
     gap: 20px;
     max-width: 600px;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .addressConfirme-title{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .address{
@@ -27,19 +29,20 @@ main{
     gap: 15px;
 }
 
-.addressConfirme-container p{
+.addressConfirme-container span{
     font-family: 'Share';
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
 }
 
-main button{
+main a{
     margin: 1rem 0 0 0;
     background: #1A06FA;
     border-radius: 10px;
     border: none;
     padding: 1rem;
+    text-align: center;
     width: 20%;
     font-family: 'Share';
     font-style: normal;

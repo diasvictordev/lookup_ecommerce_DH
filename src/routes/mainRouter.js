@@ -15,8 +15,6 @@ router.get('/pagamento', auth, mainController.paymentMethod);
 
 router.post('/pagamento',auth, mainController.paymentNext);
 
-router.get('/pagamento/confirmacao', mainController.addressConfirme);
-
 router.get('/detalhe', mainController.detail);
 
 router.get('/meu-endereco', auth, mainController.myAddress);

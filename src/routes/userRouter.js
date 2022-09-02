@@ -26,6 +26,10 @@ router.get('/login', auth, userController.login);
 
 router.post('/login', userController.processoLogin);
 
+// Processo de Deslogar
+
+router.get('/logout', userController.deslogar);
+
 
 
 module.exports = router;

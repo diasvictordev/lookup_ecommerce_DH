@@ -48,6 +48,12 @@ const userController = {
         }
 
         return res.redirect("/");
+    },
+
+    deslogar: (req,res) => {
+        req.session.destroy();
+
+        res.redirect("/");
     }
 
 }

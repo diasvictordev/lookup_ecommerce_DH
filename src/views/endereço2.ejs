@@ -25,17 +25,18 @@
             </div>
             
             <div class="address">
-                <p>Cidade: </p>
-                <p>Estado: </p>
-                <p>Bairro: </p>
-                <p>CEP: </p>
-                <p>Rua: </p>
-                <p>Número: </p>
-                <p>Complemento: </p>
+                <span>Cidade: <%=address.city%> - <%=address.state%></span>
+      
+                <span>Endereço: <%=address.district%>, <%=address.street%> <%=address.number_address%></span>
+      
+                <span>Cep: <%=address.cep%></span>
+      
+                <span>Destino: <%=userName%></span>
             </div>
         </div>
 
-        <button type="submit">Próximo</button>
+        <a href="/meu-endereco">Editar Endereço</a>
+        <a href="/pagamento">Próximo</a>
     </main>
 
     <footer>

@@ -160,9 +160,6 @@ const mainController = {
     
 
   },
-  addressConfirme: (req, res) => {
-    res.render("endereço2")
-  },
 
   removeItem: async(req, res)=>{
     const userId = req.session.user.id
@@ -294,7 +291,7 @@ userId
   const userName = userExists.dataValues.user_name + " " +userExists.dataValues.last_name
 
   if(addressExists && findUserCart.dataValues.product_id != "notDefined" && findUserCart.dataValues.product_id){
-    return res.render("address-resume", {address, userName})
+    return res.render("endereço2", {address, userName})
   }
   if(!addressExists){
     return res.redirect("/meu-endereco")
