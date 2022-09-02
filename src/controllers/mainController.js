@@ -175,7 +175,9 @@ const mainController = {
         where: {user_id: userId}
       })
 
-      res.redirect("/sucesso")
+      return res.redirect("/sucesso")
+    }else{
+      res.send("Pagamento recusado")
     }
 
     
@@ -208,7 +210,7 @@ const mainController = {
 
     const splitProducts = allProducts.split(",")
 
-    const newProductsArray = splitProducts.filter(x=> x != id)
+    const newProductsArray = splitProducts.filter(x=> x !== id)
 
     const updateId = newProductsArray.reduce((x, y)=> x + "," + y)
 
