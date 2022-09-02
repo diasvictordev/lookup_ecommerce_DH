@@ -151,10 +151,31 @@ const mainController = {
     const {secretCode} = req.body
 
     
+    const userCart = await Cart.findOne({
+      where:{
+        user_id: userId
+      }
+    })
+
+    const cartId = userCart.dataValues.cart_id
+
+    let date1 = new Date();
+
+    const order_number = Date.now()
     
-
     if(secretCode == "DigitalHouse"){
+      const order = await Order.create({
+        order_id: uuidv4(), order_status: "Aprovado", cart_id: cartId, payment_method: "Créditos Up", order_number, date: date1
+      })
 
+      const update = await Cart.update({
+        product_id: "notDefined"
+      },
+      {
+        where: {user_id: userId}
+      })
+
+      res.redirect("/sucesso")
     }
 
     
@@ -299,6 +320,13 @@ userId
   if(findUserCart.dataValues.product_id != "notDefined" || !findUserCart)
   console.log('op')
   return res.redirect("/carrinho")
+},
+sucess: (req, res)=>{
+  res.render("sucess-in-purchase")
+}
+,
+user: (req, res)=>{
+  
 }
 };
 
