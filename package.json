@@ -26,7 +26,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-        "deploy": "gridsome build && gh-pages -d dist -b master",
+    "deploy": "npm run build && gh-pages -d dist -b pagelookup",
           "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
