@@ -212,19 +212,43 @@ const mainController = {
 
     const newProductsArray = splitProducts.filter(x=> x !== id)
 
-    const updateId = newProductsArray.reduce((x, y)=> x + "," + y)
-
-    const update = await Cart.update({
-      product_id: updateId
-    },
-    {
-      where: {user_id: userId}
-    })
-
-    return res.redirect("/carrinho")
+    if(newProductsArray.length === 1){
+      const update = await Cart.update({
+        product_id: newProductsArray[0]
+      },
+      {
+        where: {user_id: userId}
+      })
   
+      return res.redirect("/carrinho")
+    }
 
+    let x = newProductsArray
+    let newProductId
+
+x.reduce((final, comma)=>{
+ newProductId = final + "," + comma
+ console.log(id)
+ console.log(newProductId)
+})
+
+const update = await Cart.update({
+  product_id: "notDefined"
+},
+{
+  where: {user_id: userId}
+})
+
+const define = await Cart.update({
+  product_id: newProductId
+},
+{
+  where: {user_id: userId}
+})
+
+return res.redirect("/carrinho")
     
+
   },
 
   detail: (req, res) => {
